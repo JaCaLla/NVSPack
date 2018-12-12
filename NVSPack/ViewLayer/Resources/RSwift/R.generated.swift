@@ -51,12 +51,16 @@ struct R: Rswift.Validatable {
     fileprivate init() {}
   }
   
-  /// This `R.storyboard` struct is generated, and contains static references to 2 storyboards.
+  /// This `R.storyboard` struct is generated, and contains static references to 4 storyboards.
   struct storyboard {
     /// Storyboard `LaunchScreen`.
     static let launchScreen = _R.storyboard.launchScreen()
     /// Storyboard `Main`.
     static let main = _R.storyboard.main()
+    /// Storyboard `home`.
+    static let home = _R.storyboard.home()
+    /// Storyboard `splash`.
+    static let splash = _R.storyboard.splash()
     
     /// `UIStoryboard(name: "LaunchScreen", bundle: ...)`
     static func launchScreen(_: Void = ()) -> UIKit.UIStoryboard {
@@ -66,6 +70,16 @@ struct R: Rswift.Validatable {
     /// `UIStoryboard(name: "Main", bundle: ...)`
     static func main(_: Void = ()) -> UIKit.UIStoryboard {
       return UIKit.UIStoryboard(resource: R.storyboard.main)
+    }
+    
+    /// `UIStoryboard(name: "home", bundle: ...)`
+    static func home(_: Void = ()) -> UIKit.UIStoryboard {
+      return UIKit.UIStoryboard(resource: R.storyboard.home)
+    }
+    
+    /// `UIStoryboard(name: "splash", bundle: ...)`
+    static func splash(_: Void = ()) -> UIKit.UIStoryboard {
+      return UIKit.UIStoryboard(resource: R.storyboard.splash)
     }
     
     fileprivate init() {}
@@ -78,7 +92,7 @@ struct R: Rswift.Validatable {
   
   fileprivate struct intern: Rswift.Validatable {
     fileprivate static func validate() throws {
-      // There are no resources to validate
+      try _R.validate()
     }
     
     fileprivate init() {}
@@ -89,12 +103,37 @@ struct R: Rswift.Validatable {
   fileprivate init() {}
 }
 
-struct _R {
+struct _R: Rswift.Validatable {
+  static func validate() throws {
+    try storyboard.validate()
+  }
+  
   struct nib {
     fileprivate init() {}
   }
   
-  struct storyboard {
+  struct storyboard: Rswift.Validatable {
+    static func validate() throws {
+      try splash.validate()
+      try home.validate()
+    }
+    
+    struct home: Rswift.StoryboardResourceType, Rswift.Validatable {
+      let bundle = R.hostingBundle
+      let homePresenter = StoryboardViewControllerResource<HomePresenter>(identifier: "HomePresenter")
+      let name = "home"
+      
+      func homePresenter(_: Void = ()) -> HomePresenter? {
+        return UIKit.UIStoryboard(resource: self).instantiateViewController(withResource: homePresenter)
+      }
+      
+      static func validate() throws {
+        if _R.storyboard.home().homePresenter() == nil { throw Rswift.ValidationError(description:"[R.swift] ViewController with identifier 'homePresenter' could not be loaded from storyboard 'home' as 'HomePresenter'.") }
+      }
+      
+      fileprivate init() {}
+    }
+    
     struct launchScreen: Rswift.StoryboardResourceWithInitialControllerType {
       typealias InitialController = UIKit.UIViewController
       
@@ -109,6 +148,23 @@ struct _R {
       
       let bundle = R.hostingBundle
       let name = "Main"
+      
+      fileprivate init() {}
+    }
+    
+    struct splash: Rswift.StoryboardResourceType, Rswift.Validatable {
+      let bundle = R.hostingBundle
+      let name = "splash"
+      let splashVC = StoryboardViewControllerResource<SplashVC>(identifier: "SplashVC")
+      
+      func splashVC(_: Void = ()) -> SplashVC? {
+        return UIKit.UIStoryboard(resource: self).instantiateViewController(withResource: splashVC)
+      }
+      
+      static func validate() throws {
+        if UIKit.UIImage(named: "splash_background") == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'splash_background' is used in storyboard 'splash', but couldn't be loaded.") }
+        if _R.storyboard.splash().splashVC() == nil { throw Rswift.ValidationError(description:"[R.swift] ViewController with identifier 'splashVC' could not be loaded from storyboard 'splash' as 'SplashVC'.") }
+      }
       
       fileprivate init() {}
     }

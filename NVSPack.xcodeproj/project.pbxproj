@@ -9,6 +9,17 @@
 /* Begin PBXBuildFile section */
 		67347CE4E9C6D956D6B0AEE3 /* Pods_NVSPackTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6005B6FFD835F3FD32765DAF /* Pods_NVSPackTests.framework */; };
 		67F1C74D68D4C428AFED2086 /* Pods_NVSPack.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F4204720EF3900B4B3235CB5 /* Pods_NVSPack.framework */; };
+		BF67C95021C13C30000C2D8E /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF67C94F21C13C30000C2D8E /* R.generated.swift */; };
+		BF67C95721C13CF7000C2D8E /* ConcurrentOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF67C95621C13CF7000C2D8E /* ConcurrentOperation.swift */; };
+		BF67C95921C13D4D000C2D8E /* StartUpAppSequencer.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF67C95821C13D4D000C2D8E /* StartUpAppSequencer.swift */; };
+		BF67C95B21C13D9E000C2D8E /* PresentMainAppOp.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF67C95A21C13D9E000C2D8E /* PresentMainAppOp.swift */; };
+		BF67C95D21C13E00000C2D8E /* PresentSplashOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF67C95C21C13E00000C2D8E /* PresentSplashOperation.swift */; };
+		BF67C96121C13EC5000C2D8E /* splash.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BF67C95F21C13EC5000C2D8E /* splash.storyboard */; };
+		BF67C96221C13EC5000C2D8E /* AppStoryboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF67C96021C13EC5000C2D8E /* AppStoryboard.swift */; };
+		BF67C96521C13F31000C2D8E /* SplashVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF67C96421C13F31000C2D8E /* SplashVC.swift */; };
+		BF67C96821C13F75000C2D8E /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF67C96721C13F75000C2D8E /* BaseViewController.swift */; };
+		BF67C96A21C1406D000C2D8E /* home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BF67C96921C1406D000C2D8E /* home.storyboard */; };
+		BF67C96D21C140B4000C2D8E /* HomePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF67C96C21C140B4000C2D8E /* HomePresenter.swift */; };
 		BF9DC4CA21C122DB00C2EE57 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF9DC4C921C122DB00C2EE57 /* AppDelegate.swift */; };
 		BF9DC4CC21C122DB00C2EE57 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF9DC4CB21C122DB00C2EE57 /* ViewController.swift */; };
 		BF9DC4CF21C122DB00C2EE57 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BF9DC4CD21C122DB00C2EE57 /* Main.storyboard */; };
@@ -30,6 +41,17 @@
 /* Begin PBXFileReference section */
 		6005B6FFD835F3FD32765DAF /* Pods_NVSPackTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NVSPackTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		85147FE419E13AE3D30A53C1 /* Pods-NVSPackTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NVSPackTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-NVSPackTests/Pods-NVSPackTests.release.xcconfig"; sourceTree = "<group>"; };
+		BF67C94F21C13C30000C2D8E /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = R.generated.swift; path = NVSPack/ViewLayer/Resources/RSwift/R.generated.swift; sourceTree = SOURCE_ROOT; };
+		BF67C95621C13CF7000C2D8E /* ConcurrentOperation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConcurrentOperation.swift; sourceTree = "<group>"; };
+		BF67C95821C13D4D000C2D8E /* StartUpAppSequencer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartUpAppSequencer.swift; sourceTree = "<group>"; };
+		BF67C95A21C13D9E000C2D8E /* PresentMainAppOp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresentMainAppOp.swift; sourceTree = "<group>"; };
+		BF67C95C21C13E00000C2D8E /* PresentSplashOperation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresentSplashOperation.swift; sourceTree = "<group>"; };
+		BF67C95F21C13EC5000C2D8E /* splash.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = splash.storyboard; sourceTree = "<group>"; };
+		BF67C96021C13EC5000C2D8E /* AppStoryboard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppStoryboard.swift; sourceTree = "<group>"; };
+		BF67C96421C13F31000C2D8E /* SplashVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SplashVC.swift; sourceTree = "<group>"; };
+		BF67C96721C13F75000C2D8E /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		BF67C96921C1406D000C2D8E /* home.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = home.storyboard; sourceTree = "<group>"; };
+		BF67C96C21C140B4000C2D8E /* HomePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePresenter.swift; sourceTree = "<group>"; };
 		BF9DC4C621C122DB00C2EE57 /* NVSPack.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NVSPack.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BF9DC4C921C122DB00C2EE57 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BF9DC4CB21C122DB00C2EE57 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -66,6 +88,111 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		BF67C94C21C13C01000C2D8E /* ViewLayer */ = {
+			isa = PBXGroup;
+			children = (
+				BF67C95E21C13E73000C2D8E /* Controllers */,
+				BF67C94D21C13C0D000C2D8E /* Resources */,
+			);
+			name = ViewLayer;
+			path = "New Group";
+			sourceTree = "<group>";
+		};
+		BF67C94D21C13C0D000C2D8E /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				BF67C95121C13C36000C2D8E /* Storyboards */,
+				BF67C94E21C13C14000C2D8E /* RSwift */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		BF67C94E21C13C14000C2D8E /* RSwift */ = {
+			isa = PBXGroup;
+			children = (
+				BF67C94F21C13C30000C2D8E /* R.generated.swift */,
+			);
+			path = RSwift;
+			sourceTree = "<group>";
+		};
+		BF67C95121C13C36000C2D8E /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				BF67C96021C13EC5000C2D8E /* AppStoryboard.swift */,
+				BF67C95F21C13EC5000C2D8E /* splash.storyboard */,
+				BF67C96921C1406D000C2D8E /* home.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		BF67C95221C13C68000C2D8E /* DomainLayer */ = {
+			isa = PBXGroup;
+			children = (
+				BF67C95421C13CCB000C2D8E /* Sequencer */,
+			);
+			path = DomainLayer;
+			sourceTree = "<group>";
+		};
+		BF67C95321C13C74000C2D8E /* DataLayer */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = DataLayer;
+			sourceTree = "<group>";
+		};
+		BF67C95421C13CCB000C2D8E /* Sequencer */ = {
+			isa = PBXGroup;
+			children = (
+				BF67C95821C13D4D000C2D8E /* StartUpAppSequencer.swift */,
+				BF67C95521C13CD8000C2D8E /* Operations */,
+			);
+			path = Sequencer;
+			sourceTree = "<group>";
+		};
+		BF67C95521C13CD8000C2D8E /* Operations */ = {
+			isa = PBXGroup;
+			children = (
+				BF67C95621C13CF7000C2D8E /* ConcurrentOperation.swift */,
+				BF67C95A21C13D9E000C2D8E /* PresentMainAppOp.swift */,
+				BF67C95C21C13E00000C2D8E /* PresentSplashOperation.swift */,
+			);
+			path = Operations;
+			sourceTree = "<group>";
+		};
+		BF67C95E21C13E73000C2D8E /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				BF67C96621C13F56000C2D8E /* Core */,
+				BF67C96B21C14085000C2D8E /* Home */,
+				BF67C96321C13F1A000C2D8E /* Splash */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		BF67C96321C13F1A000C2D8E /* Splash */ = {
+			isa = PBXGroup;
+			children = (
+				BF67C96421C13F31000C2D8E /* SplashVC.swift */,
+			);
+			path = Splash;
+			sourceTree = "<group>";
+		};
+		BF67C96621C13F56000C2D8E /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				BF67C96721C13F75000C2D8E /* BaseViewController.swift */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		BF67C96B21C14085000C2D8E /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				BF67C96C21C140B4000C2D8E /* HomePresenter.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
 		BF9DC4BD21C122DB00C2EE57 = {
 			isa = PBXGroup;
 			children = (
@@ -89,6 +216,9 @@
 		BF9DC4C821C122DB00C2EE57 /* NVSPack */ = {
 			isa = PBXGroup;
 			children = (
+				BF67C94C21C13C01000C2D8E /* ViewLayer */,
+				BF67C95221C13C68000C2D8E /* DomainLayer */,
+				BF67C95321C13C74000C2D8E /* DataLayer */,
 				BF9DC4C921C122DB00C2EE57 /* AppDelegate.swift */,
 				BF9DC4CB21C122DB00C2EE57 /* ViewController.swift */,
 				BF9DC4CD21C122DB00C2EE57 /* Main.storyboard */,
@@ -213,9 +343,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BF67C96A21C1406D000C2D8E /* home.storyboard in Resources */,
 				BF9DC4D421C122DD00C2EE57 /* LaunchScreen.storyboard in Resources */,
 				BF9DC4D121C122DD00C2EE57 /* Assets.xcassets in Resources */,
 				BF9DC4CF21C122DB00C2EE57 /* Main.storyboard in Resources */,
+				BF67C96121C13EC5000C2D8E /* splash.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -334,8 +466,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BF67C96221C13EC5000C2D8E /* AppStoryboard.swift in Sources */,
+				BF67C95721C13CF7000C2D8E /* ConcurrentOperation.swift in Sources */,
 				BF9DC4CC21C122DB00C2EE57 /* ViewController.swift in Sources */,
 				BF9DC4CA21C122DB00C2EE57 /* AppDelegate.swift in Sources */,
+				BF67C95021C13C30000C2D8E /* R.generated.swift in Sources */,
+				BF67C96821C13F75000C2D8E /* BaseViewController.swift in Sources */,
+				BF67C95D21C13E00000C2D8E /* PresentSplashOperation.swift in Sources */,
+				BF67C95921C13D4D000C2D8E /* StartUpAppSequencer.swift in Sources */,
+				BF67C95B21C13D9E000C2D8E /* PresentMainAppOp.swift in Sources */,
+				BF67C96521C13F31000C2D8E /* SplashVC.swift in Sources */,
+				BF67C96D21C140B4000C2D8E /* HomePresenter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
