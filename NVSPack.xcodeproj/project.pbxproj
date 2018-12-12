@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		67347CE4E9C6D956D6B0AEE3 /* Pods_NVSPackTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6005B6FFD835F3FD32765DAF /* Pods_NVSPackTests.framework */; };
+		67F1C74D68D4C428AFED2086 /* Pods_NVSPack.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F4204720EF3900B4B3235CB5 /* Pods_NVSPack.framework */; };
 		BF9DC4CA21C122DB00C2EE57 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF9DC4C921C122DB00C2EE57 /* AppDelegate.swift */; };
 		BF9DC4CC21C122DB00C2EE57 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF9DC4CB21C122DB00C2EE57 /* ViewController.swift */; };
 		BF9DC4CF21C122DB00C2EE57 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BF9DC4CD21C122DB00C2EE57 /* Main.storyboard */; };
@@ -26,6 +28,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		6005B6FFD835F3FD32765DAF /* Pods_NVSPackTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NVSPackTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		85147FE419E13AE3D30A53C1 /* Pods-NVSPackTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NVSPackTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-NVSPackTests/Pods-NVSPackTests.release.xcconfig"; sourceTree = "<group>"; };
 		BF9DC4C621C122DB00C2EE57 /* NVSPack.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NVSPack.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BF9DC4C921C122DB00C2EE57 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BF9DC4CB21C122DB00C2EE57 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -36,6 +40,10 @@
 		BF9DC4DA21C122DD00C2EE57 /* NVSPackTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NVSPackTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BF9DC4DE21C122DE00C2EE57 /* NVSPackTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NVSPackTests.swift; sourceTree = "<group>"; };
 		BF9DC4E021C122DE00C2EE57 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D0079D4602DCE9BE0A34CB14 /* Pods-NVSPackTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NVSPackTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-NVSPackTests/Pods-NVSPackTests.debug.xcconfig"; sourceTree = "<group>"; };
+		D0567EF705C48F9EE5CED3B1 /* Pods-NVSPack.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NVSPack.debug.xcconfig"; path = "Pods/Target Support Files/Pods-NVSPack/Pods-NVSPack.debug.xcconfig"; sourceTree = "<group>"; };
+		F4204720EF3900B4B3235CB5 /* Pods_NVSPack.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NVSPack.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F9D8E7AA98BECEAD69839F65 /* Pods-NVSPack.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NVSPack.release.xcconfig"; path = "Pods/Target Support Files/Pods-NVSPack/Pods-NVSPack.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,6 +51,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				67F1C74D68D4C428AFED2086 /* Pods_NVSPack.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -50,6 +59,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				67347CE4E9C6D956D6B0AEE3 /* Pods_NVSPackTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -62,6 +72,8 @@
 				BF9DC4C821C122DB00C2EE57 /* NVSPack */,
 				BF9DC4DD21C122DD00C2EE57 /* NVSPackTests */,
 				BF9DC4C721C122DB00C2EE57 /* Products */,
+				CF0DB21F9406E8B90A19040E /* Pods */,
+				FAE25B00A86AC1430F5E76F7 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -96,6 +108,26 @@
 			path = NVSPackTests;
 			sourceTree = "<group>";
 		};
+		CF0DB21F9406E8B90A19040E /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				D0567EF705C48F9EE5CED3B1 /* Pods-NVSPack.debug.xcconfig */,
+				F9D8E7AA98BECEAD69839F65 /* Pods-NVSPack.release.xcconfig */,
+				D0079D4602DCE9BE0A34CB14 /* Pods-NVSPackTests.debug.xcconfig */,
+				85147FE419E13AE3D30A53C1 /* Pods-NVSPackTests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		FAE25B00A86AC1430F5E76F7 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F4204720EF3900B4B3235CB5 /* Pods_NVSPack.framework */,
+				6005B6FFD835F3FD32765DAF /* Pods_NVSPackTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -103,9 +135,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = BF9DC4E321C122DE00C2EE57 /* Build configuration list for PBXNativeTarget "NVSPack" */;
 			buildPhases = (
+				EF8E4A71B9FA3F2F132EF456 /* [CP] Check Pods Manifest.lock */,
 				BF9DC4C221C122DB00C2EE57 /* Sources */,
 				BF9DC4C321C122DB00C2EE57 /* Frameworks */,
 				BF9DC4C421C122DB00C2EE57 /* Resources */,
+				486062C97D6BD952EDCCB40E /* [CP] Embed Pods Frameworks */,
+				BF67C94B21C12D4B000C2D8E /* R.Swift */,
 			);
 			buildRules = (
 			);
@@ -120,6 +155,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = BF9DC4E621C122DE00C2EE57 /* Build configuration list for PBXNativeTarget "NVSPackTests" */;
 			buildPhases = (
+				8948CB6616D6AB7910BD3F62 /* [CP] Check Pods Manifest.lock */,
 				BF9DC4D621C122DD00C2EE57 /* Sources */,
 				BF9DC4D721C122DD00C2EE57 /* Frameworks */,
 				BF9DC4D821C122DD00C2EE57 /* Resources */,
@@ -191,6 +227,107 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		486062C97D6BD952EDCCB40E /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-NVSPack/Pods-NVSPack-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/Charts/Charts.framework",
+				"${BUILT_PRODUCTS_DIR}/CocoaLumberjack/CocoaLumberjack.framework",
+				"${BUILT_PRODUCTS_DIR}/R.swift.Library/Rswift.framework",
+				"${BUILT_PRODUCTS_DIR}/RxAtomic/RxAtomic.framework",
+				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
+				"${BUILT_PRODUCTS_DIR}/RxFeedback/RxFeedback.framework",
+				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Charts.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CocoaLumberjack.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Rswift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxAtomic.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxFeedback.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-NVSPack/Pods-NVSPack-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8948CB6616D6AB7910BD3F62 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-NVSPackTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BF67C94B21C12D4B000C2D8E /* R.Swift */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = R.Swift;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"$PODS_ROOT/R.swift/rswift\" \"generate\" \"$SRCROOT/NVSPack/ViewLayer/Resources/RSwift\"\n";
+		};
+		EF8E4A71B9FA3F2F132EF456 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-NVSPack-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		BF9DC4C221C122DB00C2EE57 /* Sources */ = {
@@ -358,6 +495,7 @@
 		};
 		BF9DC4E421C122DE00C2EE57 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D0567EF705C48F9EE5CED3B1 /* Pods-NVSPack.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -369,13 +507,14 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.jca.NVSPack;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
 		BF9DC4E521C122DE00C2EE57 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F9D8E7AA98BECEAD69839F65 /* Pods-NVSPack.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -387,13 +526,14 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.jca.NVSPack;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
 		BF9DC4E721C122DE00C2EE57 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D0079D4602DCE9BE0A34CB14 /* Pods-NVSPackTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -415,6 +555,7 @@
 		};
 		BF9DC4E821C122DE00C2EE57 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 85147FE419E13AE3D30A53C1 /* Pods-NVSPackTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
