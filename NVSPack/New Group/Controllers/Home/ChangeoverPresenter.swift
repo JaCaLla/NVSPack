@@ -15,9 +15,18 @@ class ChangeoverPresenter: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        NotificationManager.shared.notificationCenter.addObserver(self, selector: #selector(onTimeSelectionChanged),
+                                                                  name: NSNotification.Name(rawValue:
+                                                                    DataManager.NotificationId.updatedTimeSelection),
+                                                                  object: nil)
+
         self.fetchDataset()
 
+    }
+
+    // MARK: - Notification methods
+    @objc func onTimeSelectionChanged(notification: NSNotification) {
+        self.fetchDataset()
     }
 
     // MARK: - Navigation
@@ -32,7 +41,7 @@ class ChangeoverPresenter: UIViewController {
         guard let uwpChangeoverViewContent = self.changeoverViewContent else {
             return
         }
-        let dataset = DataManager().changeoverDataset(date: Date())
+        let dataset = DataManager.shared.changeoverDataset()
         uwpChangeoverViewContent.dataset = dataset
 
     }

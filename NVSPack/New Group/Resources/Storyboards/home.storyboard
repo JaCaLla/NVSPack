@@ -21,7 +21,7 @@
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nT3-Oi-gj6">
                                 <rect key="frame" x="0.0" y="20" width="375" height="647"/>
                                 <connections>
-                                    <segue destination="wnZ-np-SCG" kind="embed" id="3DJ-1m-d2P"/>
+                                    <segue destination="wnZ-np-SCG" kind="embed" identifier="HomeSelectorContainerSegue" id="3DJ-1m-d2P"/>
                                 </connections>
                             </containerView>
                         </subviews>
@@ -39,10 +39,10 @@
             </objects>
             <point key="canvasLocation" x="-47" y="-567"/>
         </scene>
-        <!--Table View Controller-->
+        <!--Home View Content-->
         <scene sceneID="WQL-8H-d2J">
             <objects>
-                <tableViewController id="wnZ-np-SCG" sceneMemberID="viewController">
+                <tableViewController id="wnZ-np-SCG" customClass="HomeViewContent" customModule="NVSPack" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="sDL-TM-o52">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -50,17 +50,17 @@
                         <sections>
                             <tableViewSection id="yLo-b1-dPr">
                                 <cells>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="300" id="Ulj-uf-42C">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="300"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="80" id="Ulj-uf-42C">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="80"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Ulj-uf-42C" id="p43-v6-hhC">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="299.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="79.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jtK-oB-tIF">
-                                                    <rect key="frame" x="0.0" y="0.0" width="375" height="299.5"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="375" height="79.5"/>
                                                     <connections>
-                                                        <segue destination="aqb-Gs-lwg" kind="embed" id="wro-be-Rdw"/>
+                                                        <segue destination="aqb-Gs-lwg" kind="embed" identifier="TimeSelectorPresenterSegue" id="wro-be-Rdw"/>
                                                     </connections>
                                                 </containerView>
                                             </subviews>
@@ -73,7 +73,7 @@
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="200" id="fWH-PS-PKg">
-                                        <rect key="frame" x="0.0" y="300" width="375" height="200"/>
+                                        <rect key="frame" x="0.0" y="80" width="375" height="200"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="fWH-PS-PKg" id="OeX-CS-pnF">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="199.5"/>
@@ -95,7 +95,7 @@
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="300" id="h8s-Je-C5c">
-                                        <rect key="frame" x="0.0" y="500" width="375" height="300"/>
+                                        <rect key="frame" x="0.0" y="280" width="375" height="300"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="h8s-Je-C5c" id="DXN-JO-FIf">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="299.5"/>
@@ -129,18 +129,18 @@
             </objects>
             <point key="canvasLocation" x="-47" y="236"/>
         </scene>
-        <!--View Controller-->
+        <!--Time Selector Presenter-->
         <scene sceneID="TYi-3y-5U0">
             <objects>
-                <viewController id="aqb-Gs-lwg" sceneMemberID="viewController">
+                <viewController id="aqb-Gs-lwg" customClass="TimeSelectorPresenter" customModule="NVSPack" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="TpJ-6n-Brj">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="299.5"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="79.5"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ytc-bu-9ap">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="299.5"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="79.5"/>
                                 <connections>
-                                    <segue destination="GI8-YW-p5D" kind="embed" id="cxq-Jy-S8b"/>
+                                    <segue destination="GI8-YW-p5D" kind="embed" identifier="TimeSelectorContainerSegue" id="cxq-Jy-S8b"/>
                                 </connections>
                             </containerView>
                         </subviews>
@@ -158,16 +158,35 @@
             </objects>
             <point key="canvasLocation" x="962" y="-25"/>
         </scene>
-        <!--View Controller-->
+        <!--Time Selector View Content-->
         <scene sceneID="evA-f5-PWD">
             <objects>
-                <viewController id="GI8-YW-p5D" sceneMemberID="viewController">
+                <viewController id="GI8-YW-p5D" customClass="TimeSelectorViewContent" customModule="NVSPack" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="afc-e8-fkJ">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="299.5"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="79.5"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <subviews>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="Atd-mG-tXt">
+                                <rect key="frame" x="20" y="26" width="335" height="29"/>
+                                <segments>
+                                    <segment title="First"/>
+                                    <segment title="Second"/>
+                                </segments>
+                                <connections>
+                                    <action selector="onValueChanged:" destination="GI8-YW-p5D" eventType="valueChanged" id="zAl-NN-Nde"/>
+                                </connections>
+                            </segmentedControl>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="O16-rR-FNz" firstAttribute="trailing" secondItem="Atd-mG-tXt" secondAttribute="trailing" constant="20" id="Q9L-uO-mF6"/>
+                            <constraint firstItem="Atd-mG-tXt" firstAttribute="leading" secondItem="O16-rR-FNz" secondAttribute="leading" constant="20" id="gJh-9y-8op"/>
+                            <constraint firstItem="Atd-mG-tXt" firstAttribute="centerY" secondItem="afc-e8-fkJ" secondAttribute="centerY" id="gfU-57-pyY"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="O16-rR-FNz"/>
                     </view>
+                    <connections>
+                        <outlet property="segTimeSelector" destination="Atd-mG-tXt" id="RlM-su-4mf"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aCi-kA-mEg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

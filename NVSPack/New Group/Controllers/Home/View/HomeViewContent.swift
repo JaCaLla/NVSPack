@@ -8,23 +8,27 @@
 
 import UIKit
 
-class HomeViewContent: UIViewController {
+class HomeViewContent: UITableViewController {
 
+    // MARK: - Private attributes
+    //private var timeSelectorPresenter : TimeSelectorPresenter!
+
+    // MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
+/*
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
+        if segue.identifier == R.segue.homeViewContent.timeSelectorPresenterSegue.identifier,
+           let timeSelectorPresenter = segue.destination as? TimeSelectorPresenter {
+            timeSelectorPresenter.onSelectedPeriod = { timeSelector in
+                 weakSelf.onSelectedPeriod(timeSelector)
+            }
+        }
+    }
+*/
 }

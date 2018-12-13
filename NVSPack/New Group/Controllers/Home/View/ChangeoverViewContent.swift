@@ -14,7 +14,8 @@ class ChangeoverViewContent: DemoBaseViewController {
     // MARK: - IBOutlet
     @IBOutlet weak var chartView: HorizontalBarChartView!
     @IBOutlet weak var lblTitle: UILabel!
-    
+
+
     // MARK: - Public attributes
     var dataset: Dataset? {
         didSet {

@@ -68,7 +68,7 @@ struct R: Rswift.Validatable {
     fileprivate init() {}
   }
   
-  /// This `R.segue` struct is generated, and contains static references to 1 view controllers.
+  /// This `R.segue` struct is generated, and contains static references to 4 view controllers.
   struct segue {
     /// This struct is generated for `ChangeoverPresenter`, and contains static references to 1 segues.
     struct changeoverPresenter {
@@ -80,6 +80,51 @@ struct R: Rswift.Validatable {
       /// For use inside `prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?)`.
       static func changeOverContainerSegue(segue: UIKit.UIStoryboardSegue) -> Rswift.TypedStoryboardSegueInfo<UIKit.UIStoryboardSegue, ChangeoverPresenter, ChangeoverViewContent>? {
         return Rswift.TypedStoryboardSegueInfo(segueIdentifier: R.segue.changeoverPresenter.changeOverContainerSegue, segue: segue)
+      }
+      
+      fileprivate init() {}
+    }
+    
+    /// This struct is generated for `HomePresenter`, and contains static references to 1 segues.
+    struct homePresenter {
+      /// Segue identifier `HomeSelectorContainerSegue`.
+      static let homeSelectorContainerSegue: Rswift.StoryboardSegueIdentifier<UIKit.UIStoryboardSegue, HomePresenter, HomeViewContent> = Rswift.StoryboardSegueIdentifier(identifier: "HomeSelectorContainerSegue")
+      
+      /// Optionally returns a typed version of segue `HomeSelectorContainerSegue`.
+      /// Returns nil if either the segue identifier, the source, destination, or segue types don't match.
+      /// For use inside `prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?)`.
+      static func homeSelectorContainerSegue(segue: UIKit.UIStoryboardSegue) -> Rswift.TypedStoryboardSegueInfo<UIKit.UIStoryboardSegue, HomePresenter, HomeViewContent>? {
+        return Rswift.TypedStoryboardSegueInfo(segueIdentifier: R.segue.homePresenter.homeSelectorContainerSegue, segue: segue)
+      }
+      
+      fileprivate init() {}
+    }
+    
+    /// This struct is generated for `HomeViewContent`, and contains static references to 1 segues.
+    struct homeViewContent {
+      /// Segue identifier `TimeSelectorPresenterSegue`.
+      static let timeSelectorPresenterSegue: Rswift.StoryboardSegueIdentifier<UIKit.UIStoryboardSegue, HomeViewContent, TimeSelectorPresenter> = Rswift.StoryboardSegueIdentifier(identifier: "TimeSelectorPresenterSegue")
+      
+      /// Optionally returns a typed version of segue `TimeSelectorPresenterSegue`.
+      /// Returns nil if either the segue identifier, the source, destination, or segue types don't match.
+      /// For use inside `prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?)`.
+      static func timeSelectorPresenterSegue(segue: UIKit.UIStoryboardSegue) -> Rswift.TypedStoryboardSegueInfo<UIKit.UIStoryboardSegue, HomeViewContent, TimeSelectorPresenter>? {
+        return Rswift.TypedStoryboardSegueInfo(segueIdentifier: R.segue.homeViewContent.timeSelectorPresenterSegue, segue: segue)
+      }
+      
+      fileprivate init() {}
+    }
+    
+    /// This struct is generated for `TimeSelectorPresenter`, and contains static references to 1 segues.
+    struct timeSelectorPresenter {
+      /// Segue identifier `TimeSelectorContainerSegue`.
+      static let timeSelectorContainerSegue: Rswift.StoryboardSegueIdentifier<UIKit.UIStoryboardSegue, TimeSelectorPresenter, TimeSelectorViewContent> = Rswift.StoryboardSegueIdentifier(identifier: "TimeSelectorContainerSegue")
+      
+      /// Optionally returns a typed version of segue `TimeSelectorContainerSegue`.
+      /// Returns nil if either the segue identifier, the source, destination, or segue types don't match.
+      /// For use inside `prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?)`.
+      static func timeSelectorContainerSegue(segue: UIKit.UIStoryboardSegue) -> Rswift.TypedStoryboardSegueInfo<UIKit.UIStoryboardSegue, TimeSelectorPresenter, TimeSelectorViewContent>? {
+        return Rswift.TypedStoryboardSegueInfo(segueIdentifier: R.segue.timeSelectorPresenter.timeSelectorContainerSegue, segue: segue)
       }
       
       fileprivate init() {}
@@ -124,18 +169,51 @@ struct R: Rswift.Validatable {
   
   /// This `R.string` struct is generated, and contains static references to 1 localization tables.
   struct string {
-    /// This `R.string.localized` struct is generated, and contains static references to 1 localization keys.
+    /// This `R.string.localized` struct is generated, and contains static references to 4 localization keys.
     struct localized {
       /// en translation: Changeover
       /// 
       /// Locales: en
       static let changeover_title = Rswift.StringResource(key: "changeover_title", tableName: "Localized", bundle: R.hostingBundle, locales: ["en"], comment: nil)
+      /// en translation: Current Month
+      /// 
+      /// Locales: en
+      static let time_selector_current_month = Rswift.StringResource(key: "time_selector_current_month", tableName: "Localized", bundle: R.hostingBundle, locales: ["en"], comment: nil)
+      /// en translation: Last Month
+      /// 
+      /// Locales: en
+      static let time_selector_last_month = Rswift.StringResource(key: "time_selector_last_month", tableName: "Localized", bundle: R.hostingBundle, locales: ["en"], comment: nil)
+      /// en translation: This week
+      /// 
+      /// Locales: en
+      static let time_selector_this_week = Rswift.StringResource(key: "time_selector_this_week", tableName: "Localized", bundle: R.hostingBundle, locales: ["en"], comment: nil)
       
       /// en translation: Changeover
       /// 
       /// Locales: en
       static func changeover_title(_: Void = ()) -> String {
         return NSLocalizedString("changeover_title", tableName: "Localized", bundle: R.hostingBundle, comment: "")
+      }
+      
+      /// en translation: Current Month
+      /// 
+      /// Locales: en
+      static func time_selector_current_month(_: Void = ()) -> String {
+        return NSLocalizedString("time_selector_current_month", tableName: "Localized", bundle: R.hostingBundle, comment: "")
+      }
+      
+      /// en translation: Last Month
+      /// 
+      /// Locales: en
+      static func time_selector_last_month(_: Void = ()) -> String {
+        return NSLocalizedString("time_selector_last_month", tableName: "Localized", bundle: R.hostingBundle, comment: "")
+      }
+      
+      /// en translation: This week
+      /// 
+      /// Locales: en
+      static func time_selector_this_week(_: Void = ()) -> String {
+        return NSLocalizedString("time_selector_this_week", tableName: "Localized", bundle: R.hostingBundle, comment: "")
       }
       
       fileprivate init() {}

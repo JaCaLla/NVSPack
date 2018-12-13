@@ -12,6 +12,6 @@ class DataCollectorUseCase {
 
     func changeoverDataset() -> Dataset {
 
-        return DataManager().changeoverDataset(date: Date())
+        return DataManager().changeoverDataset()
     }
 }

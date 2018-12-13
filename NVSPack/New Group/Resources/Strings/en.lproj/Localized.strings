@@ -6,4 +6,8 @@
   Copyright © 2018 jca. All rights reserved.
 */
 
+"time_selector_this_week" = "This week";
+"time_selector_current_month" = "Current Month";
+"time_selector_last_month" = "Last Month";
+
 "changeover_title" = "Changeover";
