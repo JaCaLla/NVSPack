@@ -46,8 +46,23 @@ struct R: Rswift.Validatable {
     fileprivate init() {}
   }
   
-  /// This `R.segue` struct is generated, and contains static references to 0 view controllers.
+  /// This `R.segue` struct is generated, and contains static references to 1 view controllers.
   struct segue {
+    /// This struct is generated for `ChangeoverPresenter`, and contains static references to 1 segues.
+    struct changeoverPresenter {
+      /// Segue identifier `ChangeOverContainerSegue`.
+      static let changeOverContainerSegue: Rswift.StoryboardSegueIdentifier<UIKit.UIStoryboardSegue, ChangeoverPresenter, ChangeoverViewContent> = Rswift.StoryboardSegueIdentifier(identifier: "ChangeOverContainerSegue")
+      
+      /// Optionally returns a typed version of segue `ChangeOverContainerSegue`.
+      /// Returns nil if either the segue identifier, the source, destination, or segue types don't match.
+      /// For use inside `prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?)`.
+      static func changeOverContainerSegue(segue: UIKit.UIStoryboardSegue) -> Rswift.TypedStoryboardSegueInfo<UIKit.UIStoryboardSegue, ChangeoverPresenter, ChangeoverViewContent>? {
+        return Rswift.TypedStoryboardSegueInfo(segueIdentifier: R.segue.changeoverPresenter.changeOverContainerSegue, segue: segue)
+      }
+      
+      fileprivate init() {}
+    }
+    
     fileprivate init() {}
   }
   
