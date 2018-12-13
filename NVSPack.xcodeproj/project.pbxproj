@@ -37,6 +37,8 @@
 		BF8ED64521C2850300E62CFC /* TimeSelectorPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF8ED64421C2850300E62CFC /* TimeSelectorPresenter.swift */; };
 		BF8ED64721C2852900E62CFC /* TimeSelectorViewContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF8ED64621C2852900E62CFC /* TimeSelectorViewContent.swift */; };
 		BF8ED64A21C298E100E62CFC /* NotificationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF8ED64921C298E100E62CFC /* NotificationManager.swift */; };
+		BF8ED64C21C29C8000E62CFC /* LineyieldViewContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF8ED64B21C29C8000E62CFC /* LineyieldViewContent.swift */; };
+		BF8ED64E21C29CED00E62CFC /* LineyieldPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF8ED64D21C29CED00E62CFC /* LineyieldPresenter.swift */; };
 		BF9DC4CA21C122DB00C2EE57 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF9DC4C921C122DB00C2EE57 /* AppDelegate.swift */; };
 		BF9DC4CC21C122DB00C2EE57 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF9DC4CB21C122DB00C2EE57 /* ViewController.swift */; };
 		BF9DC4CF21C122DB00C2EE57 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BF9DC4CD21C122DB00C2EE57 /* Main.storyboard */; };
@@ -86,6 +88,8 @@
 		BF8ED64421C2850300E62CFC /* TimeSelectorPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimeSelectorPresenter.swift; sourceTree = "<group>"; };
 		BF8ED64621C2852900E62CFC /* TimeSelectorViewContent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimeSelectorViewContent.swift; sourceTree = "<group>"; };
 		BF8ED64921C298E100E62CFC /* NotificationManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationManager.swift; sourceTree = "<group>"; };
+		BF8ED64B21C29C8000E62CFC /* LineyieldViewContent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LineyieldViewContent.swift; sourceTree = "<group>"; };
+		BF8ED64D21C29CED00E62CFC /* LineyieldPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LineyieldPresenter.swift; sourceTree = "<group>"; };
 		BF9DC4C621C122DB00C2EE57 /* NVSPack.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NVSPack.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BF9DC4C921C122DB00C2EE57 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BF9DC4CB21C122DB00C2EE57 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -234,6 +238,7 @@
 				BF67C96C21C140B4000C2D8E /* HomePresenter.swift */,
 				BF8ED64421C2850300E62CFC /* TimeSelectorPresenter.swift */,
 				BF229A1221C18DDD001A8D49 /* ChangeoverPresenter.swift */,
+				BF8ED64D21C29CED00E62CFC /* LineyieldPresenter.swift */,
 				BF67C96E21C14BF4000C2D8E /* View */,
 			);
 			path = Home;
@@ -245,6 +250,7 @@
 				BF67C96F21C14C1F000C2D8E /* HomeViewContent.swift */,
 				BF8ED64621C2852900E62CFC /* TimeSelectorViewContent.swift */,
 				BF229A1421C18F0A001A8D49 /* ChangeoverViewContent.swift */,
+				BF8ED64B21C29C8000E62CFC /* LineyieldViewContent.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -609,6 +615,8 @@
 				BF67C95D21C13E00000C2D8E /* PresentSplashOperation.swift in Sources */,
 				BF67C97021C14C1F000C2D8E /* HomeViewContent.swift in Sources */,
 				BF67C95921C13D4D000C2D8E /* StartUpAppSequencer.swift in Sources */,
+				BF8ED64C21C29C8000E62CFC /* LineyieldViewContent.swift in Sources */,
+				BF8ED64E21C29CED00E62CFC /* LineyieldPresenter.swift in Sources */,
 				BF67C95B21C13D9E000C2D8E /* PresentMainAppOp.swift in Sources */,
 				BF229A1321C18DDD001A8D49 /* ChangeoverPresenter.swift in Sources */,
 				BF67C96521C13F31000C2D8E /* SplashVC.swift in Sources */,

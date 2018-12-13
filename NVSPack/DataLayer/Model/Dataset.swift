@@ -23,7 +23,7 @@ struct Dataset {
         guard let foundOne = series.first(where: {$0.index == index}) else {
             return nil
         }
-        return foundOne.tag
+        return foundOne.label
     }
 
 

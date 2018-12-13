@@ -9,7 +9,7 @@
 import Foundation
 
 struct Serie {
-    var tag: String = ""
+    var label: String = ""
     var index: Double = 0
     var value: Double = 0.0
 }

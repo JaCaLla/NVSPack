@@ -68,7 +68,7 @@ struct R: Rswift.Validatable {
     fileprivate init() {}
   }
   
-  /// This `R.segue` struct is generated, and contains static references to 4 view controllers.
+  /// This `R.segue` struct is generated, and contains static references to 5 view controllers.
   struct segue {
     /// This struct is generated for `ChangeoverPresenter`, and contains static references to 1 segues.
     struct changeoverPresenter {
@@ -110,6 +110,21 @@ struct R: Rswift.Validatable {
       /// For use inside `prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?)`.
       static func timeSelectorPresenterSegue(segue: UIKit.UIStoryboardSegue) -> Rswift.TypedStoryboardSegueInfo<UIKit.UIStoryboardSegue, HomeViewContent, TimeSelectorPresenter>? {
         return Rswift.TypedStoryboardSegueInfo(segueIdentifier: R.segue.homeViewContent.timeSelectorPresenterSegue, segue: segue)
+      }
+      
+      fileprivate init() {}
+    }
+    
+    /// This struct is generated for `LineyieldPresenter`, and contains static references to 1 segues.
+    struct lineyieldPresenter {
+      /// Segue identifier `LineyieldContainerSegue`.
+      static let lineyieldContainerSegue: Rswift.StoryboardSegueIdentifier<UIKit.UIStoryboardSegue, LineyieldPresenter, LineyieldViewContent> = Rswift.StoryboardSegueIdentifier(identifier: "LineyieldContainerSegue")
+      
+      /// Optionally returns a typed version of segue `LineyieldContainerSegue`.
+      /// Returns nil if either the segue identifier, the source, destination, or segue types don't match.
+      /// For use inside `prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?)`.
+      static func lineyieldContainerSegue(segue: UIKit.UIStoryboardSegue) -> Rswift.TypedStoryboardSegueInfo<UIKit.UIStoryboardSegue, LineyieldPresenter, LineyieldViewContent>? {
+        return Rswift.TypedStoryboardSegueInfo(segueIdentifier: R.segue.lineyieldPresenter.lineyieldContainerSegue, segue: segue)
       }
       
       fileprivate init() {}
@@ -169,8 +184,12 @@ struct R: Rswift.Validatable {
   
   /// This `R.string` struct is generated, and contains static references to 1 localization tables.
   struct string {
-    /// This `R.string.localized` struct is generated, and contains static references to 4 localization keys.
+    /// This `R.string.localized` struct is generated, and contains static references to 5 localization keys.
     struct localized {
+      /// en translation: Cairo
+      /// 
+      /// Locales: en
+      static let lineyield_title = Rswift.StringResource(key: "lineyield_title", tableName: "Localized", bundle: R.hostingBundle, locales: ["en"], comment: nil)
       /// en translation: Changeover
       /// 
       /// Locales: en
@@ -187,6 +206,13 @@ struct R: Rswift.Validatable {
       /// 
       /// Locales: en
       static let time_selector_this_week = Rswift.StringResource(key: "time_selector_this_week", tableName: "Localized", bundle: R.hostingBundle, locales: ["en"], comment: nil)
+      
+      /// en translation: Cairo
+      /// 
+      /// Locales: en
+      static func lineyield_title(_: Void = ()) -> String {
+        return NSLocalizedString("lineyield_title", tableName: "Localized", bundle: R.hostingBundle, comment: "")
+      }
       
       /// en translation: Changeover
       /// 

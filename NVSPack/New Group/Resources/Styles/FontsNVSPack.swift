@@ -10,6 +10,12 @@ import UIKit
 
 struct FontsNVSPack {
 
+    // MARK: - LineYield
+    struct Lineyield {
+        static let titleFont    = TextStyle.h24Custom.font
+        static let holeFont    = TextStyle.h20Custom.font
+    }
+
     // MARK: - ChangeOverAverage
     struct ChangeOverAverage {
         static let titleFont    = TextStyle.h24Custom.font
