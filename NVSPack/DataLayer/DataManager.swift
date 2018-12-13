@@ -46,6 +46,49 @@ enum TimeSelector: Int {
                                     Serie(label: "BAD",index: 1.0, value: 100)])
         }
     }
+
+    func lineActivityDataset() -> Dataset {
+        switch self {
+        case .thisWeek:
+            return Dataset(series:[Serie(label: R.string.localized.lineactivity_effective_uptime(), index: 0, value: 20, color: ColorsNVSPack.LineActivity.effectiveUptime),
+                                   Serie(label: R.string.localized.lineactivity_rework(), index: 0, value: 50, color: ColorsNVSPack.LineActivity.rework),
+                                   Serie(label: R.string.localized.lineactivity_micro_stoppages(), index: 0, value: 30, color: ColorsNVSPack.LineActivity.microStoppages),
+                                   Serie(label: R.string.localized.lineactivity_technical_stoppages(), index: 0, value: 10, color: ColorsNVSPack.LineActivity.technicalStoppages),
+                                   Serie(label: R.string.localized.lineactivity_changeover(), index: 0, value: 80, color: ColorsNVSPack.LineActivity.changeover),
+                                   Serie(label: R.string.localized.lineactivity_logistical_stoppage(), index: 0, value: 60, color: ColorsNVSPack.LineActivity.logisticalStoppages),
+                                   Serie(label: R.string.localized.lineactivity_scheduled_downtime(), index: 0, value: 5, color: ColorsNVSPack.LineActivity.scheduledDowntime)])
+        case .currentMonth:
+            return Dataset(series:[Serie(label: R.string.localized.lineactivity_effective_uptime(), index: 0, value: 20, color: ColorsNVSPack.LineActivity.effectiveUptime),
+                                   Serie(label: R.string.localized.lineactivity_rework(), index: 0, value: 20, color: ColorsNVSPack.LineActivity.rework),
+                                   Serie(label: R.string.localized.lineactivity_micro_stoppages(), index: 0, value: 50, color: ColorsNVSPack.LineActivity.microStoppages),
+                                   Serie(label: R.string.localized.lineactivity_technical_stoppages(), index: 0, value: 100, color: ColorsNVSPack.LineActivity.technicalStoppages),
+                                   Serie(label: R.string.localized.lineactivity_changeover(), index: 0, value: 150, color: ColorsNVSPack.LineActivity.changeover),
+                                   Serie(label: R.string.localized.lineactivity_logistical_stoppage(), index: 0, value: 60, color: ColorsNVSPack.LineActivity.logisticalStoppages),
+                                   Serie(label: R.string.localized.lineactivity_scheduled_downtime(), index: 0, value: 40, color: ColorsNVSPack.LineActivity.scheduledDowntime)])
+        case .lastMonth:
+            return Dataset(series:[Serie(label: R.string.localized.lineactivity_effective_uptime(), index: 0, value: 200, color: ColorsNVSPack.LineActivity.effectiveUptime),
+                                   Serie(label: R.string.localized.lineactivity_rework(), index: 0, value: 10, color: ColorsNVSPack.LineActivity.rework),
+                                   Serie(label: R.string.localized.lineactivity_micro_stoppages(), index: 0, value: 150, color: ColorsNVSPack.LineActivity.microStoppages),
+                                   Serie(label: R.string.localized.lineactivity_technical_stoppages(), index: 0, value: 100, color: ColorsNVSPack.LineActivity.technicalStoppages),
+                                   Serie(label: R.string.localized.lineactivity_changeover(), index: 0, value: 120, color: ColorsNVSPack.LineActivity.changeover),
+                                   Serie(label: R.string.localized.lineactivity_logistical_stoppage(), index: 0, value: 80, color: ColorsNVSPack.LineActivity.logisticalStoppages),
+                                   Serie(label: R.string.localized.lineactivity_scheduled_downtime(), index: 0, value: 50, color: ColorsNVSPack.LineActivity.scheduledDowntime)])
+        }
+    }
+
+    func assetUtilizationDataset() -> Dataset {
+        switch self {
+        case .thisWeek:
+            return Dataset(series: [Serie(label: "GOOD", index: 0.0, value: 65),
+                                    Serie(label: "BAD",index: 1.0, value: 35)])
+        case .currentMonth:
+            return Dataset(series: [Serie(label: "GOOD", index: 0.0, value: 80),
+                                    Serie(label: "BAD",index: 1.0, value: 20)])
+        case .lastMonth:
+            return Dataset(series: [Serie(label: "GOOD", index: 0.0, value: 95),
+                                    Serie(label: "BAD",index: 1.0, value: 5)])
+        }
+    }
 }
 
 class DataManager {
@@ -74,4 +117,11 @@ class DataManager {
         return timeSelector.lineyieldDataset()
     }
 
+    func lineActivityDataset() -> Dataset {
+        return timeSelector.lineActivityDataset()
+    }
+
+    func assetUtilizationDataset() -> Dataset {
+        return timeSelector.assetUtilizationDataset()
+    }
 }

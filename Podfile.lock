@@ -1,55 +1,26 @@
 PODS:
-  - Alamofire (4.5.1)
   - Charts (3.2.1):
     - Charts/Core (= 3.2.1)
   - Charts/Core (3.2.1)
-  - CocoaLumberjack/Default (3.2.1)
-  - CocoaLumberjack/Swift (3.2.1):
-    - CocoaLumberjack/Default
   - R.swift (4.0.0):
     - R.swift.Library (~> 4.0.0)
   - R.swift.Library (4.0.0)
-  - RxAtomic (4.4.0)
-  - RxCocoa (4.4.0):
-    - RxSwift (~> 4.0)
-  - RxFeedback (1.1.1):
-    - RxCocoa (~> 4.0)
-    - RxSwift (~> 4.0)
-  - RxSwift (4.4.0):
-    - RxAtomic (~> 4.4)
 
 DEPENDENCIES:
-  - Alamofire (~> 4.5.0)
   - Charts
-  - CocoaLumberjack/Swift (~> 3.2.0)
   - R.swift
-  - RxCocoa
-  - RxFeedback
-  - RxSwift
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
-    - Alamofire
     - Charts
-    - CocoaLumberjack
     - R.swift
     - R.swift.Library
-    - RxAtomic
-    - RxCocoa
-    - RxFeedback
-    - RxSwift
 
 SPEC CHECKSUMS:
-  Alamofire: 2d95912bf4c34f164fdfc335872e8c312acaea4a
   Charts: f122fb70b19847fa5817d018b77d6c5a2296ab25
-  CocoaLumberjack: 2800c03334042fe80589423c8d80e582dcaec482
   R.swift: d6a5ec2f55a8441dc0ed9f1f8b37d7d11ae85c66
   R.swift.Library: c3af34921024333546e23b70e70d0b4e0cffca75
-  RxAtomic: eacf60db868c96bfd63320e28619fe29c179656f
-  RxCocoa: df63ebf7b9a70d6b4eeea407ed5dd4efc8979749
-  RxFeedback: 640e317bc7f6c4914c39a2063c6d5c0e6c1aa65d
-  RxSwift: 5976ecd04fc2fefd648827c23de5e11157faa973
 
-PODFILE CHECKSUM: 505dd288ec8b8768e3713eed671bd63665d1cb84
+PODFILE CHECKSUM: a5046275c35e1f5e7712312e58125ca2669cf9b8
 
 COCOAPODS: 1.5.3

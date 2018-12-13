@@ -34,24 +34,48 @@ struct ColorsNVSPack {
         static let ColorBlue            = #colorLiteral(red: 0.4039215686, green: 0.6549019608, blue: 0.8549019608, alpha: 1)//67A7DA
         static let ColorGrey            = #colorLiteral(red: 0.5647058824, green: 0.5647058824, blue: 0.5647058824, alpha: 1)//909090
         static let ColorWhite           = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)//FFFFFF
-        static let ColorGreen           = #colorLiteral(red: 0.3725490196, green: 0.6431372549, blue: 0.3411764706, alpha: 1)//64BA04
+        static let ColorGreen           = #colorLiteral(red: 0.3529411765, green: 0.6470588235, blue: 0.2901960784, alpha: 1)//5AA55A
+        static let ColorGreenLight      = #colorLiteral(red: 0.5490196078, green: 0.8392156863, blue: 0.4823529412, alpha: 1)//8CD67B
+        static let ColorGreyDark        = #colorLiteral(red: 0.4823529412, green: 0.4509803922, blue: 0.4196078431, alpha: 1)//7b736b
+        static let ColorPinkLight       = #colorLiteral(red: 1, green: 0.6117647059, blue: 0.6117647059, alpha: 1)//ff9c9c
+         static let ColorOrange         = #colorLiteral(red: 0.968627451, green: 0.5490196078, blue: 0.1607843137, alpha: 1)//f78c29
+        static let ColorPinkDark        = #colorLiteral(red: 0.9058823529, green: 0.3215686275, blue: 0.3529411765, alpha: 1)//e7525a
+        static let ColorGreenBlue       = #colorLiteral(red: 0.5176470588, green: 0.7411764706, blue: 0.7098039216, alpha: 1)//84bdb5
     }
 
 
+    struct AssetUtilization {
+        static let titleFontColor   = Interface.ColorGrey
+        static let holeFontColor    = Interface.ColorBlack
+        static let hole             = Interface.ColorWhite
+    }
+
+    struct LineActivity {
+        static let titleFontColor       = Interface.ColorGrey
+        static let effectiveUptime      = Interface.ColorGreen
+        static let rework               = Interface.ColorGreenLight
+        static let microStoppages       = Interface.ColorGreyDark
+        static let technicalStoppages   = Interface.ColorPinkLight
+        static let changeover           = Interface.ColorOrange
+        static let logisticalStoppages  = Interface.ColorPinkDark
+        static let scheduledDowntime    = Interface.ColorGreenBlue
+        static let slideFontColor       = Interface.ColorBlack
+    }
+
     struct Lineyield {
-        static let titleFontColor    = Interface.ColorGrey
-        static let goodSerie         = Interface.ColorBlue
+        static let titleFontColor   = Interface.ColorGrey
+        static let goodSerie        = Interface.ColorBlue
         static let badSerie         = Interface.ColorClear
         static let holeFontColor    = Interface.ColorWhite
         static let hole             = Interface.ColorGreen
     }
 
     struct ChangeOverAverage {
-        static let titleFontColor    = Interface.ColorGrey
-        static let xAxis    = Interface.ColorGrey
-        static let leftAxis    = Interface.ColorClear
-        static let rightAxis    = Interface.ColorGrey
-        static let dataset  = Interface.ColorBlue
+        static let titleFontColor   = Interface.ColorGrey
+        static let xAxis            = Interface.ColorGrey
+        static let leftAxis         = Interface.ColorClear
+        static let rightAxis        = Interface.ColorGrey
+        static let dataset          = Interface.ColorBlue
     }
 
 }

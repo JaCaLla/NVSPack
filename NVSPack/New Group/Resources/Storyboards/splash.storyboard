@@ -10,24 +10,26 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--SplashVC-->
+        <!--Splash Presenter-->
         <scene sceneID="Efz-RK-iti">
             <objects>
-                <viewController storyboardIdentifier="SplashVC" id="zfB-6J-zxJ" customClass="SplashVC" customModule="NVSPack" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SplashPresenter" id="zfB-6J-zxJ" customClass="SplashPresenter" customModule="NVSPack" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="BgF-N5-D7R">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="splash_background" translatesAutoresizingMaskIntoConstraints="NO" id="sMZ-VL-2Wt">
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JJG-kq-GQC">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                            </imageView>
+                                <connections>
+                                    <segue destination="gm5-ab-JCb" kind="embed" identifier="SplashContainerSegue" id="A5j-ju-7gb"/>
+                                </connections>
+                            </containerView>
                         </subviews>
-                        <color key="backgroundColor" red="1" green="0.2527923882" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstAttribute="bottom" secondItem="sMZ-VL-2Wt" secondAttribute="bottom" id="IOg-8z-0cB"/>
-                            <constraint firstAttribute="trailing" secondItem="sMZ-VL-2Wt" secondAttribute="trailing" id="L37-jO-Uv1"/>
-                            <constraint firstItem="sMZ-VL-2Wt" firstAttribute="leading" secondItem="BgF-N5-D7R" secondAttribute="leading" id="avs-Ku-qRm"/>
-                            <constraint firstItem="sMZ-VL-2Wt" firstAttribute="top" secondItem="BgF-N5-D7R" secondAttribute="top" id="lJC-bP-oQW"/>
+                            <constraint firstAttribute="bottom" secondItem="JJG-kq-GQC" secondAttribute="bottom" id="4J8-I7-Lbb"/>
+                            <constraint firstItem="JJG-kq-GQC" firstAttribute="leading" secondItem="FYn-CH-OJK" secondAttribute="leading" id="Lxu-zz-xfh"/>
+                            <constraint firstItem="JJG-kq-GQC" firstAttribute="top" secondItem="BgF-N5-D7R" secondAttribute="top" id="vVG-xJ-caV"/>
+                            <constraint firstItem="FYn-CH-OJK" firstAttribute="trailing" secondItem="JJG-kq-GQC" secondAttribute="trailing" id="yWd-BM-IMB"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="FYn-CH-OJK"/>
                     </view>
@@ -36,8 +38,38 @@
             </objects>
             <point key="canvasLocation" x="52" y="374.66266866566718"/>
         </scene>
+        <!--Splash View Content-->
+        <scene sceneID="NG7-6H-5Wa">
+            <objects>
+                <viewController id="gm5-ab-JCb" customClass="SplashViewContent" customModule="NVSPack" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Nw5-Wa-S0e">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Novartis" translatesAutoresizingMaskIntoConstraints="NO" id="gGv-7k-6Rw">
+                                <rect key="frame" x="40" y="259.5" width="295" height="148"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="295" id="RzL-n9-u8b"/>
+                                    <constraint firstAttribute="height" constant="148" id="ac6-ok-NZa"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="gGv-7k-6Rw" firstAttribute="centerY" secondItem="Nw5-Wa-S0e" secondAttribute="centerY" id="WU1-4d-40m"/>
+                            <constraint firstItem="gGv-7k-6Rw" firstAttribute="centerX" secondItem="Nw5-Wa-S0e" secondAttribute="centerX" id="bu4-sa-g3b"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="imgNovartisLogo" destination="gGv-7k-6Rw" id="hec-fx-mc7"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5Bz-do-xW9" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="52" y="1142.8785607196403"/>
+        </scene>
     </scenes>
     <resources>
-        <image name="splash_background" width="414" height="736"/>
+        <image name="Novartis" width="615" height="148"/>
     </resources>
 </document>

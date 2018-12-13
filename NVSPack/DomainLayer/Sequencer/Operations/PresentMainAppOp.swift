@@ -18,11 +18,20 @@ class PresentMainAppOperation: ConcurrentOperation {
     override func main() {
         DispatchQueue.main.async {
 
+            let homePresenter = HomePresenter.instantiate(fromAppStoryboard: .home)
+            homePresenter.modalPresentationStyle = .custom
+            homePresenter.modalTransitionStyle = .crossDissolve
+/*
             let appDelegate  = UIApplication.shared.delegate as! AppDelegate
-            appDelegate.window!.rootViewController = HomePresenter.instantiate(fromAppStoryboard: .home)
+            appDelegate.window!.rootViewController = homePresenter
             //appDelegate.window?.makeKeyAndVisible()
-
-            self.state = .finished
+*/
+            if let topController = UIApplication.topViewController() {
+                topController.present(homePresenter, animated: true, completion: { [weak self] in
+                    guard let weakSelf = self else { return }
+                    weakSelf.state = .finished
+                } )
+            }
         }
     }
 }

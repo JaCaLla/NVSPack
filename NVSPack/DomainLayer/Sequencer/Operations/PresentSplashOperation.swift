@@ -18,7 +18,7 @@ class PresentSplashOperation: ConcurrentOperation {
     override func main() {
         DispatchQueue.main.async {
             let appDelegate  = UIApplication.shared.delegate as! AppDelegate
-            let splashVC = SplashVC.instantiate(fromAppStoryboard: .splash)
+            let splashVC = SplashPresenter.instantiate(fromAppStoryboard: .splash)
             splashVC.onAnimationDoneAction = { [weak self] in
 
                 guard let weakSelf = self else { return }

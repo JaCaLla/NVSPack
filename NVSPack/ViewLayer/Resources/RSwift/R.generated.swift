@@ -53,8 +53,16 @@ struct R: Rswift.Validatable {
     fileprivate init() {}
   }
   
-  /// This `R.image` struct is generated, and contains static references to 0 images.
+  /// This `R.image` struct is generated, and contains static references to 1 images.
   struct image {
+    /// Image `Novartis`.
+    static let novartis = Rswift.ImageResource(bundle: R.hostingBundle, name: "Novartis")
+    
+    /// `UIImage(named: "Novartis", bundle: ..., traitCollection: ...)`
+    static func novartis(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.novartis, compatibleWith: traitCollection)
+    }
+    
     fileprivate init() {}
   }
   
@@ -68,8 +76,23 @@ struct R: Rswift.Validatable {
     fileprivate init() {}
   }
   
-  /// This `R.segue` struct is generated, and contains static references to 5 view controllers.
+  /// This `R.segue` struct is generated, and contains static references to 8 view controllers.
   struct segue {
+    /// This struct is generated for `AssetUtilizationPresenter`, and contains static references to 1 segues.
+    struct assetUtilizationPresenter {
+      /// Segue identifier `AssetUtilizationContainerSegue`.
+      static let assetUtilizationContainerSegue: Rswift.StoryboardSegueIdentifier<UIKit.UIStoryboardSegue, AssetUtilizationPresenter, AssetUtilizationViewContent> = Rswift.StoryboardSegueIdentifier(identifier: "AssetUtilizationContainerSegue")
+      
+      /// Optionally returns a typed version of segue `AssetUtilizationContainerSegue`.
+      /// Returns nil if either the segue identifier, the source, destination, or segue types don't match.
+      /// For use inside `prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?)`.
+      static func assetUtilizationContainerSegue(segue: UIKit.UIStoryboardSegue) -> Rswift.TypedStoryboardSegueInfo<UIKit.UIStoryboardSegue, AssetUtilizationPresenter, AssetUtilizationViewContent>? {
+        return Rswift.TypedStoryboardSegueInfo(segueIdentifier: R.segue.assetUtilizationPresenter.assetUtilizationContainerSegue, segue: segue)
+      }
+      
+      fileprivate init() {}
+    }
+    
     /// This struct is generated for `ChangeoverPresenter`, and contains static references to 1 segues.
     struct changeoverPresenter {
       /// Segue identifier `ChangeOverContainerSegue`.
@@ -115,6 +138,21 @@ struct R: Rswift.Validatable {
       fileprivate init() {}
     }
     
+    /// This struct is generated for `LineActivityPresenter`, and contains static references to 1 segues.
+    struct lineActivityPresenter {
+      /// Segue identifier `LineActivityContainerSegue`.
+      static let lineActivityContainerSegue: Rswift.StoryboardSegueIdentifier<UIKit.UIStoryboardSegue, LineActivityPresenter, LineActivityViewContent> = Rswift.StoryboardSegueIdentifier(identifier: "LineActivityContainerSegue")
+      
+      /// Optionally returns a typed version of segue `LineActivityContainerSegue`.
+      /// Returns nil if either the segue identifier, the source, destination, or segue types don't match.
+      /// For use inside `prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?)`.
+      static func lineActivityContainerSegue(segue: UIKit.UIStoryboardSegue) -> Rswift.TypedStoryboardSegueInfo<UIKit.UIStoryboardSegue, LineActivityPresenter, LineActivityViewContent>? {
+        return Rswift.TypedStoryboardSegueInfo(segueIdentifier: R.segue.lineActivityPresenter.lineActivityContainerSegue, segue: segue)
+      }
+      
+      fileprivate init() {}
+    }
+    
     /// This struct is generated for `LineyieldPresenter`, and contains static references to 1 segues.
     struct lineyieldPresenter {
       /// Segue identifier `LineyieldContainerSegue`.
@@ -125,6 +163,21 @@ struct R: Rswift.Validatable {
       /// For use inside `prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?)`.
       static func lineyieldContainerSegue(segue: UIKit.UIStoryboardSegue) -> Rswift.TypedStoryboardSegueInfo<UIKit.UIStoryboardSegue, LineyieldPresenter, LineyieldViewContent>? {
         return Rswift.TypedStoryboardSegueInfo(segueIdentifier: R.segue.lineyieldPresenter.lineyieldContainerSegue, segue: segue)
+      }
+      
+      fileprivate init() {}
+    }
+    
+    /// This struct is generated for `SplashPresenter`, and contains static references to 1 segues.
+    struct splashPresenter {
+      /// Segue identifier `SplashContainerSegue`.
+      static let splashContainerSegue: Rswift.StoryboardSegueIdentifier<UIKit.UIStoryboardSegue, SplashPresenter, SplashViewContent> = Rswift.StoryboardSegueIdentifier(identifier: "SplashContainerSegue")
+      
+      /// Optionally returns a typed version of segue `SplashContainerSegue`.
+      /// Returns nil if either the segue identifier, the source, destination, or segue types don't match.
+      /// For use inside `prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?)`.
+      static func splashContainerSegue(segue: UIKit.UIStoryboardSegue) -> Rswift.TypedStoryboardSegueInfo<UIKit.UIStoryboardSegue, SplashPresenter, SplashViewContent>? {
+        return Rswift.TypedStoryboardSegueInfo(segueIdentifier: R.segue.splashPresenter.splashContainerSegue, segue: segue)
       }
       
       fileprivate init() {}
@@ -184,8 +237,12 @@ struct R: Rswift.Validatable {
   
   /// This `R.string` struct is generated, and contains static references to 1 localization tables.
   struct string {
-    /// This `R.string.localized` struct is generated, and contains static references to 5 localization keys.
+    /// This `R.string.localized` struct is generated, and contains static references to 14 localization keys.
     struct localized {
+      /// en translation: Asset Utilization
+      /// 
+      /// Locales: en
+      static let assetutilization_title = Rswift.StringResource(key: "assetutilization_title", tableName: "Localized", bundle: R.hostingBundle, locales: ["en"], comment: nil)
       /// en translation: Cairo
       /// 
       /// Locales: en
@@ -194,18 +251,57 @@ struct R: Rswift.Validatable {
       /// 
       /// Locales: en
       static let changeover_title = Rswift.StringResource(key: "changeover_title", tableName: "Localized", bundle: R.hostingBundle, locales: ["en"], comment: nil)
+      /// en translation: Changeover
+      /// 
+      /// Locales: en
+      static let lineactivity_changeover = Rswift.StringResource(key: "lineactivity_changeover", tableName: "Localized", bundle: R.hostingBundle, locales: ["en"], comment: nil)
       /// en translation: Current Month
       /// 
       /// Locales: en
       static let time_selector_current_month = Rswift.StringResource(key: "time_selector_current_month", tableName: "Localized", bundle: R.hostingBundle, locales: ["en"], comment: nil)
+      /// en translation: Effective Uptime
+      /// 
+      /// Locales: en
+      static let lineactivity_effective_uptime = Rswift.StringResource(key: "lineactivity_effective_uptime", tableName: "Localized", bundle: R.hostingBundle, locales: ["en"], comment: nil)
       /// en translation: Last Month
       /// 
       /// Locales: en
       static let time_selector_last_month = Rswift.StringResource(key: "time_selector_last_month", tableName: "Localized", bundle: R.hostingBundle, locales: ["en"], comment: nil)
+      /// en translation: Line Activity
+      /// 
+      /// Locales: en
+      static let lineactivity_title = Rswift.StringResource(key: "lineactivity_title", tableName: "Localized", bundle: R.hostingBundle, locales: ["en"], comment: nil)
+      /// en translation: Logistical Stoppage
+      /// 
+      /// Locales: en
+      static let lineactivity_logistical_stoppage = Rswift.StringResource(key: "lineactivity_logistical_stoppage", tableName: "Localized", bundle: R.hostingBundle, locales: ["en"], comment: nil)
+      /// en translation: Micro Stoppages
+      /// 
+      /// Locales: en
+      static let lineactivity_micro_stoppages = Rswift.StringResource(key: "lineactivity_micro_stoppages", tableName: "Localized", bundle: R.hostingBundle, locales: ["en"], comment: nil)
+      /// en translation: Rework
+      /// 
+      /// Locales: en
+      static let lineactivity_rework = Rswift.StringResource(key: "lineactivity_rework", tableName: "Localized", bundle: R.hostingBundle, locales: ["en"], comment: nil)
+      /// en translation: Scheduled Downtime
+      /// 
+      /// Locales: en
+      static let lineactivity_scheduled_downtime = Rswift.StringResource(key: "lineactivity_scheduled_downtime", tableName: "Localized", bundle: R.hostingBundle, locales: ["en"], comment: nil)
+      /// en translation: Technical Stoppages
+      /// 
+      /// Locales: en
+      static let lineactivity_technical_stoppages = Rswift.StringResource(key: "lineactivity_technical_stoppages", tableName: "Localized", bundle: R.hostingBundle, locales: ["en"], comment: nil)
       /// en translation: This week
       /// 
       /// Locales: en
       static let time_selector_this_week = Rswift.StringResource(key: "time_selector_this_week", tableName: "Localized", bundle: R.hostingBundle, locales: ["en"], comment: nil)
+      
+      /// en translation: Asset Utilization
+      /// 
+      /// Locales: en
+      static func assetutilization_title(_: Void = ()) -> String {
+        return NSLocalizedString("assetutilization_title", tableName: "Localized", bundle: R.hostingBundle, comment: "")
+      }
       
       /// en translation: Cairo
       /// 
@@ -221,6 +317,13 @@ struct R: Rswift.Validatable {
         return NSLocalizedString("changeover_title", tableName: "Localized", bundle: R.hostingBundle, comment: "")
       }
       
+      /// en translation: Changeover
+      /// 
+      /// Locales: en
+      static func lineactivity_changeover(_: Void = ()) -> String {
+        return NSLocalizedString("lineactivity_changeover", tableName: "Localized", bundle: R.hostingBundle, comment: "")
+      }
+      
       /// en translation: Current Month
       /// 
       /// Locales: en
@@ -228,11 +331,60 @@ struct R: Rswift.Validatable {
         return NSLocalizedString("time_selector_current_month", tableName: "Localized", bundle: R.hostingBundle, comment: "")
       }
       
+      /// en translation: Effective Uptime
+      /// 
+      /// Locales: en
+      static func lineactivity_effective_uptime(_: Void = ()) -> String {
+        return NSLocalizedString("lineactivity_effective_uptime", tableName: "Localized", bundle: R.hostingBundle, comment: "")
+      }
+      
       /// en translation: Last Month
       /// 
       /// Locales: en
       static func time_selector_last_month(_: Void = ()) -> String {
         return NSLocalizedString("time_selector_last_month", tableName: "Localized", bundle: R.hostingBundle, comment: "")
+      }
+      
+      /// en translation: Line Activity
+      /// 
+      /// Locales: en
+      static func lineactivity_title(_: Void = ()) -> String {
+        return NSLocalizedString("lineactivity_title", tableName: "Localized", bundle: R.hostingBundle, comment: "")
+      }
+      
+      /// en translation: Logistical Stoppage
+      /// 
+      /// Locales: en
+      static func lineactivity_logistical_stoppage(_: Void = ()) -> String {
+        return NSLocalizedString("lineactivity_logistical_stoppage", tableName: "Localized", bundle: R.hostingBundle, comment: "")
+      }
+      
+      /// en translation: Micro Stoppages
+      /// 
+      /// Locales: en
+      static func lineactivity_micro_stoppages(_: Void = ()) -> String {
+        return NSLocalizedString("lineactivity_micro_stoppages", tableName: "Localized", bundle: R.hostingBundle, comment: "")
+      }
+      
+      /// en translation: Rework
+      /// 
+      /// Locales: en
+      static func lineactivity_rework(_: Void = ()) -> String {
+        return NSLocalizedString("lineactivity_rework", tableName: "Localized", bundle: R.hostingBundle, comment: "")
+      }
+      
+      /// en translation: Scheduled Downtime
+      /// 
+      /// Locales: en
+      static func lineactivity_scheduled_downtime(_: Void = ()) -> String {
+        return NSLocalizedString("lineactivity_scheduled_downtime", tableName: "Localized", bundle: R.hostingBundle, comment: "")
+      }
+      
+      /// en translation: Technical Stoppages
+      /// 
+      /// Locales: en
+      static func lineactivity_technical_stoppages(_: Void = ()) -> String {
+        return NSLocalizedString("lineactivity_technical_stoppages", tableName: "Localized", bundle: R.hostingBundle, comment: "")
       }
       
       /// en translation: This week
@@ -274,6 +426,7 @@ struct _R: Rswift.Validatable {
     static func validate() throws {
       try splash.validate()
       try home.validate()
+      try launchScreen.validate()
     }
     
     struct home: Rswift.StoryboardResourceType, Rswift.Validatable {
@@ -292,11 +445,15 @@ struct _R: Rswift.Validatable {
       fileprivate init() {}
     }
     
-    struct launchScreen: Rswift.StoryboardResourceWithInitialControllerType {
+    struct launchScreen: Rswift.StoryboardResourceWithInitialControllerType, Rswift.Validatable {
       typealias InitialController = UIKit.UIViewController
       
       let bundle = R.hostingBundle
       let name = "LaunchScreen"
+      
+      static func validate() throws {
+        if UIKit.UIImage(named: "Novartis") == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'Novartis' is used in storyboard 'LaunchScreen', but couldn't be loaded.") }
+      }
       
       fileprivate init() {}
     }
@@ -313,15 +470,15 @@ struct _R: Rswift.Validatable {
     struct splash: Rswift.StoryboardResourceType, Rswift.Validatable {
       let bundle = R.hostingBundle
       let name = "splash"
-      let splashVC = StoryboardViewControllerResource<SplashVC>(identifier: "SplashVC")
+      let splashPresenter = StoryboardViewControllerResource<SplashPresenter>(identifier: "SplashPresenter")
       
-      func splashVC(_: Void = ()) -> SplashVC? {
-        return UIKit.UIStoryboard(resource: self).instantiateViewController(withResource: splashVC)
+      func splashPresenter(_: Void = ()) -> SplashPresenter? {
+        return UIKit.UIStoryboard(resource: self).instantiateViewController(withResource: splashPresenter)
       }
       
       static func validate() throws {
-        if UIKit.UIImage(named: "splash_background") == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'splash_background' is used in storyboard 'splash', but couldn't be loaded.") }
-        if _R.storyboard.splash().splashVC() == nil { throw Rswift.ValidationError(description:"[R.swift] ViewController with identifier 'splashVC' could not be loaded from storyboard 'splash' as 'SplashVC'.") }
+        if UIKit.UIImage(named: "Novartis") == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'Novartis' is used in storyboard 'splash', but couldn't be loaded.") }
+        if _R.storyboard.splash().splashPresenter() == nil { throw Rswift.ValidationError(description:"[R.swift] ViewController with identifier 'splashPresenter' could not be loaded from storyboard 'splash' as 'SplashPresenter'.") }
       }
       
       fileprivate init() {}

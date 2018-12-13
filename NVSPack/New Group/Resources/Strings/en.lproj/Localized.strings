@@ -10,5 +10,16 @@
 "time_selector_current_month" = "Current Month";
 "time_selector_last_month" = "Last Month";
 
+"assetutilization_title" = "Asset Utilization";
+
+"lineactivity_title" = "Line Activity";
+"lineactivity_effective_uptime" = "Effective Uptime";
+"lineactivity_rework" = "Rework";
+"lineactivity_micro_stoppages" = "Micro Stoppages";
+"lineactivity_technical_stoppages" = "Technical Stoppages";
+"lineactivity_changeover" = "Changeover";
+"lineactivity_logistical_stoppage" = "Logistical Stoppage";
+"lineactivity_scheduled_downtime" = "Scheduled Downtime";
+
 "lineyield_title"  = "Cairo";
 "changeover_title" = "Changeover";

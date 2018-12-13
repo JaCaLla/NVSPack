@@ -11,18 +11,18 @@ target 'NVSPack' do
     pod 'Charts'
 
     # Networking
-    pod 'Alamofire', '~> 4.5.0'
+    #pod 'Alamofire', '~> 4.5.0'
     
     # Resources
     pod 'R.swift'
      
     # Logging
-    pod 'CocoaLumberjack/Swift', '~> 3.2.0'
+    #pod 'CocoaLumberjack/Swift', '~> 3.2.0'
     
     #Reactive
-    pod 'RxSwift'
-    pod 'RxCocoa'
-    pod 'RxFeedback'
+    #pod 'RxSwift'
+    #pod 'RxCocoa'
+    #pod 'RxFeedback'
 
 
   target 'NVSPackTests' do

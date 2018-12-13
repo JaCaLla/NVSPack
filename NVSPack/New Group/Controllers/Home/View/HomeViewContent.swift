@@ -16,7 +16,7 @@ class HomeViewContent: UITableViewController {
     // MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        self.tableView.allowsSelection = false
         // Do any additional setup after loading the view.
     }
     

@@ -11,6 +11,18 @@ import UIKit
 struct FontsNVSPack {
 
     // MARK: - LineYield
+    struct AssetUtilization {
+        static let titleFont    = TextStyle.h24Custom.font
+        static let holeFont    = TextStyle.h40Custom.font
+    }
+
+    // MARK: - LineActivity
+    struct LineActivity {
+        static let titleFont    = TextStyle.h24Custom.font
+        static let slideFont    = TextStyle.h12Custom.font
+    }
+
+    // MARK: - LineYield
     struct Lineyield {
         static let titleFont    = TextStyle.h24Custom.font
         static let holeFont    = TextStyle.h20Custom.font
