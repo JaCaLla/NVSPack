@@ -13,6 +13,7 @@ struct R: Rswift.Validatable {
   fileprivate static let hostingBundle = Bundle(for: R.Class.self)
   
   static func validate() throws {
+    try font.validate()
     try intern.validate()
   }
   
@@ -21,13 +22,34 @@ struct R: Rswift.Validatable {
     fileprivate init() {}
   }
   
-  /// This `R.file` struct is generated, and contains static references to 0 files.
+  /// This `R.file` struct is generated, and contains static references to 1 files.
   struct file {
+    /// Resource file `Calibri.otf`.
+    static let calibriOtf = Rswift.FileResource(bundle: R.hostingBundle, name: "Calibri", pathExtension: "otf")
+    
+    /// `bundle.url(forResource: "Calibri", withExtension: "otf")`
+    static func calibriOtf(_: Void = ()) -> Foundation.URL? {
+      let fileResource = R.file.calibriOtf
+      return fileResource.bundle.url(forResource: fileResource)
+    }
+    
     fileprivate init() {}
   }
   
-  /// This `R.font` struct is generated, and contains static references to 0 fonts.
-  struct font {
+  /// This `R.font` struct is generated, and contains static references to 1 fonts.
+  struct font: Rswift.Validatable {
+    /// Font `Calibri`.
+    static let calibri = Rswift.FontResource(fontName: "Calibri")
+    
+    /// `UIFont(name: "Calibri", size: ...)`
+    static func calibri(size: CGFloat) -> UIKit.UIFont? {
+      return UIKit.UIFont(resource: calibri, size: size)
+    }
+    
+    static func validate() throws {
+      if R.font.calibri(size: 42) == nil { throw Rswift.ValidationError(description:"[R.swift] Font 'Calibri' could not be loaded, is 'Calibri.otf' added to the UIAppFonts array in this targets Info.plist?") }
+    }
+    
     fileprivate init() {}
   }
   
@@ -100,8 +122,25 @@ struct R: Rswift.Validatable {
     fileprivate init() {}
   }
   
-  /// This `R.string` struct is generated, and contains static references to 0 localization tables.
+  /// This `R.string` struct is generated, and contains static references to 1 localization tables.
   struct string {
+    /// This `R.string.localized` struct is generated, and contains static references to 1 localization keys.
+    struct localized {
+      /// en translation: Changeover
+      /// 
+      /// Locales: en
+      static let changeover_title = Rswift.StringResource(key: "changeover_title", tableName: "Localized", bundle: R.hostingBundle, locales: ["en"], comment: nil)
+      
+      /// en translation: Changeover
+      /// 
+      /// Locales: en
+      static func changeover_title(_: Void = ()) -> String {
+        return NSLocalizedString("changeover_title", tableName: "Localized", bundle: R.hostingBundle, comment: "")
+      }
+      
+      fileprivate init() {}
+    }
+    
     fileprivate init() {}
   }
   

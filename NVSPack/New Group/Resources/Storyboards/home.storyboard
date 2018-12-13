@@ -255,25 +255,35 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lIi-p1-UOR" customClass="HorizontalBarChartView" customModule="Charts">
-                                <rect key="frame" x="5" y="5" width="365" height="289.5"/>
+                                <rect key="frame" x="5" y="36" width="365" height="258.5"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kON-GB-tye">
+                                <rect key="frame" x="5" y="5" width="365" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <constraints>
-                            <constraint firstItem="lIi-p1-UOR" firstAttribute="top" secondItem="PCo-UB-Yvy" secondAttribute="top" constant="5" id="NaY-nf-6aM"/>
+                            <constraint firstItem="kON-GB-tye" firstAttribute="leading" secondItem="PCo-UB-Yvy" secondAttribute="leading" constant="5" id="1UZ-th-bpA"/>
                             <constraint firstItem="PCo-UB-Yvy" firstAttribute="trailing" secondItem="lIi-p1-UOR" secondAttribute="trailing" constant="5" id="WQC-1o-mrD"/>
+                            <constraint firstItem="PCo-UB-Yvy" firstAttribute="trailing" secondItem="kON-GB-tye" secondAttribute="trailing" constant="5" id="i5V-TE-aPi"/>
+                            <constraint firstItem="lIi-p1-UOR" firstAttribute="top" secondItem="kON-GB-tye" secondAttribute="bottom" constant="10" id="jHa-pw-tX5"/>
                             <constraint firstItem="PCo-UB-Yvy" firstAttribute="bottom" secondItem="lIi-p1-UOR" secondAttribute="bottom" constant="5" id="tke-E4-8Yv"/>
                             <constraint firstItem="lIi-p1-UOR" firstAttribute="leading" secondItem="PCo-UB-Yvy" secondAttribute="leading" constant="5" id="ytC-N9-86y"/>
+                            <constraint firstItem="kON-GB-tye" firstAttribute="top" secondItem="PCo-UB-Yvy" secondAttribute="top" constant="5" id="zwI-Nf-wXG"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="PCo-UB-Yvy"/>
                     </view>
                     <connections>
                         <outlet property="chartView" destination="lIi-p1-UOR" id="mhe-AF-C3F"/>
+                        <outlet property="lblTitle" destination="kON-GB-tye" id="w2t-Ta-iGG"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3gS-d3-a06" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1790" y="647"/>
+            <point key="canvasLocation" x="1789.5999999999999" y="646.77661169415296"/>
         </scene>
     </scenes>
 </document>

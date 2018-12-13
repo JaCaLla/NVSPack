@@ -29,6 +29,11 @@
 		BF8ED62921C22DBA00E62CFC /* UTDataset.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF8ED62821C22DBA00E62CFC /* UTDataset.swift */; };
 		BF8ED62B21C22FE100E62CFC /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF8ED62A21C22FE100E62CFC /* DataManager.swift */; };
 		BF8ED62E21C2341E00E62CFC /* DataCollectorUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF8ED62D21C2341E00E62CFC /* DataCollectorUseCase.swift */; };
+		BF8ED63521C2657E00E62CFC /* ColorsNVSPack.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF8ED63321C2657E00E62CFC /* ColorsNVSPack.swift */; };
+		BF8ED63621C2657E00E62CFC /* FontsNVSPack.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF8ED63421C2657E00E62CFC /* FontsNVSPack.swift */; };
+		BF8ED63D21C2692700E62CFC /* Strings.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF8ED63C21C2692700E62CFC /* Strings.swift */; };
+		BF8ED63F21C26FEB00E62CFC /* Calibri.otf in Resources */ = {isa = PBXBuildFile; fileRef = BF8ED63E21C26E3300E62CFC /* Calibri.otf */; };
+		BF8ED64021C271D000E62CFC /* Localized.strings in Resources */ = {isa = PBXBuildFile; fileRef = BF8ED64221C271D000E62CFC /* Localized.strings */; };
 		BF9DC4CA21C122DB00C2EE57 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF9DC4C921C122DB00C2EE57 /* AppDelegate.swift */; };
 		BF9DC4CC21C122DB00C2EE57 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF9DC4CB21C122DB00C2EE57 /* ViewController.swift */; };
 		BF9DC4CF21C122DB00C2EE57 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BF9DC4CD21C122DB00C2EE57 /* Main.storyboard */; };
@@ -70,6 +75,11 @@
 		BF8ED62821C22DBA00E62CFC /* UTDataset.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UTDataset.swift; sourceTree = "<group>"; };
 		BF8ED62A21C22FE100E62CFC /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
 		BF8ED62D21C2341E00E62CFC /* DataCollectorUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataCollectorUseCase.swift; sourceTree = "<group>"; };
+		BF8ED63321C2657E00E62CFC /* ColorsNVSPack.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorsNVSPack.swift; sourceTree = "<group>"; };
+		BF8ED63421C2657E00E62CFC /* FontsNVSPack.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FontsNVSPack.swift; sourceTree = "<group>"; };
+		BF8ED63C21C2692700E62CFC /* Strings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Strings.swift; sourceTree = "<group>"; };
+		BF8ED63E21C26E3300E62CFC /* Calibri.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Calibri.otf; sourceTree = "<group>"; };
+		BF8ED64121C271D000E62CFC /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localized.strings; sourceTree = "<group>"; };
 		BF9DC4C621C122DB00C2EE57 /* NVSPack.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NVSPack.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BF9DC4C921C122DB00C2EE57 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BF9DC4CB21C122DB00C2EE57 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -119,6 +129,8 @@
 		BF67C94D21C13C0D000C2D8E /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				BF8ED63721C266C900E62CFC /* Fonts */,
+				BF8ED63021C264A000E62CFC /* Strings */,
 				BF8ED62F21C25FBD00E62CFC /* Styles */,
 				BF9DC4D021C122DD00C2EE57 /* Assets.xcassets */,
 				BF67C95121C13C36000C2D8E /* Storyboards */,
@@ -264,8 +276,27 @@
 		BF8ED62F21C25FBD00E62CFC /* Styles */ = {
 			isa = PBXGroup;
 			children = (
+				BF8ED63321C2657E00E62CFC /* ColorsNVSPack.swift */,
+				BF8ED63421C2657E00E62CFC /* FontsNVSPack.swift */,
 			);
 			path = Styles;
+			sourceTree = "<group>";
+		};
+		BF8ED63021C264A000E62CFC /* Strings */ = {
+			isa = PBXGroup;
+			children = (
+				BF8ED63C21C2692700E62CFC /* Strings.swift */,
+				BF8ED64221C271D000E62CFC /* Localized.strings */,
+			);
+			path = Strings;
+			sourceTree = "<group>";
+		};
+		BF8ED63721C266C900E62CFC /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				BF8ED63E21C26E3300E62CFC /* Calibri.otf */,
+			);
+			path = Fonts;
 			sourceTree = "<group>";
 		};
 		BF9DC4BD21C122DB00C2EE57 = {
@@ -418,6 +449,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BF8ED63F21C26FEB00E62CFC /* Calibri.otf in Resources */,
+				BF8ED64021C271D000E62CFC /* Localized.strings in Resources */,
 				BF67C96A21C1406D000C2D8E /* home.storyboard in Resources */,
 				BF9DC4D421C122DD00C2EE57 /* LaunchScreen.storyboard in Resources */,
 				BF9DC4D121C122DD00C2EE57 /* Assets.xcassets in Resources */,
@@ -549,9 +582,12 @@
 				BF8ED62521C22C3500E62CFC /* Dataset.swift in Sources */,
 				BF9DC4CA21C122DB00C2EE57 /* AppDelegate.swift in Sources */,
 				BF229A1521C18F0A001A8D49 /* ChangeoverViewContent.swift in Sources */,
+				BF8ED63621C2657E00E62CFC /* FontsNVSPack.swift in Sources */,
 				BF8ED62B21C22FE100E62CFC /* DataManager.swift in Sources */,
 				BF67C95021C13C30000C2D8E /* R.generated.swift in Sources */,
 				BF67C96821C13F75000C2D8E /* BaseViewController.swift in Sources */,
+				BF8ED63D21C2692700E62CFC /* Strings.swift in Sources */,
+				BF8ED63521C2657E00E62CFC /* ColorsNVSPack.swift in Sources */,
 				BF67C95D21C13E00000C2D8E /* PresentSplashOperation.swift in Sources */,
 				BF67C97021C14C1F000C2D8E /* HomeViewContent.swift in Sources */,
 				BF67C95921C13D4D000C2D8E /* StartUpAppSequencer.swift in Sources */,
@@ -583,6 +619,14 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		BF8ED64221C271D000E62CFC /* Localized.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BF8ED64121C271D000E62CFC /* en */,
+			);
+			name = Localized.strings;
+			sourceTree = "<group>";
+		};
 		BF9DC4CD21C122DB00C2EE57 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -606,6 +650,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -667,6 +712,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";

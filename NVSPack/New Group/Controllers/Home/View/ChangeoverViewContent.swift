@@ -13,7 +13,8 @@ class ChangeoverViewContent: DemoBaseViewController {
 
     // MARK: - IBOutlet
     @IBOutlet weak var chartView: HorizontalBarChartView!
-
+    @IBOutlet weak var lblTitle: UILabel!
+    
     // MARK: - Public attributes
     var dataset: Dataset? {
         didSet {
@@ -21,93 +22,59 @@ class ChangeoverViewContent: DemoBaseViewController {
         }
     }
 
+    // MARK: - Private attributes
+    fileprivate var spaceForBar = 10.0
+
+    // MARK: - Lifcecycle
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.setupViewContent()
+    }
 
-        // Do any additional setup after loading the view.
-        self.title = "Horizontal Bar Char"
-        self.options = [.toggleValues,
-                        .toggleIcons,
-                        .toggleHighlight,
-                        .animateX,
-                        .animateY,
-                        .animateXY,
-                        .saveToGallery,
-                        .togglePinchZoom,
-                        .toggleAutoScaleMinMax,
-                        .toggleData,
-                        .toggleBarBorders]
+    func setupViewContent() {
+        lblTitle.text = R.string.localized.changeover_title()
+        lblTitle.numberOfLines = 1
+        lblTitle.font = FontsNVSPack.ChangeOverAverage.titleFont
+        lblTitle.textColor = ColorsNVSPack.ChangeOverAverage.titleFontColor
+        lblTitle.textAlignment = .center
 
         self.setup(barLineChartView: chartView)
 
-        chartView.delegate = self
+        chartView.xAxis.valueFormatter = self //extension ChangeoverViewContent: IAxisValueFormatter
 
-        chartView.xAxis.valueFormatter = self;
-
-        chartView.drawBarShadowEnabled = false
-        chartView.drawValueAboveBarEnabled = true
-
-        chartView.maxVisibleCount = 60
-
+        // Left axis
         let xAxis = chartView.xAxis
         xAxis.labelPosition = .bottom
-        xAxis.labelFont = .systemFont(ofSize: 10)
+        xAxis.labelFont = FontsNVSPack.ChangeOverAverage.xAxis
+        xAxis.labelTextColor = ColorsNVSPack.ChangeOverAverage.xAxis
         xAxis.drawAxisLineEnabled = true
+        xAxis.drawGridLinesEnabled = false
         xAxis.granularity = 10
 
+        // Top axis
         let leftAxis = chartView.leftAxis
         leftAxis.labelFont = .systemFont(ofSize: 10)
-        leftAxis.drawAxisLineEnabled = true
-        leftAxis.drawGridLinesEnabled = true
+        leftAxis.drawAxisLineEnabled = false//true
+        leftAxis.drawGridLinesEnabled = false//true
+        leftAxis.labelTextColor = ColorsNVSPack.ChangeOverAverage.leftAxis
         leftAxis.axisMinimum = 0
 
+        // Bottom axis
         let rightAxis = chartView.rightAxis
         rightAxis.enabled = true
-        rightAxis.labelFont = .systemFont(ofSize: 10)
-        rightAxis.drawAxisLineEnabled = true
+        rightAxis.labelFont = FontsNVSPack.ChangeOverAverage.rightAxis
+        rightAxis.drawAxisLineEnabled = false//true
+        rightAxis.labelTextColor = ColorsNVSPack.ChangeOverAverage.rightAxis
         rightAxis.axisMinimum = 0
 
-        let l = chartView.legend
-        l.horizontalAlignment = .left
-        l.verticalAlignment = .bottom
-        l.orientation = .horizontal
-        l.drawInside = false
-        l.form = .square
-        l.formSize = 8
-        l.font = UIFont(name: "HelveticaNeue-Light", size: 11)!
-        l.xEntrySpace = 4
-        //        chartView.legend = l
-
+        chartView.legend.enabled = false
         chartView.fitBars = true
 
 
         chartView.animate(yAxisDuration: 2.5)
 
-       // self.updateChartData()
     }
-/*
-    override func updateChartData(dataset: Dataset) {
-        if self.shouldHideData {
-            chartView.data = nil
-            return
-        }
-
-        //self.setDataCount(Int(sliderX.value) + 1, range: UInt32(sliderY.value))
-        self.setDataCount(4, range: 300, dataset:dataset)
-    }*/
-
-
-
-
-/*
-    override func optionTapped(_ option: Option) {
-        super.handleOption(option, forChartView: chartView)
-    }
-*/
     // MARK: - Actions
-
-
-
 
     // MARK: - Private/Internal
     private func refreshViewContent() {
@@ -116,32 +83,29 @@ class ChangeoverViewContent: DemoBaseViewController {
             return
         }
 
-        //self.setDataCount(Int(sliderX.value) + 1, range: UInt32(sliderY.value))
-        self.setDataCount(4, range: 300, dataset:uwpDataset)
+        self.setDataCount(dataset:uwpDataset)
     }
 
-    var spaceForBar = 10.0
-
-    func setDataCount(_ count: Int, range: UInt32, dataset:Dataset) {
+    func setDataCount( dataset:Dataset) {
 
         let barChartDataEntries:[BarChartDataEntry] = dataset.series.map {
             let serie = $0
             return BarChartDataEntry(x:serie.index * spaceForBar, y: serie.value)
         }
 
-        let set1 = BarChartDataSet(values: barChartDataEntries, label: "DataSet")
-        set1.drawIconsEnabled = false
+        let barChartDataSet = BarChartDataSet(values: barChartDataEntries, label: "DataSet")
+        barChartDataSet.drawIconsEnabled = false
+        barChartDataSet.colors = [ColorsNVSPack.ChangeOverAverage.dataset]
+        let data = BarChartData(dataSet: barChartDataSet)
 
-        let data = BarChartData(dataSet: set1)
-        data.setValueFont(UIFont(name:"HelveticaNeue-Light", size:10)!)
         data.barWidth = spaceForBar * 0.5
 
         chartView.data = data
     }
 }
 
+// MARK: - IAxisValueFormatter
 extension ChangeoverViewContent: IAxisValueFormatter {
-    // MARK: - IAxisValueFormatter
 
     func stringForValue(_ value: Double,
                         axis: AxisBase?) -> String {
