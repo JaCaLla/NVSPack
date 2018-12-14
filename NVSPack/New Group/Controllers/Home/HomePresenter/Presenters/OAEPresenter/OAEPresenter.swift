@@ -44,12 +44,12 @@ class OAEPresenter: UIViewController {
 
     // MARK: - Private/Internal
     private func fetchDataset() {
-        guard let uwpOAEViewContent = self.oAEAccumulatedViewContent else {
+        guard let uwpOAEViewContent = self.oAEAccumulatedViewContent,
+              let uwpOAEDetailedViewContent = self.oAEDetailedViewContent else {
             return
         }
-        let dataset = DataManager.shared.oAEAccumulatedDataset()
-        uwpOAEViewContent.dataset = dataset
-
+        uwpOAEViewContent.dataset = DataManager.shared.oAEAccumulatedDataset()
+        uwpOAEDetailedViewContent.dataset = DataManager.shared.oAEDetailedDataset()
     }
 
 

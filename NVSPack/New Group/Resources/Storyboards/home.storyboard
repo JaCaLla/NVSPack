@@ -614,22 +614,31 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jhf-BI-XmX" customClass="BarChartView" customModule="Charts">
+                                <rect key="frame" x="5" y="36" width="177.5" height="158.5"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="gwl-5i-ijU" firstAttribute="leading" secondItem="Bhw-49-ZA5" secondAttribute="leadingMargin" constant="5" id="2M3-eQ-0z6"/>
+                            <constraint firstItem="jhf-BI-XmX" firstAttribute="leading" secondItem="eeO-mX-Dhb" secondAttribute="leading" constant="5" id="8NP-wT-DLN"/>
+                            <constraint firstItem="jhf-BI-XmX" firstAttribute="top" secondItem="gwl-5i-ijU" secondAttribute="bottom" constant="10" id="Gdu-7Y-MlY"/>
+                            <constraint firstItem="eeO-mX-Dhb" firstAttribute="trailing" secondItem="jhf-BI-XmX" secondAttribute="trailing" constant="5" id="ZDi-0n-x8U"/>
                             <constraint firstAttribute="trailingMargin" secondItem="gwl-5i-ijU" secondAttribute="trailing" constant="5" id="i84-ja-Kq6"/>
+                            <constraint firstItem="eeO-mX-Dhb" firstAttribute="bottom" secondItem="jhf-BI-XmX" secondAttribute="bottom" constant="5" id="jd1-me-J1G"/>
                             <constraint firstItem="gwl-5i-ijU" firstAttribute="top" secondItem="Bhw-49-ZA5" secondAttribute="topMargin" constant="5" id="lpy-53-WqK"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="eeO-mX-Dhb"/>
                     </view>
                     <connections>
+                        <outlet property="chartView" destination="jhf-BI-XmX" id="2gQ-VK-fcM"/>
                         <outlet property="lblTitle" destination="gwl-5i-ijU" id="ZeR-kP-1dN"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Fjd-rA-hTU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1642" y="-340"/>
+            <point key="canvasLocation" x="1641.5999999999999" y="-340.02998500749629"/>
         </scene>
     </scenes>
 </document>

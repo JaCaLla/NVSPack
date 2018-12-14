@@ -55,6 +55,9 @@
 		BF9DC4DF21C122DE00C2EE57 /* NVSPackTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF9DC4DE21C122DE00C2EE57 /* NVSPackTests.swift */; };
 		BFBCEE8221C392DE0012F0F8 /* OAEDetailedViewContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFBCEE8121C392DD0012F0F8 /* OAEDetailedViewContent.swift */; };
 		BFBCEE8421C397760012F0F8 /* UIButton+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFBCEE8321C397760012F0F8 /* UIButton+Extension.swift */; };
+		BFBCEE8621C3BE370012F0F8 /* XYMarkerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFBCEE8521C3BE370012F0F8 /* XYMarkerView.swift */; };
+		BFBCEE8821C3BE640012F0F8 /* BalloonMarker.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFBCEE8721C3BE640012F0F8 /* BalloonMarker.swift */; };
+		BFBCEE8A21C3BEA50012F0F8 /* DayAxisValueFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFBCEE8921C3BEA50012F0F8 /* DayAxisValueFormatter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -120,6 +123,9 @@
 		BF9DC4E021C122DE00C2EE57 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BFBCEE8121C392DD0012F0F8 /* OAEDetailedViewContent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OAEDetailedViewContent.swift; sourceTree = "<group>"; };
 		BFBCEE8321C397760012F0F8 /* UIButton+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIButton+Extension.swift"; sourceTree = "<group>"; };
+		BFBCEE8521C3BE370012F0F8 /* XYMarkerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XYMarkerView.swift; sourceTree = "<group>"; };
+		BFBCEE8721C3BE640012F0F8 /* BalloonMarker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BalloonMarker.swift; sourceTree = "<group>"; };
+		BFBCEE8921C3BEA50012F0F8 /* DayAxisValueFormatter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DayAxisValueFormatter.swift; sourceTree = "<group>"; };
 		D0079D4602DCE9BE0A34CB14 /* Pods-NVSPackTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NVSPackTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-NVSPackTests/Pods-NVSPackTests.debug.xcconfig"; sourceTree = "<group>"; };
 		D0567EF705C48F9EE5CED3B1 /* Pods-NVSPack.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NVSPack.debug.xcconfig"; path = "Pods/Target Support Files/Pods-NVSPack/Pods-NVSPack.debug.xcconfig"; sourceTree = "<group>"; };
 		F4204720EF3900B4B3235CB5 /* Pods_NVSPack.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NVSPack.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -251,6 +257,9 @@
 				BFBCEE8321C397760012F0F8 /* UIButton+Extension.swift */,
 				BF67C96721C13F75000C2D8E /* BaseViewController.swift */,
 				BF8ED61F21C225BE00E62CFC /* DemoBaseViewController.swift */,
+				BFBCEE8721C3BE640012F0F8 /* BalloonMarker.swift */,
+				BFBCEE8521C3BE370012F0F8 /* XYMarkerView.swift */,
+				BFBCEE8921C3BEA50012F0F8 /* DayAxisValueFormatter.swift */,
 			);
 			path = Core;
 			sourceTree = "<group>";
@@ -737,6 +746,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BF8ED62021C225BE00E62CFC /* DemoBaseViewController.swift in Sources */,
+				BFBCEE8621C3BE370012F0F8 /* XYMarkerView.swift in Sources */,
 				BF8ED62E21C2341E00E62CFC /* DataCollectorUseCase.swift in Sources */,
 				BF67C96221C13EC5000C2D8E /* AppStoryboard.swift in Sources */,
 				BF8ED64521C2850300E62CFC /* TimeSelectorPresenter.swift in Sources */,
@@ -761,10 +771,12 @@
 				BF67C97021C14C1F000C2D8E /* HomeViewContent.swift in Sources */,
 				BF67C95921C13D4D000C2D8E /* StartUpAppSequencer.swift in Sources */,
 				BF8ED64C21C29C8000E62CFC /* LineyieldViewContent.swift in Sources */,
+				BFBCEE8A21C3BEA50012F0F8 /* DayAxisValueFormatter.swift in Sources */,
 				BF8ED64E21C29CED00E62CFC /* LineyieldPresenter.swift in Sources */,
 				BF8ED65621C2DB4600E62CFC /* AssetUtilizationPresenter.swift in Sources */,
 				BF8ED65221C2B50B00E62CFC /* LineActivityViewContent.swift in Sources */,
 				BF67C95B21C13D9E000C2D8E /* PresentMainAppOp.swift in Sources */,
+				BFBCEE8821C3BE640012F0F8 /* BalloonMarker.swift in Sources */,
 				BF229A1321C18DDD001A8D49 /* ChangeoverPresenter.swift in Sources */,
 				BF67C96521C13F31000C2D8E /* SplashPresenter.swift in Sources */,
 				BF8ED62321C22B9500E62CFC /* Serie.swift in Sources */,

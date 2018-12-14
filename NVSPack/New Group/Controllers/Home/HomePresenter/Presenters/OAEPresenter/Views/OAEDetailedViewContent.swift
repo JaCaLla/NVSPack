@@ -12,7 +12,7 @@ import Charts
 class OAEDetailedViewContent: DemoBaseViewController {
 
     // MARK: - IBOutlet
-    @IBOutlet weak var chartView: PieChartView!
+    @IBOutlet weak var chartView: BarChartView!
     @IBOutlet weak var lblTitle: UILabel!
 
 
@@ -39,14 +39,32 @@ class OAEDetailedViewContent: DemoBaseViewController {
         lblTitle.font = FontsNVSPack.OAEDetailed.titleFont
         lblTitle.textColor = ColorsNVSPack.OAEDetailed.titleFontColor
         lblTitle.textAlignment = .center
-       /* self.setup(pieChartView: chartView)
+        self.setup(barLineChartView: chartView)
 
-        chartView.delegate = self
+        chartView.xAxis.valueFormatter = self //extension ChangeoverViewContent: IAxisValueFormatter
+
+        // Left axis
+        let xAxis = chartView.xAxis
+        xAxis.labelPosition = .bottom
+        xAxis.labelFont = FontsNVSPack.ChangeOverAverage.xAxis
+        xAxis.labelTextColor = ColorsNVSPack.ChangeOverAverage.xAxis
+        xAxis.drawAxisLineEnabled = true
+        xAxis.drawGridLinesEnabled = false
+        xAxis.granularity = 10
+
+        // Top axis
+        let rightAxis = chartView.rightAxis
+        rightAxis.labelFont = .systemFont(ofSize: 10)
+        rightAxis.drawAxisLineEnabled = false//true
+        rightAxis.drawGridLinesEnabled = false//true
+        rightAxis.labelTextColor = ColorsNVSPack.ChangeOverAverage.leftAxis
+        rightAxis.axisMinimum = 0
 
         chartView.legend.enabled = false
-        chartView.holeColor = ColorsNVSPack.AssetUtilization.hole
+        chartView.fitBars = true
 
-        chartView.animate(xAxisDuration: 1.4, easingOption: .easeOutBack)*/
+
+        chartView.animate(yAxisDuration: 0.5)
     }
 
     // MARK: - Actions
@@ -64,30 +82,49 @@ class OAEDetailedViewContent: DemoBaseViewController {
 
     func setDataCount( dataset:Dataset) {
 /*
-        let pieChartDataEntries:[PieChartDataEntry] = dataset.series.map {
+        let barChartDataEntries:[BarChartDataEntry] = dataset.series.map {
             let serie = $0
-            return PieChartDataEntry(value: serie.value, label: serie.label)//BarChartDataEntry(x:serie.index * spaceForBar, y: serie.value)
+            return BarChartDataEntry(x:serie.index * spaceForBar, y: serie.value)
         }
 
-        let set = PieChartDataSet(values: pieChartDataEntries, label: nil)
-        set.drawIconsEnabled = false
-        set.sliceSpace = 2
-        set.colors = [ColorsNVSPack.Lineyield.goodSerie,ColorsNVSPack.Lineyield.badSerie]
+        let set1 = BarChartDataSet(values: barChartDataEntries, label: "The year 2017")
+        set1.colors = ChartColorTemplates.material()
+        set1.drawValuesEnabled = false
 
-        chartView.data = PieChartData(dataSet: set)
-        chartView.highlightValues(nil)
-        if let uwpData = chartView.data {
-            uwpData.setValueTextColor(UIColor.clear)
+        let data = BarChartData(dataSet: set1)
+        data.setValueFont(UIFont(name: "HelveticaNeue-Light", size: 10)!)
+        data.barWidth = 0.9
+        chartView.data = data
+*/
+
+        let barChartDataEntries:[BarChartDataEntry] = dataset.series.map {
+            let serie = $0
+            return BarChartDataEntry(x:serie.index * spaceForBar, y: serie.value)
         }
-        if let serie = dataset.series.first( where : { $0.label == "GOOD" }) {
-            let paragraph = NSMutableParagraphStyle()
-            paragraph.alignment = .center
-            let myAttribute = [ NSAttributedStringKey.font: FontsNVSPack.OAEDetailed.holeFont,
-                                NSAttributedStringKey.foregroundColor: ColorsNVSPack.OAEDetailed.holeFontColor,
-                                NSAttributedStringKey.paragraphStyle: paragraph]
-            let myAttrString = NSAttributedString(string: "\(serie.value)%", attributes: myAttribute)
-            chartView.centerAttributedText = myAttrString
+
+        let barChartDataSet = BarChartDataSet(values: barChartDataEntries, label: "DataSet")
+        barChartDataSet.drawIconsEnabled = false
+        barChartDataSet.colors = [ColorsNVSPack.ChangeOverAverage.dataset]
+        let data = BarChartData(dataSet: barChartDataSet)
+
+        data.barWidth = spaceForBar * 0.5
+
+        chartView.data = data
+        chartView.animate(yAxisDuration: 0.5)
+
+
+    }
+}
+
+// MARK: - IAxisValueFormatter
+extension OAEDetailedViewContent: IAxisValueFormatter {
+
+    func stringForValue(_ value: Double,
+                        axis: AxisBase?) -> String {
+        guard let uwpDataset = self.dataset,
+            let tag = uwpDataset.tag(index: value/spaceForBar )else {
+                return ""
         }
-  */
+        return tag
     }
 }

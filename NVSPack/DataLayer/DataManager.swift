@@ -103,6 +103,35 @@ enum TimeSelector: Int {
                                     Serie(label: "BAD",index: 1.0, value: 40)])
         }
     }
+
+    func oAEDetailedDataset() ->  Dataset {
+        switch self {
+        case .thisWeek:
+            return Dataset(series: [Serie(label: "Sun", index: 0.0, value: 85),
+                                    Serie(label: "Mon",index: 1.0, value: 150),
+                                    Serie(label: "Tue",index: 2.0, value: 20),
+                                    Serie(label: "Wed",index: 3.0, value: 60),
+                                    Serie(label: "Thu",index: 4.0, value: 90),
+                                    Serie(label: "Fri",index: 5.0, value: 0),
+                                    Serie(label: "Sat",index: 6.0, value: 0)])
+        case .currentMonth:
+            return Dataset(series: [Serie(label: "Sun", index: 0.0, value: 80),
+                                    Serie(label: "Mon",index: 1.0, value: 75),
+                                    Serie(label: "Tue",index: 2.0, value: 80),
+                                    Serie(label: "Wed",index: 3.0, value: 40),
+                                    Serie(label: "Thu",index: 4.0, value: 100),
+                                    Serie(label: "Fri",index: 5.0, value: 0),
+                                    Serie(label: "Sat",index: 6.0, value: 0)])
+        case .lastMonth:
+            return Dataset(series: [Serie(label: "Sun", index: 0.0, value: 60),
+                                    Serie(label: "Mon",index: 1.0, value: 50),
+                                    Serie(label: "Tue",index: 2.0, value: 80),
+                                    Serie(label: "Wed",index: 3.0, value: 90),
+                                    Serie(label: "Thu",index: 4.0, value: 100),
+                                    Serie(label: "Fri",index: 5.0, value: 0),
+                                    Serie(label: "Sat",index: 6.0, value: 0)])
+        }
+    }
 }
 
 class DataManager {
@@ -141,5 +170,9 @@ class DataManager {
 
     func oAEAccumulatedDataset() -> Dataset {
         return timeSelector.oAEAccumulatedDataset()
+    }
+
+    func oAEDetailedDataset() -> Dataset {
+        return timeSelector.oAEDetailedDataset()
     }
 }
