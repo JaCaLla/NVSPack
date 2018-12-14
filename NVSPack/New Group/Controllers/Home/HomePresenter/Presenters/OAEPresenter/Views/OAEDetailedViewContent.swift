@@ -9,7 +9,7 @@
 import UIKit
 import Charts
 
-class OAEViewContent: DemoBaseViewController {
+class OAEDetailedViewContent: DemoBaseViewController {
 
     // MARK: - IBOutlet
     @IBOutlet weak var chartView: PieChartView!
@@ -34,19 +34,19 @@ class OAEViewContent: DemoBaseViewController {
 
     func setupViewContent() {
 
-        lblTitle.text = R.string.localized.oaeaccumulated_title()
+        lblTitle.text = R.string.localized.oaedetailed_title()
         lblTitle.numberOfLines = 1
-        lblTitle.font = FontsNVSPack.OAEAccumulated.titleFont
-        lblTitle.textColor = ColorsNVSPack.OAEAccumulated.titleFontColor
+        lblTitle.font = FontsNVSPack.OAEDetailed.titleFont
+        lblTitle.textColor = ColorsNVSPack.OAEDetailed.titleFontColor
         lblTitle.textAlignment = .center
-        self.setup(pieChartView: chartView)
+       /* self.setup(pieChartView: chartView)
 
         chartView.delegate = self
 
         chartView.legend.enabled = false
         chartView.holeColor = ColorsNVSPack.AssetUtilization.hole
 
-        chartView.animate(xAxisDuration: 1.4, easingOption: .easeOutBack)
+        chartView.animate(xAxisDuration: 1.4, easingOption: .easeOutBack)*/
     }
 
     // MARK: - Actions
@@ -63,7 +63,7 @@ class OAEViewContent: DemoBaseViewController {
     }
 
     func setDataCount( dataset:Dataset) {
-
+/*
         let pieChartDataEntries:[PieChartDataEntry] = dataset.series.map {
             let serie = $0
             return PieChartDataEntry(value: serie.value, label: serie.label)//BarChartDataEntry(x:serie.index * spaceForBar, y: serie.value)
@@ -82,12 +82,12 @@ class OAEViewContent: DemoBaseViewController {
         if let serie = dataset.series.first( where : { $0.label == "GOOD" }) {
             let paragraph = NSMutableParagraphStyle()
             paragraph.alignment = .center
-            let myAttribute = [ NSAttributedStringKey.font: FontsNVSPack.OAEAccumulated.holeFont,
-                                NSAttributedStringKey.foregroundColor: ColorsNVSPack.OAEAccumulated.holeFontColor,
+            let myAttribute = [ NSAttributedStringKey.font: FontsNVSPack.OAEDetailed.holeFont,
+                                NSAttributedStringKey.foregroundColor: ColorsNVSPack.OAEDetailed.holeFontColor,
                                 NSAttributedStringKey.paragraphStyle: paragraph]
             let myAttrString = NSAttributedString(string: "\(serie.value)%", attributes: myAttribute)
             chartView.centerAttributedText = myAttrString
         }
-  
+  */
     }
 }

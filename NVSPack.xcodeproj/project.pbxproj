@@ -46,13 +46,15 @@
 		BF8ED65921C2E9F200E62CFC /* SplashViewContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF8ED65821C2E9F200E62CFC /* SplashViewContent.swift */; };
 		BF8ED65B21C2F28800E62CFC /* UIApplicationExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF8ED65A21C2F28800E62CFC /* UIApplicationExtension.swift */; };
 		BF8ED66D21C37CEB00E62CFC /* OAEPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF8ED66A21C37CEB00E62CFC /* OAEPresenter.swift */; };
-		BF8ED66E21C37CEB00E62CFC /* OAEViewContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF8ED66C21C37CEB00E62CFC /* OAEViewContent.swift */; };
+		BF8ED66E21C37CEB00E62CFC /* OAEAccumulatedViewContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF8ED66C21C37CEB00E62CFC /* OAEAccumulatedViewContent.swift */; };
 		BF9DC4CA21C122DB00C2EE57 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF9DC4C921C122DB00C2EE57 /* AppDelegate.swift */; };
 		BF9DC4CC21C122DB00C2EE57 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF9DC4CB21C122DB00C2EE57 /* ViewController.swift */; };
 		BF9DC4CF21C122DB00C2EE57 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BF9DC4CD21C122DB00C2EE57 /* Main.storyboard */; };
 		BF9DC4D121C122DD00C2EE57 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BF9DC4D021C122DD00C2EE57 /* Assets.xcassets */; };
 		BF9DC4D421C122DD00C2EE57 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BF9DC4D221C122DD00C2EE57 /* LaunchScreen.storyboard */; };
 		BF9DC4DF21C122DE00C2EE57 /* NVSPackTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF9DC4DE21C122DE00C2EE57 /* NVSPackTests.swift */; };
+		BFBCEE8221C392DE0012F0F8 /* OAEDetailedViewContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFBCEE8121C392DD0012F0F8 /* OAEDetailedViewContent.swift */; };
+		BFBCEE8421C397760012F0F8 /* UIButton+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFBCEE8321C397760012F0F8 /* UIButton+Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -105,7 +107,7 @@
 		BF8ED65821C2E9F200E62CFC /* SplashViewContent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewContent.swift; sourceTree = "<group>"; };
 		BF8ED65A21C2F28800E62CFC /* UIApplicationExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIApplicationExtension.swift; sourceTree = "<group>"; };
 		BF8ED66A21C37CEB00E62CFC /* OAEPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OAEPresenter.swift; sourceTree = "<group>"; };
-		BF8ED66C21C37CEB00E62CFC /* OAEViewContent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OAEViewContent.swift; sourceTree = "<group>"; };
+		BF8ED66C21C37CEB00E62CFC /* OAEAccumulatedViewContent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OAEAccumulatedViewContent.swift; sourceTree = "<group>"; };
 		BF9DC4C621C122DB00C2EE57 /* NVSPack.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NVSPack.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BF9DC4C921C122DB00C2EE57 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BF9DC4CB21C122DB00C2EE57 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -116,6 +118,8 @@
 		BF9DC4DA21C122DD00C2EE57 /* NVSPackTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NVSPackTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BF9DC4DE21C122DE00C2EE57 /* NVSPackTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NVSPackTests.swift; sourceTree = "<group>"; };
 		BF9DC4E021C122DE00C2EE57 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BFBCEE8121C392DD0012F0F8 /* OAEDetailedViewContent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OAEDetailedViewContent.swift; sourceTree = "<group>"; };
+		BFBCEE8321C397760012F0F8 /* UIButton+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIButton+Extension.swift"; sourceTree = "<group>"; };
 		D0079D4602DCE9BE0A34CB14 /* Pods-NVSPackTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NVSPackTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-NVSPackTests/Pods-NVSPackTests.debug.xcconfig"; sourceTree = "<group>"; };
 		D0567EF705C48F9EE5CED3B1 /* Pods-NVSPack.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NVSPack.debug.xcconfig"; path = "Pods/Target Support Files/Pods-NVSPack/Pods-NVSPack.debug.xcconfig"; sourceTree = "<group>"; };
 		F4204720EF3900B4B3235CB5 /* Pods_NVSPack.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NVSPack.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -244,6 +248,7 @@
 			isa = PBXGroup;
 			children = (
 				BF8ED65A21C2F28800E62CFC /* UIApplicationExtension.swift */,
+				BFBCEE8321C397760012F0F8 /* UIButton+Extension.swift */,
 				BF67C96721C13F75000C2D8E /* BaseViewController.swift */,
 				BF8ED61F21C225BE00E62CFC /* DemoBaseViewController.swift */,
 			);
@@ -449,7 +454,8 @@
 		BF8ED66B21C37CEB00E62CFC /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				BF8ED66C21C37CEB00E62CFC /* OAEViewContent.swift */,
+				BF8ED66C21C37CEB00E62CFC /* OAEAccumulatedViewContent.swift */,
+				BFBCEE8121C392DD0012F0F8 /* OAEDetailedViewContent.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -737,7 +743,7 @@
 				BF67C95721C13CF7000C2D8E /* ConcurrentOperation.swift in Sources */,
 				BF9DC4CC21C122DB00C2EE57 /* ViewController.swift in Sources */,
 				BF8ED65B21C2F28800E62CFC /* UIApplicationExtension.swift in Sources */,
-				BF8ED66E21C37CEB00E62CFC /* OAEViewContent.swift in Sources */,
+				BF8ED66E21C37CEB00E62CFC /* OAEAccumulatedViewContent.swift in Sources */,
 				BF8ED62521C22C3500E62CFC /* Dataset.swift in Sources */,
 				BF9DC4CA21C122DB00C2EE57 /* AppDelegate.swift in Sources */,
 				BF8ED65421C2DB1B00E62CFC /* AssetUtilizationViewContent.swift in Sources */,
@@ -748,8 +754,10 @@
 				BF67C96821C13F75000C2D8E /* BaseViewController.swift in Sources */,
 				BF8ED63D21C2692700E62CFC /* Strings.swift in Sources */,
 				BF8ED63521C2657E00E62CFC /* ColorsNVSPack.swift in Sources */,
+				BFBCEE8221C392DE0012F0F8 /* OAEDetailedViewContent.swift in Sources */,
 				BF8ED65021C2B49D00E62CFC /* LineActivityPresenter.swift in Sources */,
 				BF67C95D21C13E00000C2D8E /* PresentSplashOperation.swift in Sources */,
+				BFBCEE8421C397760012F0F8 /* UIButton+Extension.swift in Sources */,
 				BF67C97021C14C1F000C2D8E /* HomeViewContent.swift in Sources */,
 				BF67C95921C13D4D000C2D8E /* StartUpAppSequencer.swift in Sources */,
 				BF8ED64C21C29C8000E62CFC /* LineyieldViewContent.swift in Sources */,

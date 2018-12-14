@@ -46,7 +46,11 @@ class AssetUtilizationViewContent: DemoBaseViewController {
         chartView.legend.enabled = false
         chartView.holeColor = ColorsNVSPack.AssetUtilization.hole
 
-        chartView.animate(xAxisDuration: 1.4, easingOption: .easeOutBack)
+        //chartView.animate(xAxisDuration: 1.4, easingOption: .easeOutBack)
+        chartView.spin(duration: 0.1,
+                       fromAngle: chartView.rotationAngle,
+                       toAngle: chartView.rotationAngle - 90,
+                       easingOption: .easeInCubic)
     }
 
     // MARK: - Actions
@@ -88,6 +92,6 @@ class AssetUtilizationViewContent: DemoBaseViewController {
             let myAttrString = NSAttributedString(string: "\(serie.value)%", attributes: myAttribute)
             chartView.centerAttributedText = myAttrString
         }
-  
+        chartView.animate(yAxisDuration: 0.5)
     }
 }

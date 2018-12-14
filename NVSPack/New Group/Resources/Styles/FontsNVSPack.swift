@@ -11,6 +11,12 @@ import UIKit
 struct FontsNVSPack {
 
     // MARK: - OAEAccumulated
+    struct OAEDetailed {
+        static let titleFont   = TextStyle.h24Custom.font
+        static let holeFont    = TextStyle.h18Custom.font
+    }
+
+    // MARK: - OAEAccumulated
     struct OAEAccumulated {
         static let titleFont    = TextStyle.h24Custom.font
         static let holeFont    = TextStyle.h18Custom.font

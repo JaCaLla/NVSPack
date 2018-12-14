@@ -10,7 +10,8 @@ import UIKit
 
 class OAEPresenter: UIViewController {
 
-     var oAEViewContent: OAEViewContent?
+     var oAEAccumulatedViewContent: OAEAccumulatedViewContent?
+     var oAEDetailedViewContent: OAEDetailedViewContent?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -33,14 +34,17 @@ class OAEPresenter: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
 
         if segue.identifier == R.segue.oaePresenter.oaeAccumulatedContainerSegue.identifier,
-           let uwpOAEViewContent = segue.destination as? OAEViewContent {
-            oAEViewContent = uwpOAEViewContent
+           let uwpOAEViewContent = segue.destination as? OAEAccumulatedViewContent {
+            self.oAEAccumulatedViewContent = uwpOAEViewContent
+        } else if segue.identifier == R.segue.oaePresenter.oaeDetailedContainerSegue.identifier,
+            let uwpOAEDetailedContentView = segue.destination as? OAEDetailedViewContent {
+            self.oAEDetailedViewContent = uwpOAEDetailedContentView
         }
     }
 
     // MARK: - Private/Internal
     private func fetchDataset() {
-        guard let uwpOAEViewContent = self.oAEViewContent else {
+        guard let uwpOAEViewContent = self.oAEAccumulatedViewContent else {
             return
         }
         let dataset = DataManager.shared.oAEAccumulatedDataset()

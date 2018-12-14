@@ -18,6 +18,7 @@ class TimeSelectorPresenter: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+         self.view.dropShadow()
 
         // Do any additional setup after loading the view.
     }

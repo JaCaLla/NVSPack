@@ -54,7 +54,10 @@ class LineyieldViewContent: DemoBaseViewController {
         let myAttrString = NSAttributedString(string: "98.73%\n513,447,000\npacks", attributes: myAttribute)
         chartView.centerAttributedText = myAttrString
 
-        chartView.animate(xAxisDuration: 1.4, easingOption: .easeOutBack)
+        chartView.spin(duration: 0.1,
+                       fromAngle: chartView.rotationAngle,
+                       toAngle: chartView.rotationAngle - 90,
+                       easingOption: .easeInCubic)
     }
 
     // MARK: - Actions
@@ -84,36 +87,13 @@ class LineyieldViewContent: DemoBaseViewController {
 
 
         let data = PieChartData(dataSet: set)
-/*
-        let pFormatter = NumberFormatter()
-        pFormatter.numberStyle = .percent
-        pFormatter.maximumFractionDigits = 1
-        pFormatter.multiplier = 1
-        pFormatter.percentSymbol = " %"
-        data.setValueFormatter(DefaultValueFormatter(formatter: pFormatter))
-
-        data.setValueFont(.systemFont(ofSize: 11, weight: .light))
-        data.setValueTextColor(.white)
-*/
 
         chartView.data = data
         chartView.highlightValues(nil)
         if let uwpData = chartView.data {
             uwpData.setValueTextColor(UIColor.clear)
         }
-  
+        chartView.animate(yAxisDuration: 0.5)
     }
 }
-/*
-// MARK: - IAxisValueFormatter
-extension ChangeoverViewContent: IAxisValueFormatter {
 
-    func stringForValue(_ value: Double,
-                        axis: AxisBase?) -> String {
-        guard let uwpDataset = self.dataset,
-             let tag = uwpDataset.tag(index: value/spaceForBar )else {
-            return ""
-        }
-        return tag
-    }
-}*/

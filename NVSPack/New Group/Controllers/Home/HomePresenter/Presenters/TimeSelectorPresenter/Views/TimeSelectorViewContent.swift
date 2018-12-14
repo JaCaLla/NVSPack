@@ -30,6 +30,7 @@ class TimeSelectorViewContent: BaseViewController {
         segTimeSelector.insertSegment(withTitle: R.string.localized.time_selector_last_month(), at: 2, animated: false)
         segTimeSelector.selectedSegmentIndex = 0
 
+       
     }
     // MARK: - Actions
 

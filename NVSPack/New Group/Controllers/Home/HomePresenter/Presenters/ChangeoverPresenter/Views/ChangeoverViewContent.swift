@@ -72,7 +72,7 @@ class ChangeoverViewContent: DemoBaseViewController {
         chartView.fitBars = true
 
 
-        chartView.animate(yAxisDuration: 2.5)
+        chartView.animate(yAxisDuration: 0.5)
 
     }
     // MARK: - Actions
@@ -102,6 +102,7 @@ class ChangeoverViewContent: DemoBaseViewController {
         data.barWidth = spaceForBar * 0.5
 
         chartView.data = data
+        chartView.animate(yAxisDuration: 0.5)
     }
 }
 
