@@ -76,7 +76,7 @@ struct R: Rswift.Validatable {
     fileprivate init() {}
   }
   
-  /// This `R.segue` struct is generated, and contains static references to 8 view controllers.
+  /// This `R.segue` struct is generated, and contains static references to 9 view controllers.
   struct segue {
     /// This struct is generated for `AssetUtilizationPresenter`, and contains static references to 1 segues.
     struct assetUtilizationPresenter {
@@ -168,6 +168,21 @@ struct R: Rswift.Validatable {
       fileprivate init() {}
     }
     
+    /// This struct is generated for `OAEPresenter`, and contains static references to 1 segues.
+    struct oaePresenter {
+      /// Segue identifier `OAEAccumulatedContainerSegue`.
+      static let oaeAccumulatedContainerSegue: Rswift.StoryboardSegueIdentifier<UIKit.UIStoryboardSegue, OAEPresenter, OAEViewContent> = Rswift.StoryboardSegueIdentifier(identifier: "OAEAccumulatedContainerSegue")
+      
+      /// Optionally returns a typed version of segue `OAEAccumulatedContainerSegue`.
+      /// Returns nil if either the segue identifier, the source, destination, or segue types don't match.
+      /// For use inside `prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?)`.
+      static func oaeAccumulatedContainerSegue(segue: UIKit.UIStoryboardSegue) -> Rswift.TypedStoryboardSegueInfo<UIKit.UIStoryboardSegue, OAEPresenter, OAEViewContent>? {
+        return Rswift.TypedStoryboardSegueInfo(segueIdentifier: R.segue.oaePresenter.oaeAccumulatedContainerSegue, segue: segue)
+      }
+      
+      fileprivate init() {}
+    }
+    
     /// This struct is generated for `SplashPresenter`, and contains static references to 1 segues.
     struct splashPresenter {
       /// Segue identifier `SplashContainerSegue`.
@@ -237,7 +252,7 @@ struct R: Rswift.Validatable {
   
   /// This `R.string` struct is generated, and contains static references to 1 localization tables.
   struct string {
-    /// This `R.string.localized` struct is generated, and contains static references to 14 localization keys.
+    /// This `R.string.localized` struct is generated, and contains static references to 15 localization keys.
     struct localized {
       /// en translation: Asset Utilization
       /// 
@@ -279,6 +294,10 @@ struct R: Rswift.Validatable {
       /// 
       /// Locales: en
       static let lineactivity_micro_stoppages = Rswift.StringResource(key: "lineactivity_micro_stoppages", tableName: "Localized", bundle: R.hostingBundle, locales: ["en"], comment: nil)
+      /// en translation: OAE Accumulated
+      /// 
+      /// Locales: en
+      static let oaeaccumulated_title = Rswift.StringResource(key: "oaeaccumulated_title", tableName: "Localized", bundle: R.hostingBundle, locales: ["en"], comment: nil)
       /// en translation: Rework
       /// 
       /// Locales: en
@@ -364,6 +383,13 @@ struct R: Rswift.Validatable {
       /// Locales: en
       static func lineactivity_micro_stoppages(_: Void = ()) -> String {
         return NSLocalizedString("lineactivity_micro_stoppages", tableName: "Localized", bundle: R.hostingBundle, comment: "")
+      }
+      
+      /// en translation: OAE Accumulated
+      /// 
+      /// Locales: en
+      static func oaeaccumulated_title(_: Void = ()) -> String {
+        return NSLocalizedString("oaeaccumulated_title", tableName: "Localized", bundle: R.hostingBundle, comment: "")
       }
       
       /// en translation: Rework

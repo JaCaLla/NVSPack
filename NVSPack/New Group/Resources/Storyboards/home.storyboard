@@ -123,7 +123,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9la-h4-OXo">
-                                                    <rect key="frame" x="0.0" y="-100" width="375" height="299"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="375" height="299.5"/>
                                                     <connections>
                                                         <segue destination="nfP-Td-vwA" kind="embed" id="apq-5s-5TT"/>
                                                     </connections>
@@ -221,7 +221,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="v2m-gd-KCL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="962" y="-25"/>
+            <point key="canvasLocation" x="935" y="-311"/>
         </scene>
         <!--Time Selector View Content-->
         <scene sceneID="evA-f5-PWD">
@@ -255,51 +255,85 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aCi-kA-mEg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1825" y="-72"/>
+            <point key="canvasLocation" x="1844" y="-311"/>
         </scene>
-        <!--View Controller-->
+        <!--Presenter-->
         <scene sceneID="5P2-cI-mq1">
             <objects>
-                <viewController id="Sw7-vL-PA5" sceneMemberID="viewController">
+                <viewController id="Sw7-vL-PA5" customClass="OAEPresenter" customModule="NVSPack" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="nfK-Ey-v6h">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="199.5"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="45j-T8-ZF6">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="199.5"/>
+                                <rect key="frame" x="0.0" y="0.0" width="187.5" height="199.5"/>
                                 <connections>
-                                    <segue destination="0oQ-hU-5gV" kind="embed" id="9Of-ah-XWr"/>
+                                    <segue destination="0oQ-hU-5gV" kind="embed" identifier="OAEAccumulatedContainerSegue" id="9Of-ah-XWr"/>
+                                </connections>
+                            </containerView>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kEu-aO-R0d">
+                                <rect key="frame" x="187.5" y="0.0" width="187.5" height="199.5"/>
+                                <connections>
+                                    <segue destination="wMm-wJ-msu" kind="embed" id="4uj-Bl-qs8"/>
                                 </connections>
                             </containerView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstAttribute="trailing" secondItem="45j-T8-ZF6" secondAttribute="trailing" id="2gd-C5-1yP"/>
-                            <constraint firstItem="45j-T8-ZF6" firstAttribute="leading" secondItem="nfK-Ey-v6h" secondAttribute="leading" id="Q4e-vD-qbd"/>
-                            <constraint firstItem="45j-T8-ZF6" firstAttribute="top" secondItem="nfK-Ey-v6h" secondAttribute="top" id="YpO-Qj-Mxu"/>
-                            <constraint firstAttribute="bottom" secondItem="45j-T8-ZF6" secondAttribute="bottom" id="izl-PD-cy1"/>
+                            <constraint firstItem="45j-T8-ZF6" firstAttribute="bottom" secondItem="Nwl-4V-i00" secondAttribute="bottom" id="NMv-Yu-qST"/>
+                            <constraint firstItem="45j-T8-ZF6" firstAttribute="top" secondItem="Nwl-4V-i00" secondAttribute="top" id="QKd-uD-Mas"/>
+                            <constraint firstItem="kEu-aO-R0d" firstAttribute="width" secondItem="45j-T8-ZF6" secondAttribute="width" id="Zpb-Zx-hcH"/>
+                            <constraint firstItem="kEu-aO-R0d" firstAttribute="top" secondItem="Nwl-4V-i00" secondAttribute="top" id="dWo-Mn-mF5"/>
+                            <constraint firstItem="kEu-aO-R0d" firstAttribute="leading" secondItem="45j-T8-ZF6" secondAttribute="trailing" id="dkW-l5-kjM"/>
+                            <constraint firstItem="kEu-aO-R0d" firstAttribute="trailing" secondItem="Nwl-4V-i00" secondAttribute="trailing" id="icr-gi-yyS"/>
+                            <constraint firstItem="kEu-aO-R0d" firstAttribute="bottom" secondItem="Nwl-4V-i00" secondAttribute="bottom" id="jhu-kQ-IjM"/>
+                            <constraint firstItem="45j-T8-ZF6" firstAttribute="leading" secondItem="Nwl-4V-i00" secondAttribute="leading" id="rGr-nd-nXi"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Nwl-4V-i00"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gMB-vj-8cQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="961" y="255"/>
+            <point key="canvasLocation" x="1020" y="-21"/>
         </scene>
-        <!--View Controller-->
+        <!--View Content-->
         <scene sceneID="y0Q-gq-Pm2">
             <objects>
-                <viewController id="0oQ-hU-5gV" sceneMemberID="viewController">
+                <viewController id="0oQ-hU-5gV" customClass="OAEViewContent" customModule="NVSPack" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="1Gz-et-fZd">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="199.5"/>
+                        <rect key="frame" x="0.0" y="0.0" width="187.5" height="199.5"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="0.0" green="0.97680455450000003" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tfX-Oa-9EN">
+                                <rect key="frame" x="5" y="5" width="177.5" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RNh-bN-Ffs" customClass="PieChartView" customModule="Charts">
+                                <rect key="frame" x="0.0" y="31" width="187.5" height="168.5"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                        </subviews>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="tfX-Oa-9EN" secondAttribute="trailing" constant="5" id="DUx-oK-lhH"/>
+                            <constraint firstItem="tfX-Oa-9EN" firstAttribute="top" secondItem="1Gz-et-fZd" secondAttribute="top" constant="5" id="QZF-gn-2cP"/>
+                            <constraint firstItem="RNh-bN-Ffs" firstAttribute="leading" secondItem="C5f-iM-Iro" secondAttribute="leading" id="Tc3-aN-Fyr"/>
+                            <constraint firstItem="C5f-iM-Iro" firstAttribute="bottom" secondItem="RNh-bN-Ffs" secondAttribute="bottom" id="U8e-d8-iXA"/>
+                            <constraint firstItem="RNh-bN-Ffs" firstAttribute="top" secondItem="tfX-Oa-9EN" secondAttribute="bottom" constant="5" id="Ugh-Ql-liE"/>
+                            <constraint firstItem="tfX-Oa-9EN" firstAttribute="leading" secondItem="1Gz-et-fZd" secondAttribute="leading" constant="5" id="vjc-17-HbV"/>
+                            <constraint firstItem="C5f-iM-Iro" firstAttribute="trailing" secondItem="RNh-bN-Ffs" secondAttribute="trailing" id="y7o-Dn-gY4"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="C5f-iM-Iro"/>
                     </view>
+                    <connections>
+                        <outlet property="chartView" destination="RNh-bN-Ffs" id="v14-UK-N0Y"/>
+                        <outlet property="lblTitle" destination="tfX-Oa-9EN" id="UkI-hd-ra9"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Uko-8e-lHO" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1826" y="235"/>
+            <point key="canvasLocation" x="1694" y="-22"/>
         </scene>
         <!--Changeover Presenter-->
         <scene sceneID="jUh-cQ-mec">
@@ -391,6 +425,7 @@
                             <constraint firstAttribute="trailing" secondItem="Eo4-aL-Kut" secondAttribute="trailing" id="ncH-GS-VMG"/>
                             <constraint firstAttribute="bottom" secondItem="Eo4-aL-Kut" secondAttribute="bottom" id="oLv-Oc-PeU"/>
                         </constraints>
+                        <viewLayoutGuide key="safeArea" id="eJf-oX-8YV"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="te8-le-tjB" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -426,6 +461,7 @@
                             <constraint firstItem="fJJ-hl-cty" firstAttribute="top" secondItem="IlU-IU-Ws4" secondAttribute="top" constant="5" id="k6q-se-169"/>
                             <constraint firstItem="fJJ-hl-cty" firstAttribute="leading" secondItem="IlU-IU-Ws4" secondAttribute="leading" constant="5" id="wFR-8m-awR"/>
                         </constraints>
+                        <viewLayoutGuide key="safeArea" id="25V-mZ-x7a"/>
                     </view>
                     <connections>
                         <outlet property="chartView" destination="EeZ-y0-ss3" id="c6z-8D-Q6h"/>
@@ -441,11 +477,11 @@
             <objects>
                 <viewController id="nfP-Td-vwA" customClass="LineActivityPresenter" customModule="NVSPack" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ezb-xd-a7k">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="299"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="299.5"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="b2Y-2d-dng">
-                                <rect key="frame" x="0.0" y="-100" width="375" height="299"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="299.5"/>
                                 <connections>
                                     <segue destination="tvO-Wy-swp" kind="embed" identifier="LineActivityContainerSegue" id="68G-8W-wvZ"/>
                                 </connections>
@@ -458,6 +494,7 @@
                             <constraint firstAttribute="trailing" secondItem="b2Y-2d-dng" secondAttribute="trailing" id="fgH-SY-oxv"/>
                             <constraint firstAttribute="bottom" secondItem="b2Y-2d-dng" secondAttribute="bottom" id="qGr-Zs-f2d"/>
                         </constraints>
+                        <viewLayoutGuide key="safeArea" id="NEo-Gn-uQZ"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FG0-gP-TCK" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -469,7 +506,7 @@
             <objects>
                 <viewController id="tvO-Wy-swp" customClass="LineActivityViewContent" customModule="NVSPack" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5NI-6Q-F1U">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="299"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="299.5"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IHC-Az-HzD">
@@ -479,7 +516,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="b5z-8s-cur" customClass="PieChartView" customModule="Charts">
-                                <rect key="frame" x="5" y="35.5" width="365" height="258.5"/>
+                                <rect key="frame" x="5" y="35.5" width="365" height="259"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
                         </subviews>
@@ -493,6 +530,7 @@
                             <constraint firstItem="b5z-8s-cur" firstAttribute="top" secondItem="IHC-Az-HzD" secondAttribute="bottom" constant="10" id="gmi-ih-jhi"/>
                             <constraint firstAttribute="bottom" secondItem="b5z-8s-cur" secondAttribute="bottom" constant="5" id="qiy-wv-ykw"/>
                         </constraints>
+                        <viewLayoutGuide key="safeArea" id="1Gj-O1-uql"/>
                     </view>
                     <connections>
                         <outlet property="chartView" destination="b5z-8s-cur" id="rT3-7O-ojO"/>
@@ -512,7 +550,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lA9-hg-u1z">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="300"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="299.5"/>
                                 <connections>
                                     <segue destination="mG6-fZ-sIZ" kind="embed" identifier="AssetUtilizationContainerSegue" id="qRp-Rf-66t"/>
                                 </connections>
@@ -525,6 +563,7 @@
                             <constraint firstAttribute="bottom" secondItem="lA9-hg-u1z" secondAttribute="bottom" id="OWt-hf-nad"/>
                             <constraint firstItem="lA9-hg-u1z" firstAttribute="leading" secondItem="0Sa-OB-MBR" secondAttribute="leading" id="os3-Rd-YaR"/>
                         </constraints>
+                        <viewLayoutGuide key="safeArea" id="U8U-dx-qcY"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oXT-HV-frr" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -536,11 +575,11 @@
             <objects>
                 <viewController id="mG6-fZ-sIZ" customClass="AssetUtilizationViewContent" customModule="NVSPack" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="bh6-mM-ipO">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="300"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="299.5"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BuG-9A-vgM" customClass="PieChartView" customModule="Charts">
-                                <rect key="frame" x="0.0" y="36" width="375" height="264"/>
+                                <rect key="frame" x="0.0" y="36" width="375" height="263.5"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fEj-Z0-NPJ">
@@ -560,6 +599,7 @@
                             <constraint firstItem="fEj-Z0-NPJ" firstAttribute="leading" secondItem="bh6-mM-ipO" secondAttribute="leading" constant="5" id="gT8-Md-s0r"/>
                             <constraint firstAttribute="trailing" secondItem="fEj-Z0-NPJ" secondAttribute="trailing" constant="5" id="kig-x6-yir"/>
                         </constraints>
+                        <viewLayoutGuide key="safeArea" id="35d-KT-w76"/>
                     </view>
                     <connections>
                         <outlet property="chartView" destination="BuG-9A-vgM" id="upV-qI-Kzh"/>
@@ -569,6 +609,20 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FSc-gU-ebn" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1872" y="609"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="oMw-yq-TN5">
+            <objects>
+                <viewController id="wMm-wJ-msu" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Bhw-49-ZA5">
+                        <rect key="frame" x="0.0" y="0.0" width="187.5" height="199.5"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Fjd-rA-hTU" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2133" y="-7"/>
         </scene>
     </scenes>
 </document>

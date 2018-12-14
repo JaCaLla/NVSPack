@@ -44,6 +44,12 @@ struct ColorsNVSPack {
     }
 
 
+    struct OAEAccumulated {
+        static let titleFontColor   = Interface.ColorGrey
+        static let holeFontColor    = Interface.ColorBlack
+        static let hole             = Interface.ColorWhite
+    }
+
     struct AssetUtilization {
         static let titleFontColor   = Interface.ColorGrey
         static let holeFontColor    = Interface.ColorBlack

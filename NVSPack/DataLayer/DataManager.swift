@@ -89,6 +89,20 @@ enum TimeSelector: Int {
                                     Serie(label: "BAD",index: 1.0, value: 5)])
         }
     }
+
+    func oAEAccumulatedDataset() -> Dataset {
+        switch self {
+        case .thisWeek:
+            return Dataset(series: [Serie(label: "GOOD", index: 0.0, value: 85),
+                                    Serie(label: "BAD",index: 1.0, value: 15)])
+        case .currentMonth:
+            return Dataset(series: [Serie(label: "GOOD", index: 0.0, value: 99),
+                                    Serie(label: "BAD",index: 1.0, value: 1)])
+        case .lastMonth:
+            return Dataset(series: [Serie(label: "GOOD", index: 0.0, value: 60),
+                                    Serie(label: "BAD",index: 1.0, value: 40)])
+        }
+    }
 }
 
 class DataManager {
@@ -123,5 +137,9 @@ class DataManager {
 
     func assetUtilizationDataset() -> Dataset {
         return timeSelector.assetUtilizationDataset()
+    }
+
+    func oAEAccumulatedDataset() -> Dataset {
+        return timeSelector.oAEAccumulatedDataset()
     }
 }
