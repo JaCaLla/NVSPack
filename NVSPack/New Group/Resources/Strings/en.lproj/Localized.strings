@@ -10,11 +10,11 @@
 "time_selector_current_month" = "Current Month";
 "time_selector_last_month" = "Last Month";
 
-"oaedetailed_title" = "OAE Detailed";
+"oaedetailed_title" = "Detailed Steam Efficiency";
 
-"oaeaccumulated_title" = "OAE Accumulated";
+"oaeaccumulated_title" = "Efficiency";
 
-"assetutilization_title" = "Asset Utilization";
+"assetutilization_title" = "Capacity";
 
 "lineactivity_title" = "Line Activity";
 "lineactivity_effective_uptime" = "Effective Uptime";
@@ -26,4 +26,4 @@
 "lineactivity_scheduled_downtime" = "Scheduled Downtime";
 
 "lineyield_title"  = "Cairo";
-"changeover_title" = "Changeover";
+"changeover_title" = "Capacity Use";

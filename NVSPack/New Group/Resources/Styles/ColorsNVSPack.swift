@@ -41,19 +41,27 @@ struct ColorsNVSPack {
          static let ColorOrange         = #colorLiteral(red: 0.968627451, green: 0.5490196078, blue: 0.1607843137, alpha: 1)//f78c29
         static let ColorPinkDark        = #colorLiteral(red: 0.9058823529, green: 0.3215686275, blue: 0.3529411765, alpha: 1)//e7525a
         static let ColorGreenBlue       = #colorLiteral(red: 0.5176470588, green: 0.7411764706, blue: 0.7098039216, alpha: 1)//84bdb5
+        static let ColorLow             = #colorLiteral(red: 0.9058823529, green: 0.1921568627, blue: 0.1921568627, alpha: 1)//e73131
+        static let ColorMid             = #colorLiteral(red: 0.968627451, green: 0.7411764706, blue: 0.1294117647, alpha: 1)//f7bd21
+        static let ColorHigh            = #colorLiteral(red: 0.3215686275, green: 0.7098039216, blue: 0.3882352941, alpha: 1)//52b563
     }
 
 
     struct OAEDetailed {
         static let titleFontColor   = Interface.ColorGrey
-        static let holeFontColor    = Interface.ColorBlack
-        static let hole             = Interface.ColorWhite
+        static let datasetLow       = Interface.ColorLow
+        static let datasetMid       = Interface.ColorMid
+        static let datasetHigh       = Interface.ColorHigh
     }
 
     struct OAEAccumulated {
         static let titleFontColor   = Interface.ColorGrey
         static let holeFontColor    = Interface.ColorBlack
         static let hole             = Interface.ColorWhite
+        static let datasetLow       = Interface.ColorLow
+        static let datasetMid       = Interface.ColorMid
+        static let datasetHigh       = Interface.ColorHigh
+        static let badSerie         = Interface.ColorClear
     }
 
     struct AssetUtilization {

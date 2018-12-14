@@ -81,21 +81,6 @@ class OAEDetailedViewContent: DemoBaseViewController {
     }
 
     func setDataCount( dataset:Dataset) {
-/*
-        let barChartDataEntries:[BarChartDataEntry] = dataset.series.map {
-            let serie = $0
-            return BarChartDataEntry(x:serie.index * spaceForBar, y: serie.value)
-        }
-
-        let set1 = BarChartDataSet(values: barChartDataEntries, label: "The year 2017")
-        set1.colors = ChartColorTemplates.material()
-        set1.drawValuesEnabled = false
-
-        let data = BarChartData(dataSet: set1)
-        data.setValueFont(UIFont(name: "HelveticaNeue-Light", size: 10)!)
-        data.barWidth = 0.9
-        chartView.data = data
-*/
 
         let barChartDataEntries:[BarChartDataEntry] = dataset.series.map {
             let serie = $0
@@ -104,7 +89,17 @@ class OAEDetailedViewContent: DemoBaseViewController {
 
         let barChartDataSet = BarChartDataSet(values: barChartDataEntries, label: "DataSet")
         barChartDataSet.drawIconsEnabled = false
-        barChartDataSet.colors = [ColorsNVSPack.ChangeOverAverage.dataset]
+        barChartDataSet.drawValuesEnabled = false
+        barChartDataSet.colors = dataset.series.map {
+            let serie = $0
+            if serie.value < 30 {
+                return ColorsNVSPack.OAEDetailed.datasetLow
+            } else if serie.value > 70 {
+                return ColorsNVSPack.OAEDetailed.datasetHigh
+            } else {
+                return ColorsNVSPack.OAEDetailed.datasetMid
+            }
+        }
         let data = BarChartData(dataSet: barChartDataSet)
 
         data.barWidth = spaceForBar * 0.5

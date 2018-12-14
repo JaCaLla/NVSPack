@@ -257,15 +257,15 @@ struct R: Rswift.Validatable {
   struct string {
     /// This `R.string.localized` struct is generated, and contains static references to 16 localization keys.
     struct localized {
-      /// en translation: Asset Utilization
-      /// 
-      /// Locales: en
-      static let assetutilization_title = Rswift.StringResource(key: "assetutilization_title", tableName: "Localized", bundle: R.hostingBundle, locales: ["en"], comment: nil)
       /// en translation: Cairo
       /// 
       /// Locales: en
       static let lineyield_title = Rswift.StringResource(key: "lineyield_title", tableName: "Localized", bundle: R.hostingBundle, locales: ["en"], comment: nil)
-      /// en translation: Changeover
+      /// en translation: Capacity
+      /// 
+      /// Locales: en
+      static let assetutilization_title = Rswift.StringResource(key: "assetutilization_title", tableName: "Localized", bundle: R.hostingBundle, locales: ["en"], comment: nil)
+      /// en translation: Capacity Use
       /// 
       /// Locales: en
       static let changeover_title = Rswift.StringResource(key: "changeover_title", tableName: "Localized", bundle: R.hostingBundle, locales: ["en"], comment: nil)
@@ -277,10 +277,18 @@ struct R: Rswift.Validatable {
       /// 
       /// Locales: en
       static let time_selector_current_month = Rswift.StringResource(key: "time_selector_current_month", tableName: "Localized", bundle: R.hostingBundle, locales: ["en"], comment: nil)
+      /// en translation: Detailed Steam Efficiency
+      /// 
+      /// Locales: en
+      static let oaedetailed_title = Rswift.StringResource(key: "oaedetailed_title", tableName: "Localized", bundle: R.hostingBundle, locales: ["en"], comment: nil)
       /// en translation: Effective Uptime
       /// 
       /// Locales: en
       static let lineactivity_effective_uptime = Rswift.StringResource(key: "lineactivity_effective_uptime", tableName: "Localized", bundle: R.hostingBundle, locales: ["en"], comment: nil)
+      /// en translation: Efficiency
+      /// 
+      /// Locales: en
+      static let oaeaccumulated_title = Rswift.StringResource(key: "oaeaccumulated_title", tableName: "Localized", bundle: R.hostingBundle, locales: ["en"], comment: nil)
       /// en translation: Last Month
       /// 
       /// Locales: en
@@ -297,14 +305,6 @@ struct R: Rswift.Validatable {
       /// 
       /// Locales: en
       static let lineactivity_micro_stoppages = Rswift.StringResource(key: "lineactivity_micro_stoppages", tableName: "Localized", bundle: R.hostingBundle, locales: ["en"], comment: nil)
-      /// en translation: OAE Accumulated
-      /// 
-      /// Locales: en
-      static let oaeaccumulated_title = Rswift.StringResource(key: "oaeaccumulated_title", tableName: "Localized", bundle: R.hostingBundle, locales: ["en"], comment: nil)
-      /// en translation: OAE Detailed
-      /// 
-      /// Locales: en
-      static let oaedetailed_title = Rswift.StringResource(key: "oaedetailed_title", tableName: "Localized", bundle: R.hostingBundle, locales: ["en"], comment: nil)
       /// en translation: Rework
       /// 
       /// Locales: en
@@ -322,13 +322,6 @@ struct R: Rswift.Validatable {
       /// Locales: en
       static let time_selector_this_week = Rswift.StringResource(key: "time_selector_this_week", tableName: "Localized", bundle: R.hostingBundle, locales: ["en"], comment: nil)
       
-      /// en translation: Asset Utilization
-      /// 
-      /// Locales: en
-      static func assetutilization_title(_: Void = ()) -> String {
-        return NSLocalizedString("assetutilization_title", tableName: "Localized", bundle: R.hostingBundle, comment: "")
-      }
-      
       /// en translation: Cairo
       /// 
       /// Locales: en
@@ -336,7 +329,14 @@ struct R: Rswift.Validatable {
         return NSLocalizedString("lineyield_title", tableName: "Localized", bundle: R.hostingBundle, comment: "")
       }
       
-      /// en translation: Changeover
+      /// en translation: Capacity
+      /// 
+      /// Locales: en
+      static func assetutilization_title(_: Void = ()) -> String {
+        return NSLocalizedString("assetutilization_title", tableName: "Localized", bundle: R.hostingBundle, comment: "")
+      }
+      
+      /// en translation: Capacity Use
       /// 
       /// Locales: en
       static func changeover_title(_: Void = ()) -> String {
@@ -357,11 +357,25 @@ struct R: Rswift.Validatable {
         return NSLocalizedString("time_selector_current_month", tableName: "Localized", bundle: R.hostingBundle, comment: "")
       }
       
+      /// en translation: Detailed Steam Efficiency
+      /// 
+      /// Locales: en
+      static func oaedetailed_title(_: Void = ()) -> String {
+        return NSLocalizedString("oaedetailed_title", tableName: "Localized", bundle: R.hostingBundle, comment: "")
+      }
+      
       /// en translation: Effective Uptime
       /// 
       /// Locales: en
       static func lineactivity_effective_uptime(_: Void = ()) -> String {
         return NSLocalizedString("lineactivity_effective_uptime", tableName: "Localized", bundle: R.hostingBundle, comment: "")
+      }
+      
+      /// en translation: Efficiency
+      /// 
+      /// Locales: en
+      static func oaeaccumulated_title(_: Void = ()) -> String {
+        return NSLocalizedString("oaeaccumulated_title", tableName: "Localized", bundle: R.hostingBundle, comment: "")
       }
       
       /// en translation: Last Month
@@ -390,20 +404,6 @@ struct R: Rswift.Validatable {
       /// Locales: en
       static func lineactivity_micro_stoppages(_: Void = ()) -> String {
         return NSLocalizedString("lineactivity_micro_stoppages", tableName: "Localized", bundle: R.hostingBundle, comment: "")
-      }
-      
-      /// en translation: OAE Accumulated
-      /// 
-      /// Locales: en
-      static func oaeaccumulated_title(_: Void = ()) -> String {
-        return NSLocalizedString("oaeaccumulated_title", tableName: "Localized", bundle: R.hostingBundle, comment: "")
-      }
-      
-      /// en translation: OAE Detailed
-      /// 
-      /// Locales: en
-      static func oaedetailed_title(_: Void = ()) -> String {
-        return NSLocalizedString("oaedetailed_title", tableName: "Localized", bundle: R.hostingBundle, comment: "")
       }
       
       /// en translation: Rework

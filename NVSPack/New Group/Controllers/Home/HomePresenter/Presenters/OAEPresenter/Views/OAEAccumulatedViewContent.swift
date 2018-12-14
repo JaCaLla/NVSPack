@@ -75,7 +75,8 @@ class OAEAccumulatedViewContent: DemoBaseViewController {
         let set = PieChartDataSet(values: pieChartDataEntries, label: nil)
         set.drawIconsEnabled = false
         set.sliceSpace = 2
-        set.colors = [ColorsNVSPack.Lineyield.goodSerie,ColorsNVSPack.Lineyield.badSerie]
+
+        //set.colors = [ColorsNVSPack.Lineyield.goodSerie,ColorsNVSPack.Lineyield.badSerie]
 
         chartView.data = PieChartData(dataSet: set)
         chartView.highlightValues(nil)
@@ -90,6 +91,14 @@ class OAEAccumulatedViewContent: DemoBaseViewController {
                                 NSAttributedStringKey.paragraphStyle: paragraph]
             let myAttrString = NSAttributedString(string: "\(serie.value)%", attributes: myAttribute)
             chartView.centerAttributedText = myAttrString
+
+            if serie.value < 30 {
+                set.colors = [ColorsNVSPack.OAEAccumulated.datasetLow,ColorsNVSPack.OAEAccumulated.badSerie]
+            } else if serie.value > 70 {
+                set.colors = [ColorsNVSPack.OAEAccumulated.datasetHigh,ColorsNVSPack.OAEAccumulated.badSerie]
+            } else {
+                set.colors = [ColorsNVSPack.OAEAccumulated.datasetMid,ColorsNVSPack.OAEAccumulated.badSerie]
+            }
         }
         chartView.animate(yAxisDuration: 0.5)
     }

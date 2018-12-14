@@ -107,8 +107,8 @@ enum TimeSelector: Int {
     func oAEDetailedDataset() ->  Dataset {
         switch self {
         case .thisWeek:
-            return Dataset(series: [Serie(label: "Sun", index: 0.0, value: 85),
-                                    Serie(label: "Mon",index: 1.0, value: 150),
+            return Dataset(series: [Serie(label: "Sun", index: 0.0, value: 90),
+                                    Serie(label: "Mon",index: 1.0, value:  65),
                                     Serie(label: "Tue",index: 2.0, value: 20),
                                     Serie(label: "Wed",index: 3.0, value: 60),
                                     Serie(label: "Thu",index: 4.0, value: 90),
