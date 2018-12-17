@@ -257,34 +257,6 @@ struct R: Rswift.Validatable {
   struct string {
     /// This `R.string.localized` struct is generated, and contains static references to 16 localization keys.
     struct localized {
-      /// en translation: Boiler 1
-      /// 
-      /// Locales: en
-      static let lineactivity_effective_uptime = Rswift.StringResource(key: "lineactivity_effective_uptime", tableName: "Localized", bundle: R.hostingBundle, locales: ["en"], comment: nil)
-      /// en translation: Boiler 2
-      /// 
-      /// Locales: en
-      static let lineactivity_rework = Rswift.StringResource(key: "lineactivity_rework", tableName: "Localized", bundle: R.hostingBundle, locales: ["en"], comment: nil)
-      /// en translation: Boiler 3
-      /// 
-      /// Locales: en
-      static let lineactivity_micro_stoppages = Rswift.StringResource(key: "lineactivity_micro_stoppages", tableName: "Localized", bundle: R.hostingBundle, locales: ["en"], comment: nil)
-      /// en translation: Boiler 4
-      /// 
-      /// Locales: en
-      static let lineactivity_technical_stoppages = Rswift.StringResource(key: "lineactivity_technical_stoppages", tableName: "Localized", bundle: R.hostingBundle, locales: ["en"], comment: nil)
-      /// en translation: Boiler 5
-      /// 
-      /// Locales: en
-      static let lineactivity_changeover = Rswift.StringResource(key: "lineactivity_changeover", tableName: "Localized", bundle: R.hostingBundle, locales: ["en"], comment: nil)
-      /// en translation: Boiler 6
-      /// 
-      /// Locales: en
-      static let lineactivity_logistical_stoppage = Rswift.StringResource(key: "lineactivity_logistical_stoppage", tableName: "Localized", bundle: R.hostingBundle, locales: ["en"], comment: nil)
-      /// en translation: Boiler 7
-      /// 
-      /// Locales: en
-      static let lineactivity_scheduled_downtime = Rswift.StringResource(key: "lineactivity_scheduled_downtime", tableName: "Localized", bundle: R.hostingBundle, locales: ["en"], comment: nil)
       /// en translation: Cairo
       /// 
       /// Locales: en
@@ -292,84 +264,63 @@ struct R: Rswift.Validatable {
       /// en translation: Capacity
       /// 
       /// Locales: en
-      static let oaeaccumulated_title = Rswift.StringResource(key: "oaeaccumulated_title", tableName: "Localized", bundle: R.hostingBundle, locales: ["en"], comment: nil)
+      static let assetutilization_title = Rswift.StringResource(key: "assetutilization_title", tableName: "Localized", bundle: R.hostingBundle, locales: ["en"], comment: nil)
       /// en translation: Capacity Use
       /// 
       /// Locales: en
       static let changeover_title = Rswift.StringResource(key: "changeover_title", tableName: "Localized", bundle: R.hostingBundle, locales: ["en"], comment: nil)
+      /// en translation: Changeover
+      /// 
+      /// Locales: en
+      static let lineactivity_changeover = Rswift.StringResource(key: "lineactivity_changeover", tableName: "Localized", bundle: R.hostingBundle, locales: ["en"], comment: nil)
       /// en translation: Current Month
       /// 
       /// Locales: en
       static let time_selector_current_month = Rswift.StringResource(key: "time_selector_current_month", tableName: "Localized", bundle: R.hostingBundle, locales: ["en"], comment: nil)
-      /// en translation: Detailed Steam Capacity
+      /// en translation: Detailed Steam Efficiency
       /// 
       /// Locales: en
       static let oaedetailed_title = Rswift.StringResource(key: "oaedetailed_title", tableName: "Localized", bundle: R.hostingBundle, locales: ["en"], comment: nil)
+      /// en translation: Effective Uptime
+      /// 
+      /// Locales: en
+      static let lineactivity_effective_uptime = Rswift.StringResource(key: "lineactivity_effective_uptime", tableName: "Localized", bundle: R.hostingBundle, locales: ["en"], comment: nil)
       /// en translation: Efficiency
       /// 
       /// Locales: en
-      static let assetutilization_title = Rswift.StringResource(key: "assetutilization_title", tableName: "Localized", bundle: R.hostingBundle, locales: ["en"], comment: nil)
+      static let oaeaccumulated_title = Rswift.StringResource(key: "oaeaccumulated_title", tableName: "Localized", bundle: R.hostingBundle, locales: ["en"], comment: nil)
       /// en translation: Last Month
       /// 
       /// Locales: en
       static let time_selector_last_month = Rswift.StringResource(key: "time_selector_last_month", tableName: "Localized", bundle: R.hostingBundle, locales: ["en"], comment: nil)
-      /// en translation: Steam Capacity
+      /// en translation: Line Activity
       /// 
       /// Locales: en
       static let lineactivity_title = Rswift.StringResource(key: "lineactivity_title", tableName: "Localized", bundle: R.hostingBundle, locales: ["en"], comment: nil)
+      /// en translation: Logistical Stoppage
+      /// 
+      /// Locales: en
+      static let lineactivity_logistical_stoppage = Rswift.StringResource(key: "lineactivity_logistical_stoppage", tableName: "Localized", bundle: R.hostingBundle, locales: ["en"], comment: nil)
+      /// en translation: Micro Stoppages
+      /// 
+      /// Locales: en
+      static let lineactivity_micro_stoppages = Rswift.StringResource(key: "lineactivity_micro_stoppages", tableName: "Localized", bundle: R.hostingBundle, locales: ["en"], comment: nil)
+      /// en translation: Rework
+      /// 
+      /// Locales: en
+      static let lineactivity_rework = Rswift.StringResource(key: "lineactivity_rework", tableName: "Localized", bundle: R.hostingBundle, locales: ["en"], comment: nil)
+      /// en translation: Scheduled Downtime
+      /// 
+      /// Locales: en
+      static let lineactivity_scheduled_downtime = Rswift.StringResource(key: "lineactivity_scheduled_downtime", tableName: "Localized", bundle: R.hostingBundle, locales: ["en"], comment: nil)
+      /// en translation: Technical Stoppages
+      /// 
+      /// Locales: en
+      static let lineactivity_technical_stoppages = Rswift.StringResource(key: "lineactivity_technical_stoppages", tableName: "Localized", bundle: R.hostingBundle, locales: ["en"], comment: nil)
       /// en translation: This week
       /// 
       /// Locales: en
       static let time_selector_this_week = Rswift.StringResource(key: "time_selector_this_week", tableName: "Localized", bundle: R.hostingBundle, locales: ["en"], comment: nil)
-      
-      /// en translation: Boiler 1
-      /// 
-      /// Locales: en
-      static func lineactivity_effective_uptime(_: Void = ()) -> String {
-        return NSLocalizedString("lineactivity_effective_uptime", tableName: "Localized", bundle: R.hostingBundle, comment: "")
-      }
-      
-      /// en translation: Boiler 2
-      /// 
-      /// Locales: en
-      static func lineactivity_rework(_: Void = ()) -> String {
-        return NSLocalizedString("lineactivity_rework", tableName: "Localized", bundle: R.hostingBundle, comment: "")
-      }
-      
-      /// en translation: Boiler 3
-      /// 
-      /// Locales: en
-      static func lineactivity_micro_stoppages(_: Void = ()) -> String {
-        return NSLocalizedString("lineactivity_micro_stoppages", tableName: "Localized", bundle: R.hostingBundle, comment: "")
-      }
-      
-      /// en translation: Boiler 4
-      /// 
-      /// Locales: en
-      static func lineactivity_technical_stoppages(_: Void = ()) -> String {
-        return NSLocalizedString("lineactivity_technical_stoppages", tableName: "Localized", bundle: R.hostingBundle, comment: "")
-      }
-      
-      /// en translation: Boiler 5
-      /// 
-      /// Locales: en
-      static func lineactivity_changeover(_: Void = ()) -> String {
-        return NSLocalizedString("lineactivity_changeover", tableName: "Localized", bundle: R.hostingBundle, comment: "")
-      }
-      
-      /// en translation: Boiler 6
-      /// 
-      /// Locales: en
-      static func lineactivity_logistical_stoppage(_: Void = ()) -> String {
-        return NSLocalizedString("lineactivity_logistical_stoppage", tableName: "Localized", bundle: R.hostingBundle, comment: "")
-      }
-      
-      /// en translation: Boiler 7
-      /// 
-      /// Locales: en
-      static func lineactivity_scheduled_downtime(_: Void = ()) -> String {
-        return NSLocalizedString("lineactivity_scheduled_downtime", tableName: "Localized", bundle: R.hostingBundle, comment: "")
-      }
       
       /// en translation: Cairo
       /// 
@@ -381,8 +332,8 @@ struct R: Rswift.Validatable {
       /// en translation: Capacity
       /// 
       /// Locales: en
-      static func oaeaccumulated_title(_: Void = ()) -> String {
-        return NSLocalizedString("oaeaccumulated_title", tableName: "Localized", bundle: R.hostingBundle, comment: "")
+      static func assetutilization_title(_: Void = ()) -> String {
+        return NSLocalizedString("assetutilization_title", tableName: "Localized", bundle: R.hostingBundle, comment: "")
       }
       
       /// en translation: Capacity Use
@@ -392,6 +343,13 @@ struct R: Rswift.Validatable {
         return NSLocalizedString("changeover_title", tableName: "Localized", bundle: R.hostingBundle, comment: "")
       }
       
+      /// en translation: Changeover
+      /// 
+      /// Locales: en
+      static func lineactivity_changeover(_: Void = ()) -> String {
+        return NSLocalizedString("lineactivity_changeover", tableName: "Localized", bundle: R.hostingBundle, comment: "")
+      }
+      
       /// en translation: Current Month
       /// 
       /// Locales: en
@@ -399,18 +357,25 @@ struct R: Rswift.Validatable {
         return NSLocalizedString("time_selector_current_month", tableName: "Localized", bundle: R.hostingBundle, comment: "")
       }
       
-      /// en translation: Detailed Steam Capacity
+      /// en translation: Detailed Steam Efficiency
       /// 
       /// Locales: en
       static func oaedetailed_title(_: Void = ()) -> String {
         return NSLocalizedString("oaedetailed_title", tableName: "Localized", bundle: R.hostingBundle, comment: "")
       }
       
+      /// en translation: Effective Uptime
+      /// 
+      /// Locales: en
+      static func lineactivity_effective_uptime(_: Void = ()) -> String {
+        return NSLocalizedString("lineactivity_effective_uptime", tableName: "Localized", bundle: R.hostingBundle, comment: "")
+      }
+      
       /// en translation: Efficiency
       /// 
       /// Locales: en
-      static func assetutilization_title(_: Void = ()) -> String {
-        return NSLocalizedString("assetutilization_title", tableName: "Localized", bundle: R.hostingBundle, comment: "")
+      static func oaeaccumulated_title(_: Void = ()) -> String {
+        return NSLocalizedString("oaeaccumulated_title", tableName: "Localized", bundle: R.hostingBundle, comment: "")
       }
       
       /// en translation: Last Month
@@ -420,11 +385,46 @@ struct R: Rswift.Validatable {
         return NSLocalizedString("time_selector_last_month", tableName: "Localized", bundle: R.hostingBundle, comment: "")
       }
       
-      /// en translation: Steam Capacity
+      /// en translation: Line Activity
       /// 
       /// Locales: en
       static func lineactivity_title(_: Void = ()) -> String {
         return NSLocalizedString("lineactivity_title", tableName: "Localized", bundle: R.hostingBundle, comment: "")
+      }
+      
+      /// en translation: Logistical Stoppage
+      /// 
+      /// Locales: en
+      static func lineactivity_logistical_stoppage(_: Void = ()) -> String {
+        return NSLocalizedString("lineactivity_logistical_stoppage", tableName: "Localized", bundle: R.hostingBundle, comment: "")
+      }
+      
+      /// en translation: Micro Stoppages
+      /// 
+      /// Locales: en
+      static func lineactivity_micro_stoppages(_: Void = ()) -> String {
+        return NSLocalizedString("lineactivity_micro_stoppages", tableName: "Localized", bundle: R.hostingBundle, comment: "")
+      }
+      
+      /// en translation: Rework
+      /// 
+      /// Locales: en
+      static func lineactivity_rework(_: Void = ()) -> String {
+        return NSLocalizedString("lineactivity_rework", tableName: "Localized", bundle: R.hostingBundle, comment: "")
+      }
+      
+      /// en translation: Scheduled Downtime
+      /// 
+      /// Locales: en
+      static func lineactivity_scheduled_downtime(_: Void = ()) -> String {
+        return NSLocalizedString("lineactivity_scheduled_downtime", tableName: "Localized", bundle: R.hostingBundle, comment: "")
+      }
+      
+      /// en translation: Technical Stoppages
+      /// 
+      /// Locales: en
+      static func lineactivity_technical_stoppages(_: Void = ()) -> String {
+        return NSLocalizedString("lineactivity_technical_stoppages", tableName: "Localized", bundle: R.hostingBundle, comment: "")
       }
       
       /// en translation: This week

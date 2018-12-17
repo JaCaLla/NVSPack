@@ -1,0 +1,29 @@
+/* 
+  Localized.strings
+  NVSPack
+
+  Created by 08APO0516 on 13/12/2018.
+  Copyright © 2018 jca. All rights reserved.
+*/
+
+"time_selector_this_week" = "This week";
+"time_selector_current_month" = "Current Month";
+"time_selector_last_month" = "Last Month";
+
+"oaedetailed_title" = "Detailed Steam Efficiency";
+
+"oaeaccumulated_title" = "Efficiency";
+
+"assetutilization_title" = "Capacity";
+
+"lineactivity_title" = "Line Activity";
+"lineactivity_effective_uptime" = "Effective Uptime";
+"lineactivity_rework" = "Rework";
+"lineactivity_micro_stoppages" = "Micro Stoppages";
+"lineactivity_technical_stoppages" = "Technical Stoppages";
+"lineactivity_changeover" = "Changeover";
+"lineactivity_logistical_stoppage" = "Logistical Stoppage";
+"lineactivity_scheduled_downtime" = "Scheduled Downtime";
+
+"lineyield_title"  = "Cairo";
+"changeover_title" = "Capacity Use";
