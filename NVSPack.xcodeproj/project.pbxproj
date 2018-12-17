@@ -319,6 +319,7 @@
 			children = (
 				BF8ED63C21C2692700E62CFC /* Strings.swift */,
 				BF8ED64221C271D000E62CFC /* Localized.strings */,
+				BF8ED66221C37B0700E62CFC /* ChangeoverPresenter */,
 			);
 			path = Strings;
 			sourceTree = "<group>";
@@ -477,7 +478,6 @@
 				BF8ED65E21C37AC700E62CFC /* AssetUtilizationPresenter */,
 				BF8ED66621C37B4800E62CFC /* LineActivityPresenter */,
 				BF8ED66421C37B2400E62CFC /* LineyieldPresenter */,
-				BF8ED66221C37B0700E62CFC /* ChangeoverPresenter */,
 			);
 			path = Presenters;
 			sourceTree = "<group>";
