@@ -9,8 +9,6 @@
 /* Begin PBXBuildFile section */
 		67347CE4E9C6D956D6B0AEE3 /* Pods_NVSPackTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6005B6FFD835F3FD32765DAF /* Pods_NVSPackTests.framework */; };
 		67F1C74D68D4C428AFED2086 /* Pods_NVSPack.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F4204720EF3900B4B3235CB5 /* Pods_NVSPack.framework */; };
-		BF229A1321C18DDD001A8D49 /* ChangeoverPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF229A1221C18DDD001A8D49 /* ChangeoverPresenter.swift */; };
-		BF229A1521C18F0A001A8D49 /* ChangeoverViewContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF229A1421C18F0A001A8D49 /* ChangeoverViewContent.swift */; };
 		BF67C95021C13C30000C2D8E /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF67C94F21C13C30000C2D8E /* R.generated.swift */; };
 		BF67C95721C13CF7000C2D8E /* ConcurrentOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF67C95621C13CF7000C2D8E /* ConcurrentOperation.swift */; };
 		BF67C95921C13D4D000C2D8E /* StartUpAppSequencer.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF67C95821C13D4D000C2D8E /* StartUpAppSequencer.swift */; };
@@ -58,6 +56,8 @@
 		BFBCEE8621C3BE370012F0F8 /* XYMarkerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFBCEE8521C3BE370012F0F8 /* XYMarkerView.swift */; };
 		BFBCEE8821C3BE640012F0F8 /* BalloonMarker.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFBCEE8721C3BE640012F0F8 /* BalloonMarker.swift */; };
 		BFBCEE8A21C3BEA50012F0F8 /* DayAxisValueFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFBCEE8921C3BEA50012F0F8 /* DayAxisValueFormatter.swift */; };
+		BFC39FC621C7C44500355661 /* ChangeoverPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFC39FC321C7C44500355661 /* ChangeoverPresenter.swift */; };
+		BFC39FC721C7C44500355661 /* ChangeoverViewContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFC39FC521C7C44500355661 /* ChangeoverViewContent.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -73,8 +73,6 @@
 /* Begin PBXFileReference section */
 		6005B6FFD835F3FD32765DAF /* Pods_NVSPackTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NVSPackTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		85147FE419E13AE3D30A53C1 /* Pods-NVSPackTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NVSPackTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-NVSPackTests/Pods-NVSPackTests.release.xcconfig"; sourceTree = "<group>"; };
-		BF229A1221C18DDD001A8D49 /* ChangeoverPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangeoverPresenter.swift; sourceTree = "<group>"; };
-		BF229A1421C18F0A001A8D49 /* ChangeoverViewContent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangeoverViewContent.swift; sourceTree = "<group>"; };
 		BF67C94F21C13C30000C2D8E /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = R.generated.swift; path = NVSPack/ViewLayer/Resources/RSwift/R.generated.swift; sourceTree = SOURCE_ROOT; };
 		BF67C95621C13CF7000C2D8E /* ConcurrentOperation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConcurrentOperation.swift; sourceTree = "<group>"; };
 		BF67C95821C13D4D000C2D8E /* StartUpAppSequencer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartUpAppSequencer.swift; sourceTree = "<group>"; };
@@ -126,6 +124,8 @@
 		BFBCEE8521C3BE370012F0F8 /* XYMarkerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XYMarkerView.swift; sourceTree = "<group>"; };
 		BFBCEE8721C3BE640012F0F8 /* BalloonMarker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BalloonMarker.swift; sourceTree = "<group>"; };
 		BFBCEE8921C3BEA50012F0F8 /* DayAxisValueFormatter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DayAxisValueFormatter.swift; sourceTree = "<group>"; };
+		BFC39FC321C7C44500355661 /* ChangeoverPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChangeoverPresenter.swift; sourceTree = "<group>"; };
+		BFC39FC521C7C44500355661 /* ChangeoverViewContent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChangeoverViewContent.swift; sourceTree = "<group>"; };
 		D0079D4602DCE9BE0A34CB14 /* Pods-NVSPackTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NVSPackTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-NVSPackTests/Pods-NVSPackTests.debug.xcconfig"; sourceTree = "<group>"; };
 		D0567EF705C48F9EE5CED3B1 /* Pods-NVSPack.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NVSPack.debug.xcconfig"; path = "Pods/Target Support Files/Pods-NVSPack/Pods-NVSPack.debug.xcconfig"; sourceTree = "<group>"; };
 		F4204720EF3900B4B3235CB5 /* Pods_NVSPack.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NVSPack.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -319,7 +319,6 @@
 			children = (
 				BF8ED63C21C2692700E62CFC /* Strings.swift */,
 				BF8ED64221C271D000E62CFC /* Localized.strings */,
-				BF8ED66221C37B0700E62CFC /* ChangeoverPresenter */,
 			);
 			path = Strings;
 			sourceTree = "<group>";
@@ -401,23 +400,6 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
-		BF8ED66221C37B0700E62CFC /* ChangeoverPresenter */ = {
-			isa = PBXGroup;
-			children = (
-				BF8ED66321C37B1800E62CFC /* Views */,
-				BF229A1221C18DDD001A8D49 /* ChangeoverPresenter.swift */,
-			);
-			path = ChangeoverPresenter;
-			sourceTree = "<group>";
-		};
-		BF8ED66321C37B1800E62CFC /* Views */ = {
-			isa = PBXGroup;
-			children = (
-				BF229A1421C18F0A001A8D49 /* ChangeoverViewContent.swift */,
-			);
-			path = Views;
-			sourceTree = "<group>";
-		};
 		BF8ED66421C37B2400E62CFC /* LineyieldPresenter */ = {
 			isa = PBXGroup;
 			children = (
@@ -473,6 +455,7 @@
 		BF8ED66F21C37D0100E62CFC /* Presenters */ = {
 			isa = PBXGroup;
 			children = (
+				BFC39FC221C7C44500355661 /* ChangeoverPresenter */,
 				BF8ED66021C37AE700E62CFC /* TimeSelectorPresenter */,
 				BF8ED66921C37CEB00E62CFC /* OAEPresenter */,
 				BF8ED65E21C37AC700E62CFC /* AssetUtilizationPresenter */,
@@ -525,6 +508,24 @@
 				BF9DC4E021C122DE00C2EE57 /* Info.plist */,
 			);
 			path = NVSPackTests;
+			sourceTree = "<group>";
+		};
+		BFC39FC221C7C44500355661 /* ChangeoverPresenter */ = {
+			isa = PBXGroup;
+			children = (
+				BFC39FC321C7C44500355661 /* ChangeoverPresenter.swift */,
+				BFC39FC421C7C44500355661 /* Views */,
+			);
+			name = ChangeoverPresenter;
+			path = "../../../../../../../NVSPack copy/NVSPack/New Group/Controllers/Home/HomePresenter/Presenters/ChangeoverPresenter";
+			sourceTree = "<group>";
+		};
+		BFC39FC421C7C44500355661 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				BFC39FC521C7C44500355661 /* ChangeoverViewContent.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 		CF0DB21F9406E8B90A19040E /* Pods */ = {
@@ -755,9 +756,9 @@
 				BF8ED65B21C2F28800E62CFC /* UIApplicationExtension.swift in Sources */,
 				BF8ED66E21C37CEB00E62CFC /* OAEAccumulatedViewContent.swift in Sources */,
 				BF8ED62521C22C3500E62CFC /* Dataset.swift in Sources */,
+				BFC39FC621C7C44500355661 /* ChangeoverPresenter.swift in Sources */,
 				BF9DC4CA21C122DB00C2EE57 /* AppDelegate.swift in Sources */,
 				BF8ED65421C2DB1B00E62CFC /* AssetUtilizationViewContent.swift in Sources */,
-				BF229A1521C18F0A001A8D49 /* ChangeoverViewContent.swift in Sources */,
 				BF8ED63621C2657E00E62CFC /* FontsNVSPack.swift in Sources */,
 				BF8ED62B21C22FE100E62CFC /* DataManager.swift in Sources */,
 				BF67C95021C13C30000C2D8E /* R.generated.swift in Sources */,
@@ -767,6 +768,7 @@
 				BFBCEE8221C392DE0012F0F8 /* OAEDetailedViewContent.swift in Sources */,
 				BF8ED65021C2B49D00E62CFC /* LineActivityPresenter.swift in Sources */,
 				BF67C95D21C13E00000C2D8E /* PresentSplashOperation.swift in Sources */,
+				BFC39FC721C7C44500355661 /* ChangeoverViewContent.swift in Sources */,
 				BFBCEE8421C397760012F0F8 /* UIButton+Extension.swift in Sources */,
 				BF67C97021C14C1F000C2D8E /* HomeViewContent.swift in Sources */,
 				BF67C95921C13D4D000C2D8E /* StartUpAppSequencer.swift in Sources */,
@@ -777,7 +779,6 @@
 				BF8ED65221C2B50B00E62CFC /* LineActivityViewContent.swift in Sources */,
 				BF67C95B21C13D9E000C2D8E /* PresentMainAppOp.swift in Sources */,
 				BFBCEE8821C3BE640012F0F8 /* BalloonMarker.swift in Sources */,
-				BF229A1321C18DDD001A8D49 /* ChangeoverPresenter.swift in Sources */,
 				BF67C96521C13F31000C2D8E /* SplashPresenter.swift in Sources */,
 				BF8ED62321C22B9500E62CFC /* Serie.swift in Sources */,
 				BF8ED64A21C298E100E62CFC /* NotificationManager.swift in Sources */,
