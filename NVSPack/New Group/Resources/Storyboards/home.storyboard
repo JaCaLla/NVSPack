@@ -19,15 +19,15 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nT3-Oi-gj6">
-                                <rect key="frame" x="0.0" y="79.5" width="375" height="587.5"/>
+                                <rect key="frame" x="0.0" y="116" width="375" height="551"/>
                                 <connections>
                                     <segue destination="wnZ-np-SCG" kind="embed" identifier="HomeSelectorContainerSegue" id="3DJ-1m-d2P"/>
                                 </connections>
                             </containerView>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jtK-oB-tIF">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="79.5"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="116"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="79.5" id="tlH-E0-zru"/>
+                                    <constraint firstAttribute="height" constant="116" id="tlH-E0-zru"/>
                                 </constraints>
                                 <connections>
                                     <segue destination="aqb-Gs-lwg" kind="embed" identifier="TimeSelectorPresenterSegue" id="wro-be-Rdw"/>
@@ -55,7 +55,7 @@
             <objects>
                 <tableViewController id="wnZ-np-SCG" customClass="HomeViewContent" customModule="NVSPack" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="sDL-TM-o52">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="587.5"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="551"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <sections>
@@ -69,7 +69,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="i8E-md-heN">
-                                                    <rect key="frame" x="0.0" y="0.0" width="375" height="199.5"/>
+                                                    <rect key="frame" x="0.0" y="8" width="375" height="191.5"/>
                                                     <connections>
                                                         <segue destination="Sw7-vL-PA5" kind="embed" id="lkh-Kj-Gb9"/>
                                                     </connections>
@@ -77,7 +77,7 @@
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="i8E-md-heN" firstAttribute="leading" secondItem="OeX-CS-pnF" secondAttribute="leading" id="JbZ-iU-Um7"/>
-                                                <constraint firstItem="i8E-md-heN" firstAttribute="top" secondItem="OeX-CS-pnF" secondAttribute="top" id="Q6d-1N-RTX"/>
+                                                <constraint firstItem="i8E-md-heN" firstAttribute="top" secondItem="OeX-CS-pnF" secondAttribute="top" constant="8" id="Q6d-1N-RTX"/>
                                                 <constraint firstAttribute="bottom" secondItem="i8E-md-heN" secondAttribute="bottom" id="axz-c0-M6f"/>
                                                 <constraint firstAttribute="trailing" secondItem="i8E-md-heN" secondAttribute="trailing" id="vfJ-fA-jTC"/>
                                             </constraints>
@@ -127,30 +127,8 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="300" id="YZs-VU-4FY">
-                                        <rect key="frame" x="0.0" y="800" width="375" height="300"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="YZs-VU-4FY" id="Yd1-I3-3l9">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="299.5"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wDG-UZ-URw">
-                                                    <rect key="frame" x="0.0" y="0.0" width="375" height="299.5"/>
-                                                    <connections>
-                                                        <segue destination="VSP-Ba-Vnt" kind="embed" id="mL9-NU-NYR"/>
-                                                    </connections>
-                                                </containerView>
-                                            </subviews>
-                                            <constraints>
-                                                <constraint firstItem="wDG-UZ-URw" firstAttribute="leading" secondItem="Yd1-I3-3l9" secondAttribute="leading" id="1BH-bI-VIj"/>
-                                                <constraint firstAttribute="bottom" secondItem="wDG-UZ-URw" secondAttribute="bottom" id="EPH-1l-cdt"/>
-                                                <constraint firstAttribute="trailing" secondItem="wDG-UZ-URw" secondAttribute="trailing" id="Y15-QD-5Rd"/>
-                                                <constraint firstItem="wDG-UZ-URw" firstAttribute="top" secondItem="Yd1-I3-3l9" secondAttribute="top" id="Z0Q-sM-Yc0"/>
-                                            </constraints>
-                                        </tableViewCellContentView>
-                                    </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="300" id="h8s-Je-C5c">
-                                        <rect key="frame" x="0.0" y="1100" width="375" height="300"/>
+                                        <rect key="frame" x="0.0" y="800" width="375" height="300"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="h8s-Je-C5c" id="DXN-JO-FIf">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="299.5"/>
@@ -189,11 +167,11 @@
             <objects>
                 <viewController id="aqb-Gs-lwg" customClass="TimeSelectorPresenter" customModule="NVSPack" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="TpJ-6n-Brj">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="79.5"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="116"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ytc-bu-9ap">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="79.5"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="116"/>
                                 <connections>
                                     <segue destination="GI8-YW-p5D" kind="embed" identifier="TimeSelectorContainerSegue" id="cxq-Jy-S8b"/>
                                 </connections>
@@ -218,11 +196,11 @@
             <objects>
                 <viewController id="GI8-YW-p5D" customClass="TimeSelectorViewContent" customModule="NVSPack" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="afc-e8-fkJ">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="79.5"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="116"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="Atd-mG-tXt">
-                                <rect key="frame" x="20" y="26" width="335" height="29"/>
+                                <rect key="frame" x="20" y="52.5" width="335" height="29"/>
                                 <segments>
                                     <segment title="First"/>
                                     <segment title="Second"/>
@@ -231,11 +209,19 @@
                                     <action selector="onValueChanged:" destination="GI8-YW-p5D" eventType="valueChanged" id="zAl-NN-Nde"/>
                                 </connections>
                             </segmentedControl>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Kundl &gt; Steam" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iDy-LC-LCF">
+                                <rect key="frame" x="131.5" y="16" width="112" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <constraints>
+                            <constraint firstItem="iDy-LC-LCF" firstAttribute="top" secondItem="O16-rR-FNz" secondAttribute="top" constant="16" id="OKI-sx-0Cc"/>
                             <constraint firstItem="O16-rR-FNz" firstAttribute="trailing" secondItem="Atd-mG-tXt" secondAttribute="trailing" constant="20" id="Q9L-uO-mF6"/>
+                            <constraint firstItem="Atd-mG-tXt" firstAttribute="top" secondItem="iDy-LC-LCF" secondAttribute="bottom" constant="16" id="U99-LF-Jmi"/>
+                            <constraint firstItem="iDy-LC-LCF" firstAttribute="centerX" secondItem="afc-e8-fkJ" secondAttribute="centerX" id="cye-lf-hKG"/>
                             <constraint firstItem="Atd-mG-tXt" firstAttribute="leading" secondItem="O16-rR-FNz" secondAttribute="leading" constant="20" id="gJh-9y-8op"/>
-                            <constraint firstItem="Atd-mG-tXt" firstAttribute="centerY" secondItem="afc-e8-fkJ" secondAttribute="centerY" id="gfU-57-pyY"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="O16-rR-FNz"/>
                     </view>
@@ -252,17 +238,17 @@
             <objects>
                 <viewController id="Sw7-vL-PA5" customClass="OAEPresenter" customModule="NVSPack" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="nfK-Ey-v6h">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="199.5"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="191.5"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kEu-aO-R0d">
-                                <rect key="frame" x="0.0" y="0.0" width="187.5" height="199.5"/>
+                                <rect key="frame" x="0.0" y="0.0" width="187.5" height="191.5"/>
                                 <connections>
                                     <segue destination="wMm-wJ-msu" kind="embed" identifier="OAEDetailedContainerSegue" id="4uj-Bl-qs8"/>
                                 </connections>
                             </containerView>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="45j-T8-ZF6">
-                                <rect key="frame" x="187.5" y="0.0" width="187.5" height="199.5"/>
+                                <rect key="frame" x="187.5" y="0.0" width="187.5" height="191.5"/>
                                 <connections>
                                     <segue destination="0oQ-hU-5gV" kind="embed" identifier="OAEAccumulatedContainerSegue" id="9Of-ah-XWr"/>
                                 </connections>
@@ -291,7 +277,7 @@
             <objects>
                 <viewController id="0oQ-hU-5gV" customClass="OAEAccumulatedViewContent" customModule="NVSPack" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="1Gz-et-fZd">
-                        <rect key="frame" x="0.0" y="0.0" width="187.5" height="199.5"/>
+                        <rect key="frame" x="0.0" y="0.0" width="187.5" height="191.5"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tfX-Oa-9EN">
@@ -301,7 +287,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RNh-bN-Ffs" customClass="PieChartView" customModule="Charts">
-                                <rect key="frame" x="0.0" y="31" width="187.5" height="168.5"/>
+                                <rect key="frame" x="0.0" y="31" width="187.5" height="160.5"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
                         </subviews>
@@ -398,11 +384,11 @@
             <objects>
                 <viewController id="VSP-Ba-Vnt" customClass="LineyieldPresenter" customModule="NVSPack" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="xPq-06-ong">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="299.5"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Eo4-aL-Kut">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="299.5"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <connections>
                                     <segue destination="TJB-Pg-5zT" kind="embed" identifier="LineyieldContainerSegue" id="fCJ-4F-K9E"/>
                                 </connections>
@@ -427,7 +413,7 @@
             <objects>
                 <viewController id="TJB-Pg-5zT" customClass="LineyieldViewContent" customModule="NVSPack" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="IlU-IU-Ws4">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="299.5"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fJJ-hl-cty">
@@ -437,7 +423,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EeZ-y0-ss3" customClass="PieChartView" customModule="Charts">
-                                <rect key="frame" x="0.0" y="36" width="375" height="263.5"/>
+                                <rect key="frame" x="0.0" y="36" width="375" height="631"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
                         </subviews>
@@ -605,7 +591,7 @@
             <objects>
                 <viewController id="wMm-wJ-msu" customClass="OAEDetailedViewContent" customModule="NVSPack" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Bhw-49-ZA5">
-                        <rect key="frame" x="0.0" y="0.0" width="187.5" height="199.5"/>
+                        <rect key="frame" x="0.0" y="0.0" width="187.5" height="191.5"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gwl-5i-ijU">
@@ -615,7 +601,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jhf-BI-XmX" customClass="BarChartView" customModule="Charts">
-                                <rect key="frame" x="5" y="36" width="177.5" height="158.5"/>
+                                <rect key="frame" x="5" y="36" width="177.5" height="150.5"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
                         </subviews>

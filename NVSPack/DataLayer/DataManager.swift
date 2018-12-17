@@ -16,20 +16,26 @@ enum TimeSelector: Int {
     func changeoverDataset() -> Dataset {
         switch self {
         case .thisWeek:
-            return Dataset(series: [Serie(label: "TOTAL", index: 0.0, value: 60),
-                                    Serie(label: "P2P",index: 1.0, value: 150),
-                                    Serie(label: "N2N",index: 2.0, value: 100),
-                                    Serie(label: "B2B",index: 3.0, value: 50)])
+            return Dataset(series: [Serie(label: "Boiler 6", index: 0.0, value: 60),
+                                    Serie(label: "Boiler 5",index: 1.0, value: 150),
+                                    Serie(label: "Boiler 4",index: 2.0, value: 100),
+                                    Serie(label: "Boiler 3",index: 3.0, value: 50),
+                                    Serie(label: "Boiler 2",index: 4.0, value: 100),
+                                    Serie(label: "Boiler 1",index: 5.0, value: 50)])
         case .currentMonth:
-            return Dataset(series: [Serie(label: "TOTAL", index: 0.0, value: 100),
-                                    Serie(label: "P2P",index: 1.0, value: 210),
-                                    Serie(label: "N2N",index: 2.0, value: 70),
-                                    Serie(label: "B2B",index: 3.0, value: 80)])
+            return Dataset(series: [Serie(label: "Boiler 6", index: 0.0, value: 100),
+                                    Serie(label: "Boiler 5",index: 1.0, value: 210),
+                                    Serie(label: "Boiler 4",index: 2.0, value: 70),
+                                    Serie(label: "Boiler 3",index: 3.0, value: 80),
+                                    Serie(label: "Boiler 2",index: 4.0, value: 100),
+                                    Serie(label: "Boiler 1",index: 5.0, value: 50)])
         case .lastMonth:
-            return Dataset(series: [Serie(label: "TOTAL", index: 0.0, value: 90),
-                                    Serie(label: "P2P",index: 1.0, value: 240),
-                                    Serie(label: "N2N",index: 2.0, value: 30),
-                                    Serie(label: "B2B",index: 3.0, value: 10)])
+            return Dataset(series: [Serie(label: "Boiler 6", index: 0.0, value: 90),
+                                    Serie(label: "Boiler 5",index: 1.0, value: 240),
+                                    Serie(label: "Boiler 4",index: 2.0, value: 30),
+                                    Serie(label: "Boiler 3",index: 3.0, value: 10),
+                                    Serie(label: "Boiler 2",index: 4.0, value: 100),
+                                    Serie(label: "Boiler 1",index: 5.0, value: 50)])
         }
     }
 
@@ -55,24 +61,21 @@ enum TimeSelector: Int {
                                    Serie(label: R.string.localized.lineactivity_micro_stoppages(), index: 0, value: 30, color: ColorsNVSPack.LineActivity.microStoppages),
                                    Serie(label: R.string.localized.lineactivity_technical_stoppages(), index: 0, value: 10, color: ColorsNVSPack.LineActivity.technicalStoppages),
                                    Serie(label: R.string.localized.lineactivity_changeover(), index: 0, value: 80, color: ColorsNVSPack.LineActivity.changeover),
-                                   Serie(label: R.string.localized.lineactivity_logistical_stoppage(), index: 0, value: 60, color: ColorsNVSPack.LineActivity.logisticalStoppages),
-                                   Serie(label: R.string.localized.lineactivity_scheduled_downtime(), index: 0, value: 5, color: ColorsNVSPack.LineActivity.scheduledDowntime)])
+                                   Serie(label: R.string.localized.lineactivity_logistical_stoppage(), index: 0, value: 60, color: ColorsNVSPack.LineActivity.logisticalStoppages)])
         case .currentMonth:
             return Dataset(series:[Serie(label: R.string.localized.lineactivity_effective_uptime(), index: 0, value: 20, color: ColorsNVSPack.LineActivity.effectiveUptime),
                                    Serie(label: R.string.localized.lineactivity_rework(), index: 0, value: 20, color: ColorsNVSPack.LineActivity.rework),
                                    Serie(label: R.string.localized.lineactivity_micro_stoppages(), index: 0, value: 50, color: ColorsNVSPack.LineActivity.microStoppages),
                                    Serie(label: R.string.localized.lineactivity_technical_stoppages(), index: 0, value: 100, color: ColorsNVSPack.LineActivity.technicalStoppages),
                                    Serie(label: R.string.localized.lineactivity_changeover(), index: 0, value: 150, color: ColorsNVSPack.LineActivity.changeover),
-                                   Serie(label: R.string.localized.lineactivity_logistical_stoppage(), index: 0, value: 60, color: ColorsNVSPack.LineActivity.logisticalStoppages),
-                                   Serie(label: R.string.localized.lineactivity_scheduled_downtime(), index: 0, value: 40, color: ColorsNVSPack.LineActivity.scheduledDowntime)])
+                                   Serie(label: R.string.localized.lineactivity_logistical_stoppage(), index: 0, value: 60, color: ColorsNVSPack.LineActivity.logisticalStoppages)])
         case .lastMonth:
             return Dataset(series:[Serie(label: R.string.localized.lineactivity_effective_uptime(), index: 0, value: 200, color: ColorsNVSPack.LineActivity.effectiveUptime),
                                    Serie(label: R.string.localized.lineactivity_rework(), index: 0, value: 10, color: ColorsNVSPack.LineActivity.rework),
                                    Serie(label: R.string.localized.lineactivity_micro_stoppages(), index: 0, value: 150, color: ColorsNVSPack.LineActivity.microStoppages),
                                    Serie(label: R.string.localized.lineactivity_technical_stoppages(), index: 0, value: 100, color: ColorsNVSPack.LineActivity.technicalStoppages),
                                    Serie(label: R.string.localized.lineactivity_changeover(), index: 0, value: 120, color: ColorsNVSPack.LineActivity.changeover),
-                                   Serie(label: R.string.localized.lineactivity_logistical_stoppage(), index: 0, value: 80, color: ColorsNVSPack.LineActivity.logisticalStoppages),
-                                   Serie(label: R.string.localized.lineactivity_scheduled_downtime(), index: 0, value: 50, color: ColorsNVSPack.LineActivity.scheduledDowntime)])
+                                   Serie(label: R.string.localized.lineactivity_logistical_stoppage(), index: 0, value: 80, color: ColorsNVSPack.LineActivity.logisticalStoppages)])
         }
     }
 

@@ -10,20 +10,22 @@
 "time_selector_current_month" = "Current Month";
 "time_selector_last_month" = "Last Month";
 
-"oaedetailed_title" = "Detailed Steam Efficiency";
+"oaedetailed_title" = "Detailed Steam Capacity";
 
-"oaeaccumulated_title" = "Efficiency";
+"oaeaccumulated_title" = "Capacity";
 
-"assetutilization_title" = "Capacity";
+"assetutilization_title" = "Efficiency";
 
-"lineactivity_title" = "Line Activity";
-"lineactivity_effective_uptime" = "Effective Uptime";
-"lineactivity_rework" = "Rework";
-"lineactivity_micro_stoppages" = "Micro Stoppages";
-"lineactivity_technical_stoppages" = "Technical Stoppages";
-"lineactivity_changeover" = "Changeover";
-"lineactivity_logistical_stoppage" = "Logistical Stoppage";
-"lineactivity_scheduled_downtime" = "Scheduled Downtime";
+
+"lineactivity_title" = "Steam Capacity";
+
+"lineactivity_effective_uptime" = "Boiler 1";
+"lineactivity_rework" = "Boiler 2";
+"lineactivity_micro_stoppages" = "Boiler 3";
+"lineactivity_technical_stoppages" = "Boiler 4";
+"lineactivity_changeover" = "Boiler 5";
+"lineactivity_logistical_stoppage" = "Boiler 6";
+"lineactivity_scheduled_downtime" = "Boiler 7";
 
 "lineyield_title"  = "Cairo";
 "changeover_title" = "Capacity Use";
