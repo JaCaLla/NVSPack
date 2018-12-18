@@ -10,7 +10,7 @@
 "time_selector_current_month" = "Current Month";
 "time_selector_last_month" = "Last Month";
 
-"oaedetailed_title" = "Detailed Steam Capacity";
+"oaedetailed_title" = "Capacity by Day";
 
 "oaeaccumulated_title" = "Capacity";
 
@@ -29,3 +29,6 @@
 
 "lineyield_title"  = "Cairo";
 "changeover_title" = "Capacity Use";
+
+"capacity_info" = "Total Capacity";
+"generation_info" = "Generation";

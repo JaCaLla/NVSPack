@@ -53,10 +53,17 @@ struct R: Rswift.Validatable {
     fileprivate init() {}
   }
   
-  /// This `R.image` struct is generated, and contains static references to 1 images.
+  /// This `R.image` struct is generated, and contains static references to 2 images.
   struct image {
+    /// Image `IconSteam`.
+    static let iconSteam = Rswift.ImageResource(bundle: R.hostingBundle, name: "IconSteam")
     /// Image `Novartis`.
     static let novartis = Rswift.ImageResource(bundle: R.hostingBundle, name: "Novartis")
+    
+    /// `UIImage(named: "IconSteam", bundle: ..., traitCollection: ...)`
+    static func iconSteam(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.iconSteam, compatibleWith: traitCollection)
+    }
     
     /// `UIImage(named: "Novartis", bundle: ..., traitCollection: ...)`
     static func novartis(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
@@ -162,12 +169,14 @@ struct R: Rswift.Validatable {
       fileprivate init() {}
     }
     
-    /// This struct is generated for `OAEPresenter`, and contains static references to 2 segues.
+    /// This struct is generated for `OAEPresenter`, and contains static references to 3 segues.
     struct oaePresenter {
       /// Segue identifier `OAEAccumulatedContainerSegue`.
       static let oaeAccumulatedContainerSegue: Rswift.StoryboardSegueIdentifier<UIKit.UIStoryboardSegue, OAEPresenter, OAEAccumulatedViewContent> = Rswift.StoryboardSegueIdentifier(identifier: "OAEAccumulatedContainerSegue")
       /// Segue identifier `OAEDetailedContainerSegue`.
       static let oaeDetailedContainerSegue: Rswift.StoryboardSegueIdentifier<UIKit.UIStoryboardSegue, OAEPresenter, OAEDetailedViewContent> = Rswift.StoryboardSegueIdentifier(identifier: "OAEDetailedContainerSegue")
+      /// Segue identifier `OAEInfoContainerSegue`.
+      static let oaeInfoContainerSegue: Rswift.StoryboardSegueIdentifier<UIKit.UIStoryboardSegue, OAEPresenter, OAEInfoViewContent> = Rswift.StoryboardSegueIdentifier(identifier: "OAEInfoContainerSegue")
       
       /// Optionally returns a typed version of segue `OAEAccumulatedContainerSegue`.
       /// Returns nil if either the segue identifier, the source, destination, or segue types don't match.
@@ -181,6 +190,13 @@ struct R: Rswift.Validatable {
       /// For use inside `prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?)`.
       static func oaeDetailedContainerSegue(segue: UIKit.UIStoryboardSegue) -> Rswift.TypedStoryboardSegueInfo<UIKit.UIStoryboardSegue, OAEPresenter, OAEDetailedViewContent>? {
         return Rswift.TypedStoryboardSegueInfo(segueIdentifier: R.segue.oaePresenter.oaeDetailedContainerSegue, segue: segue)
+      }
+      
+      /// Optionally returns a typed version of segue `OAEInfoContainerSegue`.
+      /// Returns nil if either the segue identifier, the source, destination, or segue types don't match.
+      /// For use inside `prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?)`.
+      static func oaeInfoContainerSegue(segue: UIKit.UIStoryboardSegue) -> Rswift.TypedStoryboardSegueInfo<UIKit.UIStoryboardSegue, OAEPresenter, OAEInfoViewContent>? {
+        return Rswift.TypedStoryboardSegueInfo(segueIdentifier: R.segue.oaePresenter.oaeInfoContainerSegue, segue: segue)
       }
       
       fileprivate init() {}
@@ -255,7 +271,7 @@ struct R: Rswift.Validatable {
   
   /// This `R.string` struct is generated, and contains static references to 1 localization tables.
   struct string {
-    /// This `R.string.localized` struct is generated, and contains static references to 16 localization keys.
+    /// This `R.string.localized` struct is generated, and contains static references to 18 localization keys.
     struct localized {
       /// en translation: Boiler 1
       /// 
@@ -297,18 +313,22 @@ struct R: Rswift.Validatable {
       /// 
       /// Locales: en
       static let changeover_title = Rswift.StringResource(key: "changeover_title", tableName: "Localized", bundle: R.hostingBundle, locales: ["en"], comment: nil)
+      /// en translation: Capacity by Day
+      /// 
+      /// Locales: en
+      static let oaedetailed_title = Rswift.StringResource(key: "oaedetailed_title", tableName: "Localized", bundle: R.hostingBundle, locales: ["en"], comment: nil)
       /// en translation: Current Month
       /// 
       /// Locales: en
       static let time_selector_current_month = Rswift.StringResource(key: "time_selector_current_month", tableName: "Localized", bundle: R.hostingBundle, locales: ["en"], comment: nil)
-      /// en translation: Detailed Steam Capacity
-      /// 
-      /// Locales: en
-      static let oaedetailed_title = Rswift.StringResource(key: "oaedetailed_title", tableName: "Localized", bundle: R.hostingBundle, locales: ["en"], comment: nil)
       /// en translation: Efficiency
       /// 
       /// Locales: en
       static let assetutilization_title = Rswift.StringResource(key: "assetutilization_title", tableName: "Localized", bundle: R.hostingBundle, locales: ["en"], comment: nil)
+      /// en translation: Generation
+      /// 
+      /// Locales: en
+      static let generation_info = Rswift.StringResource(key: "generation_info", tableName: "Localized", bundle: R.hostingBundle, locales: ["en"], comment: nil)
       /// en translation: Last Month
       /// 
       /// Locales: en
@@ -321,6 +341,10 @@ struct R: Rswift.Validatable {
       /// 
       /// Locales: en
       static let time_selector_this_week = Rswift.StringResource(key: "time_selector_this_week", tableName: "Localized", bundle: R.hostingBundle, locales: ["en"], comment: nil)
+      /// en translation: Total Capacity
+      /// 
+      /// Locales: en
+      static let capacity_info = Rswift.StringResource(key: "capacity_info", tableName: "Localized", bundle: R.hostingBundle, locales: ["en"], comment: nil)
       
       /// en translation: Boiler 1
       /// 
@@ -392,6 +416,13 @@ struct R: Rswift.Validatable {
         return NSLocalizedString("changeover_title", tableName: "Localized", bundle: R.hostingBundle, comment: "")
       }
       
+      /// en translation: Capacity by Day
+      /// 
+      /// Locales: en
+      static func oaedetailed_title(_: Void = ()) -> String {
+        return NSLocalizedString("oaedetailed_title", tableName: "Localized", bundle: R.hostingBundle, comment: "")
+      }
+      
       /// en translation: Current Month
       /// 
       /// Locales: en
@@ -399,18 +430,18 @@ struct R: Rswift.Validatable {
         return NSLocalizedString("time_selector_current_month", tableName: "Localized", bundle: R.hostingBundle, comment: "")
       }
       
-      /// en translation: Detailed Steam Capacity
-      /// 
-      /// Locales: en
-      static func oaedetailed_title(_: Void = ()) -> String {
-        return NSLocalizedString("oaedetailed_title", tableName: "Localized", bundle: R.hostingBundle, comment: "")
-      }
-      
       /// en translation: Efficiency
       /// 
       /// Locales: en
       static func assetutilization_title(_: Void = ()) -> String {
         return NSLocalizedString("assetutilization_title", tableName: "Localized", bundle: R.hostingBundle, comment: "")
+      }
+      
+      /// en translation: Generation
+      /// 
+      /// Locales: en
+      static func generation_info(_: Void = ()) -> String {
+        return NSLocalizedString("generation_info", tableName: "Localized", bundle: R.hostingBundle, comment: "")
       }
       
       /// en translation: Last Month
@@ -432,6 +463,13 @@ struct R: Rswift.Validatable {
       /// Locales: en
       static func time_selector_this_week(_: Void = ()) -> String {
         return NSLocalizedString("time_selector_this_week", tableName: "Localized", bundle: R.hostingBundle, comment: "")
+      }
+      
+      /// en translation: Total Capacity
+      /// 
+      /// Locales: en
+      static func capacity_info(_: Void = ()) -> String {
+        return NSLocalizedString("capacity_info", tableName: "Localized", bundle: R.hostingBundle, comment: "")
       }
       
       fileprivate init() {}
@@ -479,6 +517,7 @@ struct _R: Rswift.Validatable {
       }
       
       static func validate() throws {
+        if UIKit.UIImage(named: "IconSteam") == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'IconSteam' is used in storyboard 'home', but couldn't be loaded.") }
         if _R.storyboard.home().homePresenter() == nil { throw Rswift.ValidationError(description:"[R.swift] ViewController with identifier 'homePresenter' could not be loaded from storyboard 'home' as 'HomePresenter'.") }
       }
       

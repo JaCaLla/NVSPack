@@ -135,6 +135,28 @@ enum TimeSelector: Int {
                                     Serie(label: "Sat",index: 6.0, value: 0)])
         }
     }
+    
+    func totalCapacityInfo() ->  Int {
+        switch self {
+        case .thisWeek:
+            return 30
+        case .currentMonth:
+            return 40
+        case .lastMonth:
+            return 50
+        }
+    }
+    
+    func generationInfo() ->  Float {
+        switch self {
+        case .thisWeek:
+            return 74.345
+        case .currentMonth:
+            return 35.2346
+        case .lastMonth:
+            return 87.3298
+        }
+    }
 }
 
 class DataManager {
@@ -177,5 +199,13 @@ class DataManager {
 
     func oAEDetailedDataset() -> Dataset {
         return timeSelector.oAEDetailedDataset()
+    }
+    
+    func oaETotalCapacity() -> Int {
+        return timeSelector.totalCapacityInfo()
+    }
+    
+    func oaEGeneration() -> Float {
+        return timeSelector.generationInfo()
     }
 }

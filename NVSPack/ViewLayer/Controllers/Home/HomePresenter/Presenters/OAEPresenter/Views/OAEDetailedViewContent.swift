@@ -36,7 +36,7 @@ class OAEDetailedViewContent: DemoBaseViewController {
 
         lblTitle.text = R.string.localized.oaedetailed_title()
         lblTitle.numberOfLines = 1
-        lblTitle.font = FontsNVSPack.OAEDetailed.titleFont
+        lblTitle.font = FontsNVSPack.OAEAccumulated.titleFont
         lblTitle.textColor = ColorsNVSPack.OAEDetailed.titleFontColor
         lblTitle.textAlignment = .center
         self.setup(barLineChartView: chartView)
